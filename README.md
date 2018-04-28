@@ -92,9 +92,9 @@
 
 # Calendar
 
-- ## [May 2018](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/May)
+- ## [May 2018](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/Calendar/May)
 
-    - [Day 01](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/May/01.md) 
+    - [Day 01](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/Calendar/May/01.md) 
 
 - ## June 2018
 
