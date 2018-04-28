@@ -5,19 +5,19 @@
 - ## Training
 
     - [x] **Formation Complète Développeur Web**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Codeur
+    John Codeur
 
     - [ ] **The Web Developer Bootcamp**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COLT STEELE
+    COLT STEELE
 
     - [ ] **The Advanced Web Developer Bootcamp**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COLT STEELE, ELIE SCHOPPIK, TIM GARCIA
+    COLT STEELE, ELIE SCHOPPIK, TIM GARCIA
     
     - [ ] **Advanced CSS and Sadd: Flexbox, Grid, Animations and More!**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JONAS SCHMEDTMANN
+    JONAS SCHMEDTMANN
 
     - [ ] **The Complete JavaScript Course 2018: Build Real Projects!**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JONAS SCHMEDTMANN
+    JONAS SCHMEDTMANN
 
     - [ ] *The* ***SassWay***  
 
@@ -59,24 +59,24 @@
 
         - [ ] **Dynamic Web Application Projects**  
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*freeCodeCamp*
+    *freeCodeCamp*
 
 
 - ## Books
     - [ ] **HTML & CSS** *design and build websites*  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JON DUCKETT
+    JON DUCKETT
 
     - [ ] **JAVASCRIPT & JQUERY** *interactive front-end web development*  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JON DUCKETT
+    JON DUCKETT
 
     - [ ] *Secrets of the* **JavaScript Ninja**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOHN RESIG, Bear Bibeault, Josip Maras
+    JOHN RESIG, Bear Bibeault, Josip Maras
 
     - [ ] **Front-End Developer Handbook 2018**  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CODY LINDLEY
+    CODY LINDLEY
 
     - [ ] **You don't know JS** ***- Up & Going***  
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KYLE SIMPSON
+    KYLE SIMPSON
 
 
 # Rules
@@ -92,9 +92,9 @@
 
 # Calendar
 
-- ## [May 2018](https://github.com/Scylidose/100DaysOfCodeChallenge/May)
+- ## [May 2018](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/May)
 
-    - [Day 01](https://github.com/Scylidose/100DaysOfCodeChallenge/May/01.md) 
+    - [Day 01](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/May/01.md) 
 
 - ## June 2018
 
