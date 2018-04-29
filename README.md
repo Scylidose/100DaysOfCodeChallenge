@@ -19,6 +19,14 @@
     - [ ] **The Complete JavaScript Course 2018: Build Real Projects!**  
     JONAS SCHMEDTMANN
 
+    - [ ] **JavaScript30**
+
+    - [ ] **CSS ZEN GARDEN**
+
+    - [ ] **Grid Garden**
+
+    - [ ] **FrontEnd Masters**
+
     - [ ] *The* ***SassWay***  
 
     - [ ] **Front End Development**  
