@@ -30,11 +30,11 @@
     - [ ] *The* ***SassWay***  
 
     - [ ] **Front End Development**  
-        - [ ] **HTML5 and CSS**  
+        - [x] **HTML5 and CSS**  
 
-        - [ ] **Responsive Design with Bootstrap**  
+        - [x] **Responsive Design with Bootstrap**  
 
-        - [ ] **jQuery**  
+        - [x] **jQuery**  
 
         - [ ] **Basic Front End Development Projects**  
 
