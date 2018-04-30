@@ -7,8 +7,8 @@
 - Learned the basics of wireframes  
 
 - Done 2 differents wireframes for the TributePage (*freeCodeCamp*)
-![WireFrame1](img/wireframe1.png){:height="620px" width="791px"}
-![WireFrame2](img/wireframe2.png){:height="620px" width="791px"}
+![WireFrame1](img/wireframe1.png)
+![WireFrame2](img/wireframe2.png)
 
 - Started to code the TributePage (HTML5 and CSS3)
 
