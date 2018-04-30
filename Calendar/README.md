@@ -6,7 +6,8 @@
 
 - Learned the basics of wireframes  
 
-- Done 2 differents wireframes for the TributePage (*freeCodeCamp*)
+- Done 2 differents wireframes for the TributePage (*freeCodeCamp*)  
+
 ![WireFrame1](img/wireframe1.png)
 ![WireFrame2](img/wireframe2.png)
 
