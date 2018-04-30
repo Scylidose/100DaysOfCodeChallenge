@@ -103,18 +103,4 @@
 ### Started Sunday 29 April 2018  
 ### Should end Tuesday 07 August 2018  
 
-- ## [April 2018](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/Calendar/April)
-
-    - [Day 01](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/Calendar/April/01.md) 
-
-    - [Day 02](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/Calendar/April/02.md) 
-
-- ## [May 2018](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/Calendar/May)
-
-    - [Day 03](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/Calendar/May/03.md) 
-
-- ## June 2018
-
-- ## July 2018
-
-- ## August 2018
+Click [there](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/Calendar/README.md) and see my daily logs ! :v:
