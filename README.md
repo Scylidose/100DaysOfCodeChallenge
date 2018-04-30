@@ -103,4 +103,4 @@
 ### Started Sunday 29 April 2018  
 ### Should end Tuesday 07 August 2018  
 
-Click [there](https://github.com/Scylidose/100DaysOfCodeChallenge/blob/master/Calendar/README.md) and see my daily logs ! :v:
+Click [there](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/Calendar) and see my daily logs ! :v:
