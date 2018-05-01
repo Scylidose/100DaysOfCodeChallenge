@@ -2,6 +2,12 @@
 
 ## Day 03: 01 May 2018
 
+- Read how to use CSS grid.
+
+- Continued to code the TributePage, centering and align text and images.
+
+**Aprox Time:** ***1.5 hours***
+
 ## Day 02: 30 April 2018
 
 - Learned the basics of wireframes  
