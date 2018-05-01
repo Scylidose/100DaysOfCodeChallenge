@@ -6,6 +6,8 @@
 
 - Continued to code the TributePage, centering and align text and images.
 
+![TributePage1](img/tributepage1.png)
+
 **Aprox Time:** ***1.5 hours***
 
 ## Day 02: 30 April 2018
