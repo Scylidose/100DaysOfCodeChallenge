@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
@@ -13,26 +15,40 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="header">
-        <img src="img/logo.png">
+    <div class="header text-center">
+        <img src="img/logo.png" class="img-fluid" width="50px" height="50px">
     </div>
-    <div class="container">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <img src="img/banniere.png">
-            <img src="img/titre.png">
-            <div class="description">
-                <p></p>
-                <img src="img/description.png">
-                <p></p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <img src="img/banniere.png" class="img-fluid">
+                <div class="text-center">
+                    <img src="img/titre.png" class="img-fluid" width="500px" height="50px">
+                </div>
+                <div class="presentation">
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    Fusce mauris arcu, placerat in nunc vitae, ultrices <br>
+                    egestas risus. Curabitur vitae tempus diam. Nam tempor bibendum arcu, <br>
+                    nec faucibus sapien interdum nec. Duis quis lorem elit. Quisque nec ipsum <br>
+                    interdum nisl pretium tristique at id urna. Proin dictum consequat <br>
+                    diam in porta. Donec id convallis diam, vel convallis libero. <br>
+                </p>
+                <img src="img/description.png" style="vertical-align:middle" class="img-fluid" width="310px" height="200px">
             </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris arcu, placerat in nunc vitae, ultrices
+                egestas risus.</p>
         </div>
         <div class="col-md-2"></div>
     </div>
-    <div class="footer">
-
+    </div>
+    <div class="footer text-center">
+        <img src="img/copyright.png" class="img-fluid" width="50px" height="50px">
     </div>
 </body>
 
