@@ -1,0 +1,21 @@
+.header, .footer{
+    background-color: #333333;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.presentation {
+    display:table;
+}
+
+.description {
+    vertical-align: middle;
+    display: table-cell;
+}
