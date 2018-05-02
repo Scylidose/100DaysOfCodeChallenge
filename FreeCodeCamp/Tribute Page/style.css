@@ -1,9 +1,19 @@
-.header, .footer{
+.header{
+    background-color: #333333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.footer{
     background-color: #333333;
     overflow: hidden;
     position: relative;
     top: 0;
     width: 100%;
+    margin-top: 30px;
 }
 
 img {
@@ -16,6 +26,10 @@ img {
 }
 
 .description {
-    vertical-align: middle;
+    vertical-align: top;
     display: table-cell;
+}
+
+.img-responsive {
+    width: 100%;
 }
