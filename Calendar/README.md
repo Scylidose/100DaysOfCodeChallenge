@@ -1,5 +1,18 @@
 # 100 Days of Code Challenge
 
+## Day 04: 02 May 2018
+
+- Finished to code the TributePage (HTML5, CSS3, Bootstrap 4).
+
+Computer :  
+![TributePage2](img/tributepage-computer.png)  
+Tablet :  
+![TributePage2](img/tributepage-tablet.png)  
+Phone :  
+![TributePage2](img/tributepage-phone.png)  
+
+**Aprox Time:** ***1 hour***
+
 ## Day 03: 01 May 2018
 
 - Read how to use CSS grid.
@@ -8,7 +21,7 @@
 
 ![TributePage1](img/tributepage1.png)
 
-**Aprox Time:** ***1.5 hours***
+**Aprox Time:** ***1.5 hour***
 
 ## Day 02: 30 April 2018
 
