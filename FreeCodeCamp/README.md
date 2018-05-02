@@ -12,7 +12,9 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ### Basic Front End Development Projects
 
-* [Build a Tribute Page](https://github.com/Scylidose/)
+* [Build a Tribute Page](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Tribute%20Page)  
+
+![TributePage](../Calendar/img/tributepage-computer.png)  
 
 * [Build a Personal Portfolio Webpage](https://github.com/Scylidose/)
 
