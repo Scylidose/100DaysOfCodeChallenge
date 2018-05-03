@@ -3,6 +3,10 @@
     margin-top: 60px;
 }
 
+#experience {
+    margin-bottom: 50px;
+}
+
 .nav-tabs{
     overflow: hidden;
     position: fixed;
@@ -23,7 +27,13 @@ label {
 
 hr {
     border: 3px solid rgb(106, 212, 245);
+    margin-top:-5px;
 }
+
+.titre {
+    color: rgb(106, 212, 245);
+}
+
 table {
     margin: 0 auto;
 }
@@ -55,4 +65,16 @@ p {
     background-color: #e6e6e6;
     font-size: 20px;
     color: #333;
+}
+
+#formations {
+    border-radius: 5px;
+    width: 60%;
+    margin: 0px auto;
+    float: none;
+    color: #e6e6e6;
+}
+
+#formations td {
+    padding: 5px;
 }
