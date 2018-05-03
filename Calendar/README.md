@@ -18,7 +18,7 @@ Computer :
 ![TributePage2](img/tributepage-computer.png)  
 Tablet :  
 ![TributePage2](img/tributepage-tablet.png)  
-Phone : 
+Phone :   
 ![TributePage2](img/tributepage-phone.png)  
 
 **Aprox Time:** ***1 hour***
