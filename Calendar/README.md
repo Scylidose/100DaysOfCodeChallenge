@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 05: 03 May 2018
+
+- Done coding the Portfolio page for the *freeCodeCamp* (HTML5, CSS3, Bootstrap4, JavaScript, JQuery).
+
+![Portfolio](img/portfolio.png)  
+
+![PortfolioAnimated](img/portfolio.gif)  
+
+**Aprox Time:** ***2.5 hours***
+
 ## Day 04: 02 May 2018
 
 - Finished to code the TributePage (HTML5, CSS3, Bootstrap 4).
@@ -8,7 +18,7 @@ Computer :
 ![TributePage2](img/tributepage-computer.png)  
 Tablet :  
 ![TributePage2](img/tributepage-tablet.png)  
-Phone :  
+Phone : 
 ![TributePage2](img/tributepage-phone.png)  
 
 **Aprox Time:** ***1 hour***
