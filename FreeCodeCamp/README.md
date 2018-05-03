@@ -16,7 +16,9 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ![TributePage](../Calendar/img/tributepage-computer.png)  
 
-* [Build a Personal Portfolio Webpage](https://github.com/Scylidose/)
+* [Build a Personal Portfolio Webpage](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Portfolio)  
+
+![Portfolio](../Calendar/img/portfolio.png)  
 
 ### Intermediate Front End Development Projects
 
