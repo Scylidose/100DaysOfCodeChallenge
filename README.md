@@ -36,7 +36,7 @@
 
         - [x] **jQuery**  
 
-        - [ ] **Basic Front End Development Projects**  
+        - [x] **Basic Front End Development Projects**  
 
         - [ ] **Basic JavaScript**  
 
