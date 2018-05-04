@@ -1,5 +1,19 @@
 # 100 Days of Code Challenge
 
+## Day 08: 06 May 2018
+
+
+## Day 07: 05 May 2018
+
+
+## Day 06: 04 May 2018
+
+- Completed Basic JavaScript (*freeCodeCamp*)  
+
+- Object Oriented and Functional Programming (*freeCodeCamp*)  
+
+**Aprox Time:** ***2 hours***  
+
 ## Day 05: 03 May 2018
 
 - Done coding the Portfolio page for the *freeCodeCamp* (HTML5, CSS3, Bootstrap4, JavaScript, JQuery).
