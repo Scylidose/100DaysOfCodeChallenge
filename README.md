@@ -38,9 +38,9 @@
 
         - [x] **Basic Front End Development Projects**  
 
-        - [ ] **Basic JavaScript**  
+        - [x] **Basic JavaScript**  
 
-        - [ ] **Object Oriented and Functional Programming**  
+        - [x] **Object Oriented and Functional Programming**  
 
         - [ ] **Basic Algorithm Scripting**  
 
