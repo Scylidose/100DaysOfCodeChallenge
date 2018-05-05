@@ -5,12 +5,15 @@
 
 ## Day 07: 05 May 2018
 
+- Completed Basic Algorithm Scripting (*freeCodeCamp*)
+
+**Aprox Time:** ***1.5 hour***  
 
 ## Day 06: 04 May 2018
 
 - Completed Basic JavaScript (*freeCodeCamp*)  
 
-- Object Oriented and Functional Programming (*freeCodeCamp*)  
+- Completed Object Oriented and Functional Programming (*freeCodeCamp*)  
 
 **Aprox Time:** ***2 hours***  
 
