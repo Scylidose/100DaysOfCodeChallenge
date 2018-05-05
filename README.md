@@ -42,7 +42,7 @@
 
         - [x] **Object Oriented and Functional Programming**  
 
-        - [ ] **Basic Algorithm Scripting**  
+        - [x] **Basic Algorithm Scripting**  
 
         - [ ] **JSON APIs and Ajax**  
 
