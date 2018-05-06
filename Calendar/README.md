@@ -2,6 +2,11 @@
 
 ## Day 08: 06 May 2018
 
+- Completed JSON APIs and Ajax (*freeCodeCamp*)
+
+- Continued the *The Advanced Web Developer Bootcamp* course
+
+**Aprox Time:** ***1 hour***
 
 ## Day 07: 05 May 2018
 
