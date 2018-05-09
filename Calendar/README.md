@@ -2,9 +2,11 @@
 
 ## Day 11: 09 May 2018
 
-- Started the Random Quote Machine (*freeCodeCamp*).  
+- Started the Random Quote Machine (HTML, JavaScript and JQuery), defined list of quotes, create function that retrieved a random quote with an image of the author.
 
-**Aprox Time:** ***1 hour***
+![RandomQuote](img/quote1.png)  
+
+**Aprox Time:** ***1.5 hour***
 
 ## Day 10: 08 May 2018
 
