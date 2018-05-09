@@ -1,5 +1,25 @@
 # 100 Days of Code Challenge
 
+## Day 11: 09 May 2018
+
+- Started the Random Quote Machine (*freeCodeCamp*).  
+
+**Aprox Time:** ***1 hour***
+
+## Day 10: 08 May 2018
+
+- Read few articles about web development jobs, tricks and front-end cheatsheets.  
+
+**Aprox Time:** ***1 hour***
+
+## Day 09: 07 May 2018
+
+- Read articles about CSS selectors.  
+
+- Read articles about tricks in CSS. (https://css-tricks.com/).  
+
+**Aprox Time:** ***1 hour***
+
 ## Day 08: 06 May 2018
 
 - Completed JSON APIs and Ajax (*freeCodeCamp*)
