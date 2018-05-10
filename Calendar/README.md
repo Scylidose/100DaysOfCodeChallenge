@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 12: 10 May 2018
+
+- Read about JQuery functions from the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT).
+
+- Continue the Random Quote Machine (*freeCodeCamp*). Added a button that can tweet the actual quote, avoid div resize, added new margin, padding and radius and added fade transition between quotes.
+
+![RandomQuote](img/quote2.png)  
+
+**Aprox Time:** ***2.5 hours***
+
 ## Day 11: 09 May 2018
 
 - Started the Random Quote Machine (HTML, JavaScript and JQuery), defined list of quotes, create function that retrieved a random quote with an image of the author.
