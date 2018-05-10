@@ -15,8 +15,13 @@ var quotes = [deVinci, einstein, freud, pythagore];
 function getQuotes() {
     var tab = quotes[Math.floor(Math.random() * quotes.length)];
 
-    $("#phrase").text(tab[Math.floor(Math.random() * tab.length)]);
-
-    $(".image").remove();
-    $("#profil").prepend('<img class="image" src="img/' + tab.name + '.jpg">');
+    $('#phrase').fadeOut("slow", function () {
+        $("#phrase").text(tab[Math.floor(Math.random() * tab.length)]);
+        $('#phrase').fadeIn("slow");
+    });
+    $('#profil').fadeOut("slow", function () {
+        $(".image").remove();
+        $("#profil").prepend('<img class="image" src="img/' + tab.name + '.jpg">');
+        $('#profil').fadeIn("slow");
+    });
 }
