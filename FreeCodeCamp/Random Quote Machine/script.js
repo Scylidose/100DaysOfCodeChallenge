@@ -33,3 +33,15 @@ function getQuotes() {
         $('.author').fadeIn("slow");
     });
 }
+
+$(document).ready(function() {
+    var screenWidth = $(window).width();
+    var screenHeight = $(window).height();
+
+    $('#citation').css('width', screenWidth/2 + 'px');
+    $('#citation').css('height', screenHeight/2 + 'px');
+});
+
+function postTwitter() {
+    $("a").attr("href", "https://twitter.com/intent/tweet?text=" + $("#phrase").html());
+}
