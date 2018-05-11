@@ -22,7 +22,9 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ### Intermediate Front End Development Projects
 
-* [Build a Random Quote Machine](https://github.com/Scylidose/)
+* [Build a Random Quote Machine](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Random%20Quote%20Machine)
+
+![RandomQuoteMachine](../Calendar/img/quote3.gif)
 
 * [Show the Local Weather](https://github.com/Scylidose/)
 
