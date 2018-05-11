@@ -1,5 +1,19 @@
 # 100 Days of Code Challenge
 
+## Day 13: 11 May 2018
+
+- Read about DOM Tree from the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT).
+
+- Drawn a DOM Tree related to the Random Quote Machine (*freeCodeCamp*).
+
+- Finished the Random Quote Machine (*freeCodeCamp*). Added new style.
+
+![DOMTree](img/domtree.png)
+
+![RandomQuote](img/quote3.gif)  
+
+**Aprox Time:** ***2 hours***
+
 ## Day 12: 10 May 2018
 
 - Read about JQuery functions from the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT).
