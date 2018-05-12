@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 14: 12 May 2018
+
+- Started the Local Weather generator (*freeCodeCamp*). Added bootstrap, added toggle button (HTML5, CSS3) from proto.io, added geolocalisation, show celsius or fahranheit and local weather (Javascript, JQuery).
+
+![Weather](img/weather1.png)
+
+**Aprox Time:** ***1.5 hour***
+
 ## Day 13: 11 May 2018
 
 - Read about DOM Tree from the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT).
