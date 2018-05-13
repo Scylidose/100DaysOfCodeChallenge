@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 15: 13 May 2018
+
+- Finished the Local Weather generator(*freeCodeCamp*). Can now show flag country, city, wind speed with estimation given by [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale) 
+
+![Weather](img/weather2.gif)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 14: 12 May 2018
 
 - Started the Local Weather generator (*freeCodeCamp*). Added bootstrap, added toggle button (HTML5, CSS3) from proto.io, added geolocalisation, show celsius or fahranheit and local weather (Javascript, JQuery).
