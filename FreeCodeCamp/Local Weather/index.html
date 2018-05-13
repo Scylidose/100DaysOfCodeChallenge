@@ -17,18 +17,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>    
+
     <link rel="stylesheet" href="style.css">
 
     <script src="script.js"></script>
 </head>
 
 <body onload="getLocation();">
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6 text-center">
-                <h3>Local Weather</h3>
+                <h3 style="margin: 30px 30px;"><b><i>LOCAL WEATHER</i></b></h3>
                     <!-- TOGGLE BUTTON FROM https://proto.io/freebies/onoff/ -->
                     <div class="onoffswitch">
                         <input onclick="setDegrees();" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -38,7 +39,7 @@
                         </label>
                 </div>
                 <div id="weather">
-                    <p></p>
+                    <p id="type"></p>
                 </div>
             </div>
             <div class="col-md-3"></div>
