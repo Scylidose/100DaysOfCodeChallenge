@@ -26,9 +26,11 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ![RandomQuoteMachine](../Calendar/img/quote3.gif)
 
-* [Show the Local Weather](https://github.com/Scylidose/)
+* [Show the Local Weather](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Local%20Weather)
 
-* Build a Wikipedia Viewer
+![LocalWeather](../Calendar/img/weather2.gif)
+
+* [Build a Wikipedia Viewer](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Wikipedia%20Viewer)
 
 * Use the Twitch.tv JSON API
 
