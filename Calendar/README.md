@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 16: 14 May 2018
+
+- Started the Wikipedia Viewer project (*freeCodeCamp*). Added wikipedia logo, search bar and button. Animated placeholder and fadeIn when page is ready.
+
+![Wikipedia](img/wikipedia1.gif)
+
+**Aprox Time:** ***2 hours***
+
 ## Day 15: 13 May 2018
 
 - Finished the Local Weather generator(*freeCodeCamp*). Can now show flag country, city, wind speed with estimation given by [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale) 
