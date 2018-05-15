@@ -32,6 +32,8 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 * [Build a Wikipedia Viewer](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Wikipedia%20Viewer)
 
+![Wikipedia](../Calendar/img/wikipedia2.gif)
+
 * Use the Twitch.tv JSON API
 
 ### Advanced Front End Development Projects
