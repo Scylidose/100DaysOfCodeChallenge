@@ -32,16 +32,22 @@
             <div class="col-md-3"></div>
             <div class="col-md-6 mx-auto text-center">
                 <img src="img/wikipedia-logo.jpg" width="402" height="250" class="img-fluid">
-                <form id="search" onsubmit="rechercher()" class="form-inline justify-content-center" action="#">
-                    <input size="35" class="form-control mr-sm-2" id="words" name="fieldname" placeholder="Search something on Wikipedia!" aria-label="Search something on Wikipedia!">
+                <form id="search" class="form-inline justify-content-center">
+                    <input size="35" class="form-control mr-sm-2" id="words" placeholder="Search something on Wikipedia!" value="">
                     <button type="submit" class="btn">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
+                <button class="btn" id="random" style="margin-top:10px;border: 1px black solid;">
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">
+                    <i class="fas fa-book-open"></i> Search randomly something!</a></button>
+                <div id="results">
+                </div>
             </div>
             <div class="col-md-3"></div>
         </div>
     </div>
+
     <script src="js/placeholdem.min.js"></script>
     <script>
         Placeholdem(document.querySelectorAll('[placeholder]'));
