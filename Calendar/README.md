@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 17: 15 May 2018
+
+- Read documentation about JSONP method.
+
+- Finished the Wikipedia Viewer project (*freeCodeCamp*). Added Ajax request, animation and style for results.
+
+![Wikipedia](img/wikipedia2.gif)
+
+**Aprox Time:** ***2.5 hours***
+
 ## Day 16: 14 May 2018
 
 - Started the Wikipedia Viewer project (*freeCodeCamp*). Added wikipedia logo, search bar and button. Animated placeholder and fadeIn when page is ready.
