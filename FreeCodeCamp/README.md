@@ -34,7 +34,7 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ![Wikipedia](../Calendar/img/wikipedia2.gif)
 
-* Use the Twitch.tv JSON API
+* [Use the Twitch.tv JSON API](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Use%20the%20Twitch.tv%20JSON%20API)
 
 ### Advanced Front End Development Projects
 
