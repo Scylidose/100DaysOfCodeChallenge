@@ -1,0 +1,40 @@
+body {
+    background-color: #6344A3;
+}
+
+#live, #search {
+    display: none;
+}
+
+.user h5{
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.user {
+    width: 350px;
+    height:180px;
+    margin:20px 20px;
+    padding:5px;
+    border: 5px solid white;
+}
+
+.user p{
+    text-align: left;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
