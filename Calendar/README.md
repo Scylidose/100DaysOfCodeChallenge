@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 18: 16 May 2018
+
+- Started the Twitch.tv JSON API project (*freeCodeCamp*). Added twitch logo, search bar (from the wikipedia project), added box containing author, title, preview and link for channels in a list.
+
+![Twitch](img/twitch1.gif)
+
+**Aprox Time:** ***1.5 hour***
+
 ## Day 17: 15 May 2018
 
 - Read documentation about JSONP method.
