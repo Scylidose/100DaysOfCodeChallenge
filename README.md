@@ -46,7 +46,7 @@
 
         - [x] **JSON APIs and Ajax**  
 
-        - [ ] **Intermediate Front End Development Projects**  
+        - [x] **Intermediate Front End Development Projects**  
 
         - [ ] **Intermediate Algorithm Scripting**  
 
