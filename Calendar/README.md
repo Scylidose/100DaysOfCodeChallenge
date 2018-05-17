@@ -6,7 +6,10 @@
 
 ![Twitch](img/twitch2.gif)
 
-**Aprox Time:** ***1 hour***
+- I reorganized my gitHub repositories (deleted some repositories and added new ones with old projects).
+
+
+**Aprox Time:** ***2 hours***
 
 ## Day 18: 16 May 2018
 
