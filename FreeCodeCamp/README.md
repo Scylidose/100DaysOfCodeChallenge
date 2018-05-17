@@ -36,6 +36,9 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 * [Use the Twitch.tv JSON API](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Use%20the%20Twitch.tv%20JSON%20API)
 
+
+![Twitch TV JSON API](../Calendar/img/twitch2.gif)
+
 ### Advanced Front End Development Projects
 
 * Build a Javascript Calculator
