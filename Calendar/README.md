@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 19: 17 May 2018
+
+- Finished the Twitch.tv JSON API project (*freeCodeCamp*). Added the ability to search if someone is living, now can show author that are not living and added new fadeIn transition.
+
+![Twitch](img/twitch2.gif)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 18: 16 May 2018
 
 - Started the Twitch.tv JSON API project (*freeCodeCamp*). Added twitch logo, search bar (from the wikipedia project), added box containing author, title, preview and link for channels in a list.
