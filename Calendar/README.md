@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 20: 18 May 2018
+
+Time to move on from freeCodeCamp projects for a while :D  
+
+- Done the *DOM Manipulation* and the *Advanced DOM Manipulation* from The Web Developer Bootcamp.
+
+**Aprox Time:** ***1.5 hour***
+
 ## Day 19: 17 May 2018
 
 - Finished the Twitch.tv JSON API project (*freeCodeCamp*). Added the ability to search if someone is living, now can show author that are not living and added new fadeIn transition.
