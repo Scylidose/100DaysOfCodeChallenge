@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 21: 19 May 2018
+
+- Continue the courses from The Web Developer Bootcamp, watched the Color Game project directives.
+
+- Read some chapters about CSS grid from the book : **HTML & CSS** *design and build websites* (JON DUCKETT)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 20: 18 May 2018
 
 Time to move on from freeCodeCamp projects for a while :D  
