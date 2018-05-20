@@ -8,6 +8,7 @@ h1, h2, span{
 
 .square {
     border-radius: 20%;
+    border: 2px white solid;
     width: 30%;
     padding-bottom: 30%;
     float: left;

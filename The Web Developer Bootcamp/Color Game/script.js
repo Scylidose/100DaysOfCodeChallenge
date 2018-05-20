@@ -16,29 +16,30 @@ resetButton.addEventListener("click", function() {
 	colorDisplay.textContent = pickedColor;
 	//change colors of squares
 	for(var i = 0; i < squares.length; i++) {
-		squares[i].style.background = colors[i];
+		squares[i].style.backgroundColor = colors[i];
 	}
-	header.style.background = "#232323";
+	header.style.backgroundColor = "#232323";
 });
 
 colorDisplay.textContent = pickedColor;
 
 for(var i = 0; i < squares.length; i++){
 	// add initial colors to squares
-	squares[i].style.background = colors[i];
+	squares[i].style.backgroundColor = colors[i];
 
 	//add click listeners to squares
 	squares[i].addEventListener("click", function() {
 		//grab color of clicked squares
-		var clickedColor = this.style.background;
+		var clickedColor = this.style.backgroundColor;
 		//compare color to pickedColor
 		if(clickedColor === pickedColor) {
 			messageDisplay.textContent = "Correct!";
 			resetButton.textContent = "Play Again?";
 			changeColors(clickedColor);
-			header.style.background = clickedColor;
+			header.style.backgroundColor = clickedColor;
 		} else {
-			this.style.background = "#232323";
+            this.style.backgroundColor = "#232323";
+            this.style.border = "none";
 			messageDisplay.textContent = "Try Again";
 		}
 	});
@@ -48,7 +49,9 @@ function changeColors(color) {
 	//loop through all squares
 	for(var i = 0; i < squares.length; i++) {
 		//change each color to match given color
-		squares[i].style.background = color;
+        squares[i].style.backgroundColor = color;
+        squares[i].style.border = "2px white solid";
+
 	}
 }
 
