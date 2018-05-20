@@ -1,6 +1,6 @@
 # 100 Days of Code Challenge
 
-## Day 222: 20 May 2018
+## Day 22: 20 May 2018
 
 - Started the Color Game project (*The Web Developer Bootcamp*). Added random color generator, show RGB code to find, can play it (win or lose) and start new game after a win.
 
