@@ -1,5 +1,19 @@
 # 100 Days of Code Challenge
 
+## Day 23: 21 May 2018
+
+- Finished the Color Game project (*The Web Developer Bootcamp*). Added score and attempts mechanics, can now switch between modes, added style and refactored some code.
+
+My solution :
+
+![ColorGame](img/color2.gif)
+
+Colt Steele solution : 
+
+![ColorSolution](img/colorsolution.gif)
+
+**Aprox Time:** ***2 hours***
+
 ## Day 22: 20 May 2018
 
 - Started the Color Game project (*The Web Developer Bootcamp*). Added random color generator, show RGB code to find, can play it (win or lose) and start new game after a win.
