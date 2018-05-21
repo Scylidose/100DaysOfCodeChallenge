@@ -1,0 +1,9 @@
+.list {
+    border: 1px black solid;
+    width: 366px;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through; 
+}
