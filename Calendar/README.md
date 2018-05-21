@@ -2,6 +2,12 @@
 
 ## Day 23: 21 May 2018
 
+- Started the TODO List project (*The Web Developer Bootcamp*). Can add, deleted and mark as finished To-Do elements.
+
+![ToDo](img/todo1.gif)
+
+- Done Intro to jQuery and Advanced jQuery (*The Web Developer Bootcamp*).
+
 - Finished the Color Game project (*The Web Developer Bootcamp*). Added score and attempts mechanics, can now switch between modes, added style and refactored some code.
 
 My solution :
@@ -12,7 +18,7 @@ Colt Steele solution :
 
 ![ColorSolution](img/colorsolution.gif)
 
-**Aprox Time:** ***2 hours***
+**Aprox Time:** ***4 hours***
 
 ## Day 22: 20 May 2018
 
