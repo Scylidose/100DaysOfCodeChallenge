@@ -1,10 +1,47 @@
 body {
     background-color: #232323;
+    margin: 0;
 }
 
-h1, h2, span{
+h1, h2, .spanWhite {
     color: white;
     text-shadow: -1px 0 #232323, 0 1px #232323, 1px 0 #232323, 0 -1px #232323;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    line-height: 1.1;
+    padding: 10px 0;
+    font-weight: normal;
+}
+
+#pickedColor {
+    font-size: 200%;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: #232323;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+button:hover {
+    color:white;
+    background-color: #232323;
+}
+
+.game {
+    margin: 20px auto;
 }
 
 .square {
@@ -14,4 +51,18 @@ h1, h2, span{
     padding-bottom: 30%;
     float: left;
     margin: 1.6%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.centre {
+    background-color: white;
+    color: #232323;
+    height: 38px;
+}
+
+.selected {
+    background-color: #232323;
+    color: white;
 }
