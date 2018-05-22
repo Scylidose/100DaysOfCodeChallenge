@@ -1,10 +1,127 @@
+body {
+    font-family: 'Slabo', serif;
+    background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%);
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%);
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%);
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%);
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%);
+    /* W3C */
+}
+
+h1 {
+    background-color: #2980b9;
+    color: white;
+    margin: 0px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    background-color: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(43, 43, 43);
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
+li:nth-child(2n) {
+    background-color: #f7f7f7;
+}
+
+input {
+    font-size: 15px;
+    background-color: #f7f7f7;
+    width: 40.5%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    color: #2980b9;
+    border: 2px rgb(0, 0, 0, 0) solid;
+}
+
+input:focus {
+    background-color: white;
+    border: 2px #2980b9 solid;
+    outline: none;
+}
+
+span:not(.date) {
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0px;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #2980b9;
+    margin-left:50px;
+}
+
 .list {
-    margin: 20px 20px;
-    border: 1px black solid;
+    margin: 100px auto;
     width: 366px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+.important {
+    width: 17%;
+    font-size: 15px;
+    color: rgb(216, 30, 30);
+    padding: 0;
+    border: none;
+    background-color: #f7f7f7;
+    height: 45px;
+    font-size: 20px;
+}
+
+.clicked {
+    border: 2px rgb(216, 30, 30) solid;
+}
+
+button {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+.todo {
+    margin-left: 3px;
+}
+
+.fa-plus, .fa-minus {
+    float: right;
 }
 
 .completed {
     color: gray;
-    text-decoration: line-through; 
+    text-decoration: line-through;
 }
