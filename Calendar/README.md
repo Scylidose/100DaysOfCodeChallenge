@@ -2,7 +2,21 @@
 
 ## Day 23: 21 May 2018
 
-- Started the TODO List project (*The Web Developer Bootcamp*). Can add, deleted and mark as finished To-Do elements.
+- Finished the TODO List project (*The Web Developer Bootcamp*). Added icons, fade transition, added important button and show date.
+
+My solution :
+
+![ToDo2](img/todo2.gif)
+
+Colt Steele solution : 
+
+![ToDoSolution](img/todosolution.gif)
+
+**Aprox Time:** ***3 hours***
+
+## Day 23: 21 May 2018
+
+- Started the TODO List project (*The Web Developer Bootcamp*). Can add, delete and mark as finished To-Do elements.
 
 ![ToDo](img/todo1.gif)
 
