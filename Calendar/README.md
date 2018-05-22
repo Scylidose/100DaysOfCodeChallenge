@@ -1,6 +1,6 @@
 # 100 Days of Code Challenge
 
-## Day 23: 21 May 2018
+## Day 24: 22 May 2018
 
 - Finished the TODO List project (*The Web Developer Bootcamp*). Added icons, fade transition, added important button and show date.
 
