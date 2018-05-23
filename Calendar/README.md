@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 25: 23 May 2018
+
+- Done few algorithms from the Intermediate Algorithm Scripting (*freeCodeCamp*).
+
+- Done the Patatap Clone project (*The Web Developer Bootcamp*).
+
+**Aprox Time:** ***2 hours***
+
 ## Day 24: 22 May 2018
 
 - Finished the TODO List project (*The Web Developer Bootcamp*). Added icons, fade transition, added important button and show date.
