@@ -1,5 +1,14 @@
 # 100 Days of Code Challenge
 
+## Day 26: 24 May 2018
+
+- Done few algorithms from the Intermediate Algorithm Scripting (*freeCodeCamp*).
+
+- Corrected some issue in previous freeCodeCamp projects, created pen for each project and submited it.
+
+**Aprox Time:** ***2 hours***
+
+
 ## Day 25: 23 May 2018
 
 - Done few algorithms from the Intermediate Algorithm Scripting (*freeCodeCamp*).
