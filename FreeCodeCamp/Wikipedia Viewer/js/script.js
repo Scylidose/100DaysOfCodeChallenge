@@ -20,8 +20,10 @@ function show(data) {
 
     for (let i = 0; i < data.length; i++) {
         setTimeout(function timer() {
-            $("#results").append("<div class='result'><a target='_blank' href='" + data[3][i] + "'><h4><i><b>" + data[1][i] + "</b></i></h4><p>" + data[2][i] + "</p></a></div>");
-            $(".result").fadeIn(3000);
+            if(data[3][i] != undefined){
+                $("#results").append("<div class='result'><a target='_blank' href='" + data[3][i] + "'><h4><i><b>" + data[1][i] + "</b></i></h4><p>" + data[2][i] + "</p></a></div>");
+                $(".result").fadeIn(3000);
+            }
         }, i * 500);
     }
 }
