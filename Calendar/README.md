@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 27: 25 May 2018
+
+- Finisshed the Intermediate Algorithm Scripting (*freeCodeCamp*).
+
+**Aprox Time:** ***1 hour***
+
 ## Day 26: 24 May 2018
 
 - Done few algorithms from the Intermediate Algorithm Scripting (*freeCodeCamp*).
