@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Flags Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 col">
+                <div id="calc" class="col">
+                    <p id="modele">NG-1409</p>
+                    <input type="text" id="show" value="" disabled>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="font-size: 12px; background-color: rgb(190, 38, 190)" id="init">ON/C</button>
+                            </td>
+                            <td>
+                                <button id="reset" onclick="reset()">CE</button>
+                            </td>
+                            <td>
+                                <button>√</button>
+                            </td>
+                            <td>
+                                <button>%</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button style="font-size: 12px;">MRC</button>
+                            </td>
+                            <td>
+                                <button>M-</button>
+                            </td>
+                            <td>
+                                <button>M+</button>
+                            </td>
+                            <td>
+                                <button>÷</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button>7</button>
+                            </td>
+                            <td>
+                                <button>8</button>
+                            </td>
+                            <td>
+                                <button>9</button>
+                            </td>
+                            <td>
+                                <button>x</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button>4</button>
+                            </td>
+                            <td>
+                                <button>5</button>
+                            </td>
+                            <td>
+                                <button>6</button>
+                            </td>
+                            <td>
+                                <button>-</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button>1</button>
+                            </td>
+                            <td>
+                                <button>2</button>
+                            </td>
+                            <td>
+                                <button>3</button>
+                            </td>
+                            <td>
+                                <button>+</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button>0</button>
+                            </td>
+                            <td>
+                                <button>.</button>
+                            </td>
+                            <td>
+                                <button>+/-</button>
+                            </td>
+                            <td>
+                                <button>=</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
