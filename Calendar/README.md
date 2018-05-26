@@ -1,8 +1,22 @@
 # 100 Days of Code Challenge
 
+## Day 28: 26 May 2018
+
+- Started the JavaScript Calculator (*freeCodeCamp*). Added div, buttons, input and text for the calculator, added style for the body and the calculator and added click events (numbers, reset, ON/OFF) and added an indicator that show if the calculator is ON or not.
+
+![Calculator1](img/calculator1.gif)
+
+I decided to replicate one of my calculator found recently on my desk 😆
+
+There it is : 
+
+![RealCalculator](img/realcalc.png)
+
+**Aprox Time:** ***2 hours***
+
 ## Day 27: 25 May 2018
 
-- Finisshed the Intermediate Algorithm Scripting (*freeCodeCamp*).
+- Finished the Intermediate Algorithm Scripting (*freeCodeCamp*).
 
 **Aprox Time:** ***1 hour***
 
