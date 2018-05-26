@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Digital-7";
+    src: url('font/digital-7.ttf');
+}
+
+body {
+    background: url(img/wood.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#calc {
+    border-right: 10px solid orange;
+    border-left: 10px solid orange;
+    width: 290px;
+    border-radius: 10%;
+    margin: 50px 50px;
+    background-color: white;
+}
+
+#modele {
+    color: orange;
+    font-size: 20px;
+    padding: 0 25px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+input {
+    font-family: "Digital-7", Helvetica, Arial, sans-serif;
+    text-align: right;
+    background-color: #8F846A;
+    font-size: 45px;
+    width: 220px;
+    padding: 0 10px;
+    font-weight: bold;
+    margin: 10px 10px;
+    border-radius: 10px;
+    border-color: white;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+}
+
+td button {
+    width: 45px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border-radius: 100%;
+}
