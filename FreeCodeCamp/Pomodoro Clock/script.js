@@ -23,6 +23,7 @@ $(document).ready(function () {
 
             if (minutes == "00" && secondes == "00") {
                 //Finished
+                clearInterval(interval);
             }
 
             if (minutes > "09" && secondes == 60) {
