@@ -49,6 +49,11 @@ $(document).ready(function () {
 
         }, 1000);
     });
+
+    $("#stop").click(function () {
+        clearInterval(interval);
+    });
+
     $("#reset").click(function () {
         minutes = 25;
         secondes = "00";
