@@ -48,7 +48,7 @@
 
         - [x] **Intermediate Front End Development Projects**  
 
-        - [ ] **Intermediate Algorithm Scripting**  
+        - [x] **Intermediate Algorithm Scripting**  
 
         - [ ] **Advances Algorithm Scripting**  
 
