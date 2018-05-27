@@ -6,7 +6,7 @@ var enters2 = "";
 var operation = "";
 var equal = false;
 
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
 var operations = ["+", "-", "x", "÷"];
 
 $(document).ready(function () {
@@ -68,18 +68,20 @@ $(document).ready(function () {
         }
 
         $(".basic").click(function () {
-            if (enters2 != "") {
-                if (operation == "x") {
-                    operation = "*";
-                } else if (operation == "÷") {
-                    operation = "/";
+            if (on) {
+                if (enters2 != "") {
+                    if (operation == "x") {
+                        operation = "*";
+                    } else if (operation == "÷") {
+                        operation = "/";
+                    }
+                    enters = eval(enters + " " + operation + " " + enters2);
+                    operation = "";
+                    enters2 = "";
                 }
-                enters = eval(enters + " " + operation + " " + enters2);
-                operation = "";
-                enters2 = "";
+                $("input").val($(this).text());
+                operation = $(this).text();
             }
-            $("input").val($(this).text());
-            operation = $(this).text();
         });
     });
 });
@@ -122,4 +124,21 @@ function result() {
     }
 }
 
+function square(){
+    if (on) {
+        $("input").val(Math.sqrt(parseInt(enters)));
+        enters = $("input").val();
+    }
+}
+
+function percentage(){
+    if(on){
+        $("input").val($("input").val() + "%");
+        if(enters2 == ""){
+            enters = enters / 100;
+        }else {
+            enters2 = enters2 * 100 / enters;
+        }
+    }
+}
 
