@@ -12,7 +12,7 @@
 
 ![Calculator2](img/calculator2.gif)
 
-**Aprox Time:** ***2.5 hours***
+**Aprox Time:** ***4 hours***
 
 ## Day 28: 26 May 2018
 
