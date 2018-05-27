@@ -2,11 +2,17 @@
 
 ## Day 29: 27 May 2018
 
+- Started the Pomodoro Clock (*freeCodeCamp*). Can set minutes and seconds, start, stop and reset the timer and can show the time.
+
+![Pomodoro1](img/pomodoro1.gif)
+
+- Read informations about he Pomodoro technique.
+
 - Finished the JavaScript Calculator (*freeCodeCamp*). Added percentage, square, decimal and basics arithmetics operations. Disabled Memory related buttons.
 
 ![Calculator2](img/calculator2.gif)
 
-**Aprox Time:** ***2 hours***
+**Aprox Time:** ***2.5 hours***
 
 ## Day 28: 26 May 2018
 
