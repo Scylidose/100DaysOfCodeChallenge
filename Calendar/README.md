@@ -2,6 +2,14 @@
 
 ## Day 28: 26 May 2018
 
+- Finished the JavaScript Calculator (*freeCodeCamp*). Added percentage, square, decimal and basics arithmetics operations. Disabled Memory related buttons.
+
+![Calculator2](img/calculator2.gif)
+
+**Aprox Time:** ***2 hours***
+
+## Day 28: 26 May 2018
+
 - Started the JavaScript Calculator (*freeCodeCamp*). Added div, buttons, input and text for the calculator, added style for the body and the calculator and added click events (numbers, reset, ON/OFF) and added an indicator that show if the calculator is ON or not.
 
 ![Calculator1](img/calculator1.gif)
