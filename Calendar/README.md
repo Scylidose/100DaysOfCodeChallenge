@@ -1,6 +1,6 @@
 # 100 Days of Code Challenge
 
-## Day 28: 26 May 2018
+## Day 29: 27 May 2018
 
 - Finished the JavaScript Calculator (*freeCodeCamp*). Added percentage, square, decimal and basics arithmetics operations. Disabled Memory related buttons.
 
