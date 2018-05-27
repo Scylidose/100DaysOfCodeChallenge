@@ -6,7 +6,7 @@
 
 ![Pomodoro1](img/pomodoro1.gif)
 
-- Read informations about he Pomodoro technique.
+- Read informations about the Pomodoro technique.
 
 - Finished the JavaScript Calculator (*freeCodeCamp*). Added percentage, square, decimal and basics arithmetics operations. Disabled Memory related buttons.
 
