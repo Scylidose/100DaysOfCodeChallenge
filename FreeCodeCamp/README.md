@@ -41,7 +41,9 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ### Advanced Front End Development Projects
 
-* Build a Javascript Calculator
+* [Build a Javascript Calculator](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/JavaScript%20Calculator)
+
+![Javascript Calculator](../Calendar/img/calculator2.gif)
 
 * Build a Pomodoro Clock
 
