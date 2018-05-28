@@ -1,0 +1,31 @@
+body {
+    background: url(img/background-clock.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.timer {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: 1px 1px 1px 3px rgb(72, 228, 228);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 50px 50px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
+    color: rgb(72, 228, 228);
+}
+
+.borderAnim {
+    box-shadow: 1px 1px 1px 10px rgb(72, 228, 228);
+}
