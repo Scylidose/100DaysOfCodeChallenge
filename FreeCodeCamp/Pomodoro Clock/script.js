@@ -28,9 +28,6 @@ $(document).ready(function () {
         $(".timer").val(minutes + " : " + secondes);
         clearInterval(interval);
         $(".lecture").replaceWith("<button class='lecture' id='start' onclick='play()'><i class='fas fa-play'></i></button>");
-
-        $("#setMinutes").val("");
-        $("#setSecondes").val("");
     });
 });
 
