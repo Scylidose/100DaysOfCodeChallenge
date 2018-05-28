@@ -71,7 +71,7 @@
 
 
 - ## Books
-    - [ ] **HTML & CSS** *design and build websites*  
+    - [x] **HTML & CSS** *design and build websites*  
     JON DUCKETT
 
     - [ ] **JAVASCRIPT & JQUERY** *interactive front-end web development*  
