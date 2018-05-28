@@ -23,19 +23,28 @@ button, button:focus {
 }
 
 button:hover {
-    color:rgb(69, 204, 204);  
+    color: rgb(69, 204, 204);
 }
 
 #minSetter, #secSetter {
     margin: 10px 20px;
     height: 150px;
     width: 150px;
+    border: 1px rgb(72, 228, 228) solid;
     border-radius: 50%;
-    border: 5px rgb(182, 253, 75) solid;
     color: rgb(72, 228, 228);
     font-size: 15px;
     font-weight: bold;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
+
+#minSetter:hover, #secSetter:hover {
+    border: 3px rgb(72, 228, 228) solid;
+}
+
 
 #setMinutes, #setSecondes {
     font-weight: bold;
@@ -59,8 +68,6 @@ button:hover {
 #set {
     font-weight: bold;
     font-family: "Stencil Std, fantasy";
-    border: 1px rgb(72, 228, 228) solid;
-    border-radius: 10%;
     margin: 10px 0px;
 }
 
