@@ -17,7 +17,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 
@@ -30,17 +31,33 @@
             <div class="col-md-3"></div>
             <div class="col-md-6 text-center">
                 <div id="pomodoro">
-                    <input type="text" id="clock" class="borderAnim timer" disabled><br>
-                    <button class="lecture" id="start" onclick="play()"><i class="fas fa-play"></i></button>
-                    <button id="reset"><i class="fas fa-sync-alt"></i></button><br>
-
-                    <input type="text" id="setMinutes"><br><label>Minutes</label><br>
-                    <input type="text" id="setSecondes"><br><label>Secondes</label><br>
-                    <button id="set">Set Timer</button>
+                    <input type="text" id="clock" class="borderAnim timer" disabled>
+                    <br>
+                    <button class="lecture" id="start" onclick="play()">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="reset">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <br>
+                    <div id="setter">
+                        <div id="minSetter">
+                            <input type="text" id="setMinutes">
+                            <br>
+                            <label>Minutes</label>
+                        </div>
+                        <div id="secSetter">
+                            <input type="text" id="setSecondes">
+                            <br>
+                            <label>Secondes</label>
+                        </div>
+                    </div>
                 </div>
+                <button id="set">Set Timer</button>
             </div>
-            <div class="col-md-3"></div>
         </div>
+        <div class="col-md-3"></div>
+    </div>
     </div>
 </body>
 
