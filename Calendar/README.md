@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 30: 28 May 2018
+
+- Finished the Pomodoro Clock (*freeCodeCamp*). Added style, added icons for start, stop and reset button, added animation and switch play/stop button when clicking.
+
+![Pomodoro2](img/pomodoro2.gif)
+
+- Finished to read the **HTML & CSS** *design and build websites* (JON DUCKETT) book.
+
+**Aprox Time:** ***4 hours***
+
 ## Day 29: 27 May 2018
 
 - Started the Pomodoro Clock (*freeCodeCamp*). Can set minutes and seconds, start, stop and reset the timer and can show the time.
