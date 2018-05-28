@@ -45,7 +45,9 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ![Javascript Calculator](../Calendar/img/calculator2.gif)
 
-* Build a Pomodoro Clock
+* [Build a Pomodoro Clock](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Pomodoro%20Clock)
+
+![Pomodoro Clock](../Calendar/img/pomodoro2.gif)
 
 * Build a Tic Tac Toe Game
 
