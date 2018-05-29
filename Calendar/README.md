@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 31: 29 May 2018
+
+- Started the Tic Tac Toe Game (*freeCodeCamp*). Added basic style to represent Tic Tac Toe game and change text in button depending the player that plays.
+
+![TicTacToe1](img/tictactoe1.gif)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 30: 28 May 2018
 
 - Finished the Pomodoro Clock (*freeCodeCamp*). Added style, added icons for start, stop and reset button, added animation and switch play/stop button when clicking.
