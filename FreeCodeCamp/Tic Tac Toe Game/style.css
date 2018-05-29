@@ -1,0 +1,54 @@
+table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 100px auto;
+    float: none;
+}
+
+#top-left{
+    border-right: 2px black solid;
+    border-bottom: 2px black solid;
+}
+
+#top-middle{
+    border-bottom: 2px black solid;
+}
+
+#top-right{
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+}
+
+#middle-left{
+    border-right: 2px black solid;
+}
+
+#middle-right{
+    border-left: 2px black solid;
+}
+
+#bottom-left {
+    border-top: 2px black solid;
+    border-right: 2px black solid;
+}
+
+#bottom-middle {
+    border-top: 2px black solid;
+}
+
+#bottom-right {
+    border-top: 2px black solid;
+    border-left: 2px black solid;
+}
+
+button{
+    width: 100px;
+    height:100px;
+    border:none;
+    outline: none;
+}
+
+button:focus{
+    border:none;
+    outline: none;
+}
