@@ -19,7 +19,7 @@
     - [ ] **The Complete JavaScript Course 2018: Build Real Projects!**  
     JONAS SCHMEDTMANN
 
-    - [] **MERN Stack Front To Back: Full Stak React, Redux & Node.js**  
+    - [ ] **MERN Stack Front To Back: Full Stak React, Redux & Node.js**  
     BRAD TRAVERSY
 
     - [ ] **JavaScript30**
