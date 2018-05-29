@@ -46,6 +46,8 @@ button{
     height:100px;
     border:none;
     outline: none;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 button:focus{
