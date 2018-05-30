@@ -13,14 +13,15 @@ $(document).ready(function () {
 
 function restart() {
     won = false;
+    player = "X";
     ordre = [];
     delay = 100;
     emptyCase();
     $("#result").text("");
 }
 
-function emptyCase(){
-    for(var i = 0; i < objects.length; i++){
+function emptyCase() {
+    for (var i = 0; i < objects.length; i++) {
         $(objects[i]).text("");
         $(objects[i]).removeClass();
     }
@@ -37,6 +38,11 @@ function changeText(cas) {
         if (!won) {
             if (cas.text() == "") {
                 cas.text(player);
+                if (player == "X") {
+                    $(cas).addClass("player1");
+                } else {
+                    cas.addClass("player2");
+                }
                 ordre.push(cas);
                 changePlayer();
             }
