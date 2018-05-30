@@ -1,29 +1,29 @@
 table {
     border-radius: 5px;
     width: 50%;
-    margin: 100px auto;
+    margin: 50px auto;
     float: none;
 }
 
-#top-left{
+#top-left {
     border-right: 2px black solid;
     border-bottom: 2px black solid;
 }
 
-#top-middle{
+#top-middle {
     border-bottom: 2px black solid;
 }
 
-#top-right{
+#top-right {
     border-left: 2px black solid;
     border-bottom: 2px black solid;
 }
 
-#middle-left{
+#middle-left {
     border-right: 2px black solid;
 }
 
-#middle-right{
+#middle-right {
     border-left: 2px black solid;
 }
 
@@ -41,16 +41,41 @@ table {
     border-left: 2px black solid;
 }
 
-button{
+button {
     width: 100px;
-    height:100px;
-    border:none;
+    height: 100px;
+    border: none;
     outline: none;
     font-size: 40px;
     font-weight: bold;
 }
 
-button:focus{
-    border:none;
+button:focus {
+    border: none;
     outline: none;
+}
+
+.win {
+    background-color: hsl(128, 91%, 43%);
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
+}
+
+.neutral{
+    background-color: hsl(0, 0%, 64%);
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
+}
+
+.loose {
+    background-color: hsl(9, 94%, 37%);
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
+}
+
+#restart {
+    display: none;
 }
