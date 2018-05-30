@@ -8,37 +8,61 @@ table {
 #top-left {
     border-right: 2px black solid;
     border-bottom: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #top-middle {
     border-bottom: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #top-right {
     border-left: 2px black solid;
     border-bottom: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #middle-left {
     border-right: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #middle-right {
     border-left: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #bottom-left {
     border-top: 2px black solid;
     border-right: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #bottom-middle {
     border-top: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 #bottom-right {
     border-top: 2px black solid;
     border-left: 2px black solid;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
 }
 
 button {
@@ -56,24 +80,23 @@ button:focus {
 }
 
 .win {
-    background-color: hsl(128, 91%, 43%);
-    -webkit-transition: background-color 0.5s linear;
-    -ms-transition: background-color 0.5s linear;
-    transition: background-color 0.5s linear;
+    background-color: hsl(128, 91%, 43%) !important;
 }
 
 .neutral{
-    background-color: hsl(0, 0%, 64%);
-    -webkit-transition: background-color 0.5s linear;
-    -ms-transition: background-color 0.5s linear;
-    transition: background-color 0.5s linear;
+    background-color: hsl(0, 0%, 64%) !important;
 }
 
 .loose {
-    background-color: hsl(9, 94%, 37%);
-    -webkit-transition: background-color 0.5s linear;
-    -ms-transition: background-color 0.5s linear;
-    transition: background-color 0.5s linear;
+    background-color: hsl(9, 94%, 37%) !important;
+}
+
+.player1 {
+    background-color: hsl(184, 95%, 37%);
+}
+
+.player2 {
+    background-color: hsl(41, 93%, 40%);
 }
 
 #restart {
