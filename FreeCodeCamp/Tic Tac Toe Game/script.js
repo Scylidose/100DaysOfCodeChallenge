@@ -7,6 +7,19 @@ var objects =
         "#middle-left", "#middle-middle", "#middle-right",
         "#bottom-left", "#bottom-middle", "#bottom-right"];
 
+// Can choose player color
+
+// Can choose human 1v1 or against IA
+
+// Add color to restart button
+
+// Add background-color
+
+// Upgrade color in the table
+
+// Upgrade td borders.
+
+
 $(document).ready(function () {
     changeAllText();
 });
