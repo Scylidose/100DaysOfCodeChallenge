@@ -60,13 +60,14 @@ function changeText(cas) {
                 changePlayer();
             }
             checkWin();
+            if (won) {
+                $("#result").text(cas.text() + " Player Won !");
+                $("#restart").fadeIn(2000, function () {
+                    $(this).css("display", "block");
+                });
+            }
         }
-        if (won) {
-            $("#result").text(cas.text() + " Player Won !");
-            $("#restart").fadeIn(2000, function () {
-                $(this).css("display", "block");
-            });
-        }
+        
     });
 }
 
