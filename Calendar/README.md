@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 32: 30 May 2018
+
+- Continued the Tic Tac Toe Game (*freeCodeCamp*). Added restart, end game, announce the player that win, added fadeIn transition, added new background color (win, lose, neutral, player1, player2), and refactored code.
+
+![TicTacToe2](img/tictactoe2.gif)
+
+**Aprox Time:** ***2 hours***
+
 ## Day 31: 29 May 2018
 
 - Started the Tic Tac Toe Game (*freeCodeCamp*). Added basic style to represent Tic Tac Toe game and change text in button depending the player that plays.
