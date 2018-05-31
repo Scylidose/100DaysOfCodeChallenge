@@ -32,43 +32,58 @@
 
     - [ ] *The* ***SassWay***  
 
-    - [ ] **Front End Development**  
-        - [x] **HTML5 and CSS**  
+    - [ ] **Responsive Web Design**  
+        - [x] **Basic HTML and HTML5**  
 
-        - [x] **Responsive Design with Bootstrap**  
+        - [x] **Basic CSS**  
 
-        - [x] **jQuery**  
+        - [x] **Applied Visual Design**  
 
-        - [x] **Basic Front End Development Projects**  
+        - [x] **Applied Accessibility**  
 
-        - [x] **Basic JavaScript**  
+        - [x] **Responsive Web Design Principles**  
 
-        - [x] **Object Oriented and Functional Programming**  
+        - [x] **CSS Flexbox**  
 
-        - [x] **Basic Algorithm Scripting**  
+        - [x] **CSS Grid**  
 
-        - [x] **JSON APIs and Ajax**  
+        - [x] **Responsive Web Design Projects**   
 
-        - [x] **Intermediate Front End Development Projects**  
+    - [ ] **Javascript Algorithms And Data Structures**  
+        - [ ] **Basic JavaScript**  
 
-        - [x] **Intermediate Algorithm Scripting**  
+        - [ ] **ES6**  
 
-        - [ ] **Advances Algorithm Scripting**  
+        - [ ] **Regular Expressions**  
 
-        - [ ] **Advanced Front End Development Projects**  
+        - [ ] **Debugging**  
 
-    - [ ] **Back End Development Certification**  
-        - [ ] **Automated Testing and Debugging**  
+        - [ ] **Basic Data Structures**  
 
-        - [ ] **Node.js and Express.js**  
+        - [ ] **Basic Algorithm Scripting**  
 
-        - [ ] **Git**  
+        - [ ] **Object Oriented Programming**  
 
-        - [ ] **MongoDB**  
+        - [ ] **Functional Programming**  
 
-        - [ ] **API Projects**  
+        - [ ] **Intermediate Algorithm Scripting**  
 
-        - [ ] **Dynamic Web Application Projects**  
+        - [ ] **JavaScript Algorithms and Data Structures Projects**  
+
+    - [ ] **Front End Libraries**  
+        - [ ] **Bootstrap**  
+
+        - [ ] **jQuery**  
+
+        - [ ] **Sass**  
+
+        - [ ] **React**  
+
+        - [ ] **Redux**  
+
+        - [ ] **React and Redux**  
+
+        - [ ] **Front End Libraries Projects**  
 
     *freeCodeCamp*
 
