@@ -1,6 +1,5 @@
 body {
     height: 100vh;
-
     background: linear-gradient(to bottom right, #c04848, #480048);
 }
 
@@ -8,12 +7,13 @@ table {
     border-radius: 5px;
     width: 50%;
     margin: 50px auto;
+    margin-bottom: 20px;
     float: none;
     background-color: black;
 }
 
 td {
-    padding:3px 4px;
+    padding: 3px 4px;
 }
 
 #top-left {
@@ -59,7 +59,7 @@ td {
 }
 
 #bottom-right {
--webkit-transition: background-color 0.5s linear;
+    -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
@@ -102,6 +102,13 @@ button:focus {
     display: none;
 }
 
+#restart span {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+}
+
 #yes {
     background-color: hsl(184, 93%, 40%);
     color: white;
@@ -120,4 +127,10 @@ button:focus {
 
 #yes:focus, #no:focus {
     color: gray;
+}
+
+#result {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
 }
