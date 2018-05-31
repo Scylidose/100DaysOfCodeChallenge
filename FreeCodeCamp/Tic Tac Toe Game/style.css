@@ -10,10 +10,34 @@ table {
     margin-bottom: 20px;
     float: none;
     background-color: black;
+    display: none;
 }
 
 td {
     padding: 3px 4px;
+}
+
+#player, #robot {
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 250px;
+    background-color: transparent;
+}
+
+#player button, #robot button {
+    margin: 10px 10px;
+}
+
+#play1, #play2 {
+    background-color: hsl(184, 93%, 43%);
+}
+
+#choice {
+    border: 2px black solid;
+    margin-top: 30px;
 }
 
 #top-left {
@@ -90,11 +114,11 @@ button:focus {
     background-color: hsl(9, 94%, 37%) !important;
 }
 
-.player1 {
+.player1, #x1:hover, #x2:hover, #x1:focus, #x2:focus {
     background-color: hsl(184, 95%, 37%);
 }
 
-.player2 {
+.player2, #o1:hover, #o2:hover, #o1:focus, #o2:focus {
     background-color: hsl(41, 93%, 40%);
 }
 
@@ -105,7 +129,7 @@ button:focus {
 #restart span {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 30px;
     text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
 }
 
@@ -121,11 +145,11 @@ button:focus {
     border: 3px black solid;
 }
 
-#yes:hover, #no:hover {
+#yes:hover, #no:hover, #play1:hover, #play2:hover {
     box-shadow: 1px 1px 1px 1px #888888;
 }
 
-#yes:focus, #no:focus {
+#yes:focus, #no:focus, #play1:focus, #play2:focus {
     color: gray;
 }
 
