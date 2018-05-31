@@ -37,20 +37,20 @@
 
         - [x] **Basic CSS**  
 
-        - [x] **Applied Visual Design**  
+        - [ ] **Applied Visual Design**  
 
-        - [x] **Applied Accessibility**  
+        - [ ] **Applied Accessibility**  
 
-        - [x] **Responsive Web Design Principles**  
+        - [ ] **Responsive Web Design Principles**  
 
-        - [x] **CSS Flexbox**  
+        - [ ] **CSS Flexbox**  
 
-        - [x] **CSS Grid**  
+        - [ ] **CSS Grid**  
 
-        - [x] **Responsive Web Design Projects**   
+        - [ ] **Responsive Web Design Projects**   
 
     - [ ] **Javascript Algorithms And Data Structures**  
-        - [ ] **Basic JavaScript**  
+        - [x] **Basic JavaScript**  
 
         - [ ] **ES6**  
 
@@ -60,7 +60,7 @@
 
         - [ ] **Basic Data Structures**  
 
-        - [ ] **Basic Algorithm Scripting**  
+        - [x] **Basic Algorithm Scripting**  
 
         - [ ] **Object Oriented Programming**  
 
@@ -71,9 +71,9 @@
         - [ ] **JavaScript Algorithms and Data Structures Projects**  
 
     - [ ] **Front End Libraries**  
-        - [ ] **Bootstrap**  
+        - [x] **Bootstrap**  
 
-        - [ ] **jQuery**  
+        - [x] **jQuery**  
 
         - [ ] **Sass**  
 
