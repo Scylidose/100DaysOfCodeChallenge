@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 33: 31 May 2018
+
+- Finished the Tic Tac Toe Game (*freeCodeCamp*). Added style for the restart buttons, style for the text for restart and win announce, added very basic IA player, can choose to play against a player or a machine.
+
+![TicTacToe3](img/tictactoe3.gif)
+
+- Adapted all my README so it correspond to the new site of freeCodeCamp.
+
+**Aprox Time:** ***3 hours***
+
 ## Day 32: 30 May 2018
 
 - Continued the Tic Tac Toe Game (*freeCodeCamp*). Added restart, end game, announce the player that win, added fadeIn transition, added new background color (win, lose, neutral, player1, player2), and refactored code.
