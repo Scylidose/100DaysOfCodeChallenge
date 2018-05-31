@@ -4,7 +4,6 @@ var won = false;
 var ordre = [];
 var delay = 100;
 var machine = false;
-var machineTurn = false;
 var objects =
     ["#top-left", "#top-middle", "#top-right",
         "#middle-left", "#middle-middle", "#middle-right",
@@ -36,7 +35,6 @@ $(document).ready(function () {
     $("#play2").click(function () {
         actualPlayer = player;
         machine = true;
-        machineTurn = true;
         changeAllText();
     });
 });
@@ -90,35 +88,35 @@ function changeText(cas) {
             changePlayer();
         }
 
+        if (machine) {
+            if (!won) {
+                var elem = $(objects[Math.floor(Math.random() * objects.length)]);
+                while (elem.text() != "") {
+                    elem = $(objects[Math.floor(Math.random() * objects.length)]);
+                }
+                elem.text(player);
+                if (player == "X") {
+                    $(elem).addClass("player1");
+                } else {
+                    elem.addClass("player2");
+                }
+                ordre.push(elem);
+            }
+            checkWin();
 
-        if (!won) {
-            var elem = $(objects[Math.floor(Math.random() * objects.length)]);
-            while (elem.text() != "") {
-                elem = $(objects[Math.floor(Math.random() * objects.length)]);
+            if (won) {
+                if (elem.text() == actualPlayer) {
+                    $("#result").text("Player1 Won !");
+                } else {
+                    $("#result").text("IA Won !");
+                }
+
+                $("#restart").fadeIn(2000, function () {
+                    $(this).css("display", "block");
+                });
             }
-            elem.text(player);
-            if (player == "X") {
-                $(elem).addClass("player1");
-            } else {
-                elem.addClass("player2");
-            }
-            ordre.push(elem);
+            changePlayer();
         }
-        checkWin();
-
-        if (won) {
-            if (elem.text() == actualPlayer) {
-                $("#result").text("Player1 Won !");
-            } else {
-                $("#result").text("IA Won !");
-            }
-
-            $("#restart").fadeIn(2000, function () {
-                $(this).css("display", "block");
-            });
-        }
-        changePlayer();
-
     });
 }
 
@@ -140,6 +138,20 @@ function checkWin() {
     win($(objects[0]), $(objects[3]), $(objects[6])); // |
     win($(objects[1]), $(objects[4]), $(objects[7])); // |
     win($(objects[2]), $(objects[5]), $(objects[8])); // |
+
+    if (!won && $(objects[0]).text() != "" && $(objects[1]).text() != "" && $(objects[2]).text() != "" &&
+        $(objects[3]).text() != "" && $(objects[4]).text() != "" && $(objects[5]).text() != "" &&
+        $(objects[6]).text() != "" && $(objects[7]).text() != "" && $(objects[8]).text() != "") {
+        for (var i = 0; i  <  objects.length; i++) {
+            $(objects[i]).fadeIn("slow", function () {
+                $(this).addClass("neutral");
+                $("#result").text("Equality !");
+                $("#restart").fadeIn(2000, function () {
+                    $(this).css("display", "block");
+                });
+            });
+        }
+    }
 }
 
 function win(case1, case2, case3) {
