@@ -2,7 +2,9 @@
 
 ## Day 33: 31 May 2018
 
-- Finished the Tic Tac Toe Game (*freeCodeCamp*). Added style for the restart buttons, style for the text for restart and win announce, added very basic IA player, can choose to play against a player or a machine.
+- Completed Basic HTML and HTML5, Basic CSS and Responsive Web Design Principles sections (*freeCodeCamp*).
+
+- Finished the Tic Tac Toe Game (*freeCodeCamp*). Added background color, added style for the restart buttons, style for the text for restart and win announce, added very basic IA player, can choose to play against a player or a machine.
 
 ![TicTacToe3](img/tictactoe3.gif)
 
