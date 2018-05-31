@@ -58,7 +58,7 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ![Wikipedia](../Calendar/img/wikipedia2.gif)
 
-* [Use the Twitch.tv JSON API](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Use%20the%20Twitch.tv%20JSON%20API)
+* [Use the Twitch.tv JSON API](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Twitch.tv%20JSON%20API)
 
 ![Twitch TV JSON API](../Calendar/img/twitch2.gif)
 
