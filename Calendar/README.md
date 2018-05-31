@@ -10,7 +10,7 @@
 
 - Adapted all my README so it correspond to the new site of freeCodeCamp.
 
-**Aprox Time:** ***3 hours***
+**Aprox Time:** ***4 hours***
 
 ## Day 32: 30 May 2018
 
