@@ -11,15 +11,6 @@ var objects =
 
 // Can choose human 1v1 or against IA
 
-// Add color to restart button
-
-// Add background-color
-
-// Upgrade color in the table
-
-// Upgrade td borders.
-
-
 $(document).ready(function () {
     changeAllText();
 });
@@ -31,6 +22,7 @@ function restart() {
     delay = 100;
     emptyCase();
     $("#result").text("");
+    $("#restart").css("display", "none");
 }
 
 function emptyCase() {
