@@ -1,3 +1,4 @@
+var actualPlayer;
 var player;
 var won = false;
 var ordre = [];
@@ -28,10 +29,12 @@ $(document).ready(function () {
     });
 
     $("#play1").click(function () {
+        actualPlayer = player;
         changeAllText();
     });
 
     $("#play2").click(function () {
+        actualPlayer = player;
         machine = true;
         machineTurn = true;
         changeAllText();
@@ -39,16 +42,7 @@ $(document).ready(function () {
 });
 
 function restart() {
-    won = false;
-    ordre = [];
-    delay = 100;
-    machine = false;
-    machineTurn = false;
-    emptyCase();
-    $("#result").text("");
-    $("table").css("display", "none");
-    $("#restart").css("display", "none");
-    $("#choice").css("display", "block");
+    location.reload();
 }
 
 function emptyCase() {
@@ -67,9 +61,6 @@ function changeAllText() {
 }
 
 function changeText(cas) {
-    if (machineTurn) {
-        cas.click();
-    }
     cas.click(function () {
         if (!won) {
             if (cas.text() == "") {
@@ -83,7 +74,7 @@ function changeText(cas) {
             }
             checkWin();
             if (won) {
-                if (cas.text() == player) {
+                if (cas.text() == actualPlayer) {
                     $("#result").text("Player1 Won !");
                 } else {
                     if (machine) {
@@ -98,11 +89,36 @@ function changeText(cas) {
             }
             changePlayer();
         }
-        if (machineTurn) {
-            machineTurn = false;
-        } else {
-            machineTurn = true;
+
+
+        if (!won) {
+            var elem = $(objects[Math.floor(Math.random() * objects.length)]);
+            while (elem.text() != "") {
+                elem = $(objects[Math.floor(Math.random() * objects.length)]);
+            }
+            elem.text(player);
+            if (player == "X") {
+                $(elem).addClass("player1");
+            } else {
+                elem.addClass("player2");
+            }
+            ordre.push(elem);
         }
+        checkWin();
+
+        if (won) {
+            if (elem.text() == actualPlayer) {
+                $("#result").text("Player1 Won !");
+            } else {
+                $("#result").text("IA Won !");
+            }
+
+            $("#restart").fadeIn(2000, function () {
+                $(this).css("display", "block");
+            });
+        }
+        changePlayer();
+
     });
 }
 
