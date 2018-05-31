@@ -12,7 +12,7 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ### Responsive Web Design Projects
 
-* [Build a Tribute Page](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Tribute%20Page)  
+* [Build a Tribute Page](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Responsive%20Web%20Design/Tribute%20Page)  
 
 ![TributePage](../Calendar/img/tributepage-computer.png)  
 
@@ -22,7 +22,7 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 * Build a Technical Documentation Page
 
-* [Build a Personal Portfolio Webpage](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Portfolio)  
+* [Build a Personal Portfolio Webpage](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Responsive%20Web%20Design/Portfolio)  
 
 ![Portfolio](../Calendar/img/portfolio.png)  
 
@@ -30,7 +30,7 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ### Front End Libraries Projects
 
-* [Build a Random Quote Machine](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Random%20Quote%20Machine)
+* [Build a Random Quote Machine](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Front%20End%20Libraries/Random%20Quote%20Machine)
 
 ![RandomQuoteMachine](../Calendar/img/quote3.gif)
 
@@ -38,11 +38,11 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 * Build a Drum Machine
 
-* [Build a Javascript Calculator](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/JavaScript%20Calculator)
+* [Build a Javascript Calculator](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Front%20End%20Libraries/JavaScript%20Calculator)
 
 ![Javascript Calculator](../Calendar/img/calculator2.gif)
 
-* [Build a Pomodoro Clock](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Pomodoro%20Clock)
+* [Build a Pomodoro Clock](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Front%20End%20Libraries/Pomodoro%20Clock)
 
 ![Pomodoro Clock](../Calendar/img/pomodoro2.gif)
 
@@ -50,18 +50,18 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 
 ### Take Home Projects
 
-* [Show the Local Weather](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Local%20Weather)
+* [Show the Local Weather](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Local%20Weather)
 
 ![LocalWeather](../Calendar/img/weather2.gif)
 
-* [Build a Wikipedia Viewer](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Wikipedia%20Viewer)
+* [Build a Wikipedia Viewer](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Wikipedia%20Viewer)
 
 ![Wikipedia](../Calendar/img/wikipedia2.gif)
 
-* [Use the Twitch.tv JSON API](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Use%20the%20Twitch.tv%20JSON%20API)
+* [Use the Twitch.tv JSON API](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Use%20the%20Twitch.tv%20JSON%20API)
 
 ![Twitch TV JSON API](../Calendar/img/twitch2.gif)
 
-*[Build a Tic Tac Toe Game](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Tic%20Tac%20Toe%20Game)
+*[Build a Tic Tac Toe Game](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Tic%20Tac%20Toe%20Game)
 
 ![Tic Tac Toe Game](../Calendar/img/tictactoe3.gif)
