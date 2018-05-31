@@ -1,66 +1,65 @@
+body {
+    height: 100vh;
+
+    background: linear-gradient(to bottom right, #c04848, #480048);
+}
+
 table {
     border-radius: 5px;
     width: 50%;
     margin: 50px auto;
     float: none;
+    background-color: black;
+}
+
+td {
+    padding:3px 4px;
 }
 
 #top-left {
-    border-right: 2px black solid;
-    border-bottom: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #top-middle {
-    border-bottom: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #top-right {
-    border-left: 2px black solid;
-    border-bottom: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #middle-left {
-    border-right: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #middle-right {
-    border-left: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #bottom-left {
-    border-top: 2px black solid;
-    border-right: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #bottom-middle {
-    border-top: 2px black solid;
     -webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 
 #bottom-right {
-    border-top: 2px black solid;
-    border-left: 2px black solid;
-    -webkit-transition: background-color 0.5s linear;
+-webkit-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
@@ -83,7 +82,7 @@ button:focus {
     background-color: hsl(128, 91%, 43%) !important;
 }
 
-.neutral{
+.neutral {
     background-color: hsl(0, 0%, 64%) !important;
 }
 
@@ -101,4 +100,24 @@ button:focus {
 
 #restart {
     display: none;
+}
+
+#yes {
+    background-color: hsl(184, 93%, 40%);
+    color: white;
+    border: 3px black solid;
+}
+
+#no {
+    background-color: hsl(9, 95%, 41%);
+    color: white;
+    border: 3px black solid;
+}
+
+#yes:hover, #no:hover {
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+
+#yes:focus, #no:focus {
+    color: gray;
 }
