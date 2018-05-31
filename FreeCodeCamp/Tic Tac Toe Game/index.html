@@ -27,6 +27,22 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6 text-center">
+                <div id="choice">
+                    <div id="player">
+                        <span>Play Against an another player
+                            <br>Choose your symbole</span><br>
+                        <button id="x1">X</button>
+                        <button id="o1">O</button><br>
+                        <button id="play1">Play</button>
+                    </div>
+                    <div id="robot">
+                        <span>Play Against an IA
+                            <br>Choose your symbole</span><br>
+                        <button id="x2">X</button>
+                        <button id="o2">O</button><br>
+                        <button id="play2">Play</button>
+                    </div>
+                </div>
                 <table>
                     <tr>
                         <td>
@@ -64,7 +80,8 @@
                 </table>
                 <div id="result"></div>
                 <div id="restart">
-                    <span>Wanna play again ?</span><br>
+                    <span>Wanna play again ?</span>
+                    <br>
                     <button id="yes" onclick="restart()">YES</button>
                     <button id="no" onclick="end()">NO</button>
                 </div>
