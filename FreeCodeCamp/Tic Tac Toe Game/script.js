@@ -1,28 +1,54 @@
-var player = "X";
+var player;
 var won = false;
 var ordre = [];
 var delay = 100;
+var machine = false;
+var machineTurn = false;
 var objects =
     ["#top-left", "#top-middle", "#top-right",
         "#middle-left", "#middle-middle", "#middle-right",
         "#bottom-left", "#bottom-middle", "#bottom-right"];
 
-// Can choose player color
-
-// Can choose human 1v1 or against IA
-
 $(document).ready(function () {
-    changeAllText();
+
+    $("#x1").click(function () {
+        player = "X";
+    });
+
+    $("#x2").click(function () {
+        player = "X";
+    });
+
+    $("#o1").click(function () {
+        player = "O";
+    });
+
+    $("#o2").click(function () {
+        player = "O";
+    });
+
+    $("#play1").click(function () {
+        changeAllText();
+    });
+
+    $("#play2").click(function () {
+        machine = true;
+        machineTurn = true;
+        changeAllText();
+    });
 });
 
 function restart() {
     won = false;
-    player = "X";
     ordre = [];
     delay = 100;
+    machine = false;
+    machineTurn = false;
     emptyCase();
     $("#result").text("");
+    $("table").css("display", "none");
     $("#restart").css("display", "none");
+    $("#choice").css("display", "block");
 }
 
 function emptyCase() {
@@ -33,12 +59,17 @@ function emptyCase() {
 }
 
 function changeAllText() {
+    $("#choice").css("display", "none");
+    $("table").css("display", "block");
     for (var i = 0; i < objects.length; i++) {
         changeText($(objects[i]));
     }
 }
 
 function changeText(cas) {
+    if (machineTurn) {
+        cas.click();
+    }
     cas.click(function () {
         if (!won) {
             if (cas.text() == "") {
@@ -49,19 +80,32 @@ function changeText(cas) {
                     cas.addClass("player2");
                 }
                 ordre.push(cas);
-                changePlayer();
             }
             checkWin();
             if (won) {
-                $("#result").text(cas.text() + " Player Won !");
+                if (cas.text() == player) {
+                    $("#result").text("Player1 Won !");
+                } else {
+                    if (machine) {
+                        $("#result").text("IA Won !");
+                    } else {
+                        $("#result").text("Player2 Won !");
+                    }
+                }
                 $("#restart").fadeIn(2000, function () {
                     $(this).css("display", "block");
                 });
             }
+            changePlayer();
         }
-        
+        if (machineTurn) {
+            machineTurn = false;
+        } else {
+            machineTurn = true;
+        }
     });
 }
+
 
 function changePlayer() {
     if (player == "X") {
@@ -115,7 +159,7 @@ function win(case1, case2, case3) {
 }
 
 function end() {
-    $("#restart").fadeOut(1000, function () {
+    $("#restart").fadeOut(500, function () {
         $(this).css("display", "none");
     });
 }
