@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 34: 01 June 2018
+
+- Started the Simon Game (*freeCodeCamp*). Added background color, added style for the buttons, and script to change color when a color is picked.
+
+![Simon1](img/simon1.gif)
+
+**Aprox Time:** ***2 hours***
+
 ## Day 33: 31 May 2018
 
 - Completed Basic HTML and HTML5, Basic CSS and Responsive Web Design Principles sections (*freeCodeCamp*).
