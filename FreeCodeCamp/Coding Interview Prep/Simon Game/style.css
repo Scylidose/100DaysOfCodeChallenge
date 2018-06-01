@@ -1,0 +1,62 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #dbe6f6, #c5796d);
+}
+
+table {
+    margin: 30px auto;
+}
+
+.green {
+    background-color: #15994C;
+}
+
+.greenLight {
+    background-color: rgb(97, 184, 133);
+}
+
+.red {
+    background-color: #C72026;
+}
+
+.redLight {
+    background-color: rgb(192, 82, 86);
+}
+
+.yellow {
+    background-color: #D7BA31;
+}
+
+.yellowLight {
+    background-color: rgb(209, 193, 115);
+}
+
+.blue {
+    background-color: #1177BA;
+}
+
+.blueLight {
+    background-color: rgb(92, 145, 180);
+}
+
+.green, .red, .yellow, .blue {
+    width: 200px;
+    height: 200px;
+    border: 2px black solid;
+}
+
+#menu button {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    text-transform: uppercase;
+    margin: 0 20px;
+    text-align: center;
+}
+
+#menu {
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
