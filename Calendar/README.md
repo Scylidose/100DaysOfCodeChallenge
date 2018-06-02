@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 35: 02 June 2018
+
+- Continued the Simon Game (*freeCodeCamp*). Added strict button and done lot of research to add delay in for loops.
+
+![Simon2](img/simon2.png)
+
+- Read two chapters from the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT) book.
+
+**Aprox Time:** ***1.5 hour***
+
 ## Day 34: 01 June 2018
 
 - Started the Simon Game (*freeCodeCamp*). Added background color, added style for the buttons, and script to change color when a color is picked.
