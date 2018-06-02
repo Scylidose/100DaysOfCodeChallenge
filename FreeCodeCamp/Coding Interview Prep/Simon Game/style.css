@@ -52,6 +52,8 @@ table {
     text-transform: uppercase;
     margin: 0 20px;
     text-align: center;
+    outline:none;
+
 }
 
 #menu {
@@ -59,4 +61,11 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.strictActive {
+    background-color: #232323 !important;
+    border: 0px;
+    outline:none;
+    color: white;
 }
