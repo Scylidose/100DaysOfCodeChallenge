@@ -1,5 +1,19 @@
 # 100 Days of Code Challenge
 
+## Day 37: 04 June 2018
+
+- Continued the Simon Game (*freeCodeCamp*). Tried again to add delay when iterating, verify if what we click correspond to what generated and added loose function, added outline none to quadra colors.
+
+**Aprox Time:** ***1 hour***
+
+## Day 36: 03 June 2018
+
+- Read articles about CSS tricks 
+
+- Read a bit of the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT) book.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 35: 02 June 2018
 
 - Continued the Simon Game (*freeCodeCamp*). Added strict button and done lot of research to add delay in for loops.
