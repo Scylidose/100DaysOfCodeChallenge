@@ -43,6 +43,7 @@ table {
     width: 200px;
     height: 200px;
     border: 2px black solid;
+    outline: none;
 }
 
 #menu button {
@@ -53,7 +54,6 @@ table {
     margin: 0 20px;
     text-align: center;
     outline:none;
-
 }
 
 #menu {
