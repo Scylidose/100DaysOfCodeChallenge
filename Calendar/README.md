@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 38: 05 June 2018
+
+- Read chapters from the **JAVASCRIPT & JQUERY** *interactive front-end web development* (JON DUCKETT) book.
+
+- Learn how CSS grid and Flexbox works.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 37: 04 June 2018
 
 - Continued the Simon Game (*freeCodeCamp*). Tried again to add delay when iterating, verify if what we click correspond to what generated and added loose function, added outline none to quadra colors.
