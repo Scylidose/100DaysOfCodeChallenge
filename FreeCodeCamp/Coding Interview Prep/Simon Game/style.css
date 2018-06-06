@@ -6,6 +6,12 @@ body {
 table {
     margin: 30px auto;
 }
+h4 {
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 20px 20px;
+}
 
 .green {
     background-color: #15994C;
@@ -63,7 +69,7 @@ table {
     justify-content: center;
 }
 
-.strictActive {
+.strictActive, .playing {
     background-color: #232323 !important;
     border: 0px;
     outline:none;
