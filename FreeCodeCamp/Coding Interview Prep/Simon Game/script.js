@@ -17,6 +17,9 @@ var yellowAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.m
 var blueAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
 
 $(document).ready(function () {
+
+    $("h4").text(ordre.length);
+
     $("#strict").click(function () {
         if ($(this).hasClass("strictActive")) {
             $(this).removeClass("strictActive");
@@ -29,7 +32,7 @@ $(document).ready(function () {
 
     $("#play").click(function () {
         $(this).addClass("playing");
-        $(this).prop("disabled",true);
+        $(this).prop("disabled", true);
     });
 
     $("#red").click(function () {
@@ -40,6 +43,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#red").removeClass("redLight");
         }, delay);
+
+        verifier();
     });
 
     $("#blue").click(function () {
@@ -50,6 +55,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#blue").removeClass("blueLight");
         }, delay);
+
+        verifier();
     });
 
     $("#yellow").click(function () {
@@ -60,6 +67,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#yellow").removeClass("yellowLight");
         }, delay);
+
+        verifier();
     });
 
     $("#green").click(function () {
@@ -70,6 +79,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $("#green").removeClass("greenLight");
         }, delay);
+
+        verifier();
     });
 });
 
@@ -77,14 +88,13 @@ function play() {
     $("h4").text(ordre.length);
 
     if (!fail) {
+        click = [];
         color = colors[Math.floor(Math.random() * colors.length)];
 
         ordre.push(color);
 
         index = 0;
         setLight();
-
-        verifier();
 
     } else {
         fail = false;
@@ -95,6 +105,7 @@ function setLight() {
     setTimeout(function () {
         enlight(ordre[index]);
     }, 1000);
+    console.log(click);
 }
 
 function enlight(col) {
@@ -126,18 +137,20 @@ function restart() {
     ordre = [];
     click = [];
     delay = 1000;
+    $("h4").text(ordre.length);
     $("#play").removeClass("playing");
     $("#play").prop("disabled", false);
 }
 
 function verifier() {
-    /*for (var i = 0; i < click.length; i++) {
+    for (var i = 0; i < click.length; i++) {
         if (click[i] != ordre[i]) {
             perdu();
         }
     }
-
-    play();*/
+    if(click.length == ordre.length){
+        play();
+    }
 }
 
 function perdu() {
