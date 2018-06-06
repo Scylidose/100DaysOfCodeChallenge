@@ -9,6 +9,7 @@ var col;
 var delay = 1000;
 var strict = false;
 var fail = false;
+var index = 0;
 
 var redAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
 var greenAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
@@ -24,6 +25,11 @@ $(document).ready(function () {
             $(this).addClass("strictActive");
             strict = true;
         }
+    });
+
+    $("#play").click(function () {
+        $(this).addClass("playing");
+        $(this).prop("disabled",true);
     });
 
     $("#red").click(function () {
@@ -68,14 +74,16 @@ $(document).ready(function () {
 });
 
 function play() {
+    $("h4").text(ordre.length);
+
     if (!fail) {
         color = colors[Math.floor(Math.random() * colors.length)];
 
         ordre.push(color);
 
-        for (var i = 0; i < ordre.length; i++) {
-            enlight(ordre[i]);
-        }
+        index = 0;
+        setLight();
+
         verifier();
 
     } else {
@@ -83,45 +91,53 @@ function play() {
     }
 }
 
-function enlight(col) {
+function setLight() {
     setTimeout(function () {
-        var classes = $("#" + col).attr('class');
-        classes = col + "Light" + ' ' + col;
-        $("#" + col).attr('class', classes);
-
-        if (col == "red") {
-            redAudio.play();
-        } else if (col == "green") {
-            greenAudio.play();
-        } else if (col == "yellow") {
-            yellowAudio.play();
-        } else if (col == "blue") {
-            blueAudio.play();
-        }
-        setTimeout(function () {
-            $("#" + col).removeClass(col + "Light");
-        }, 1000);
+        enlight(ordre[index]);
     }, 1000);
+}
+
+function enlight(col) {
+    var classes = $("#" + col).attr('class');
+    classes = col + "Light" + ' ' + col;
+    $("#" + col).attr('class', classes);
+
+    if (col == "red") {
+        redAudio.play();
+    } else if (col == "green") {
+        greenAudio.play();
+    } else if (col == "yellow") {
+        yellowAudio.play();
+    } else if (col == "blue") {
+        blueAudio.play();
+    }
+    setTimeout(function () {
+        $("#" + col).removeClass(col + "Light");
+    }, 1000);
+
+    index++;
+
+    if (index < ordre.length) {
+        setLight();
+    }
 }
 
 function restart() {
     ordre = [];
     click = [];
     delay = 1000;
+    $("#play").removeClass("playing");
+    $("#play").prop("disabled", false);
 }
 
 function verifier() {
-    //console.log(click);
-    //console.log(ordre);
     /*for (var i = 0; i < click.length; i++) {
         if (click[i] != ordre[i]) {
             perdu();
         }
     }
 
-    if (!fail) {
-        play();
-    }*/
+    play();*/
 }
 
 function perdu() {
