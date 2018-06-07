@@ -52,7 +52,7 @@ h4 {
     outline: none;
 }
 
-#menu button {
+#menu button, .error {
     font-size: 20px;
     font-weight: bold;
     background-color: white;
