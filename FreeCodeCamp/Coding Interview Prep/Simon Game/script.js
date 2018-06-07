@@ -6,10 +6,10 @@ var colors = ["green", "red", "yellow", "blue"];
 
 var color;
 var col;
-var delay = 1000;
 var strict = false;
 var fail = false;
 var index = 0;
+var score = 0;
 
 var redAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
 var greenAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3');
@@ -18,7 +18,7 @@ var blueAudio = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3
 
 $(document).ready(function () {
 
-    $("h4").text(ordre.length);
+    $(".score").text(score);
 
     $("#strict").click(function () {
         if ($(this).hasClass("strictActive")) {
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#red").removeClass("redLight");
-        }, delay);
+        }, 1000);
 
         verifier();
     });
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#blue").removeClass("blueLight");
-        }, delay);
+        }, 1000);
 
         verifier();
     });
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#yellow").removeClass("yellowLight");
-        }, delay);
+        }, 1000);
 
         verifier();
     });
@@ -78,16 +78,16 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#green").removeClass("greenLight");
-        }, delay);
+        }, 1000);
 
         verifier();
     });
 });
 
 function play() {
-    $("h4").text(ordre.length);
-
     if (!fail) {
+        $(".score").text(score);
+
         click = [];
         color = colors[Math.floor(Math.random() * colors.length)];
 
@@ -105,7 +105,6 @@ function setLight() {
     setTimeout(function () {
         enlight(ordre[index]);
     }, 1000);
-    console.log(click);
 }
 
 function enlight(col) {
@@ -136,8 +135,8 @@ function enlight(col) {
 function restart() {
     ordre = [];
     click = [];
-    delay = 1000;
-    $("h4").text(ordre.length);
+    score = 0;
+    $(".score").text(score);
     $("#play").removeClass("playing");
     $("#play").prop("disabled", false);
 }
@@ -148,15 +147,60 @@ function verifier() {
             perdu();
         }
     }
-    if(click.length == ordre.length){
-        play();
+    if (click.length == ordre.length && !fail) {
+        score++;
+        if (score == 2) {
+            gagner();
+        } else {
+            play();
+        }
+    } else {
+        index = 0;
+        setTimeout(function () {
+            setLight();
+        }, 4000);
     }
 }
 
+function gagner() {
+    $(".score").text(score);
+    var err = setInterval(function () {
+        $(".error").text("WIN").fadeIn(500);
+        $(".error").text("WIN").fadeOut(500);
+    }, 1000);
+    index = 0;
+    setTimeout(function () {
+        clearInterval(err);
+        restart();
+    }, 5000);
+}
+
+/*
+    PROBLEME AVEC RESTART
+*/
+
 function perdu() {
     if (strict) {
-        restart();
+        ordre = [];
+        click = [];
+        showError();
+        play();
     } else {
         fail = true;
+        showError();
     }
+}
+
+function showError() {
+    $(".score").fadeOut(300);
+    var err = setInterval(function () {
+        $(".error").text("ERROR").fadeIn(500);
+        $(".error").text("ERROR").fadeOut(500);
+    }, 1000);
+    index = 0;
+    setTimeout(function () {
+        clearInterval(err);
+        $(".score").text(score).fadeIn(500);
+        setLight();
+    }, 4000);
 }
