@@ -42,7 +42,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#red").removeClass("redLight");
-        }, 1000);
+        }, 500);
 
         verifier();
     });
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#blue").removeClass("blueLight");
-        }, 1000);
+        }, 500);
 
         verifier();
     });
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#yellow").removeClass("yellowLight");
-        }, 1000);
+        }, 500);
 
         verifier();
     });
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $("#green").removeClass("greenLight");
-        }, 1000);
+        }, 500);
 
         verifier();
     });
@@ -109,7 +109,7 @@ function setLight() {
 
 function enlight(col) {
     var classes = $("#" + col).attr('class');
-    classes = col + "Light" + ' ' + col;
+    classes = col + "Light " + col;
     $("#" + col).attr('class', classes);
 
     if (col == "red") {
@@ -136,6 +136,8 @@ function restart() {
     ordre = [];
     click = [];
     score = 0;
+    fail = false;
+
     $(".score").text(score);
     $("#play").removeClass("playing");
     $("#play").prop("disabled", false);
@@ -149,7 +151,7 @@ function verifier() {
     }
     if (click.length == ordre.length && !fail) {
         score++;
-        if (score == 2) {
+        if (score == 20) {
             gagner();
         } else {
             play();
@@ -172,12 +174,8 @@ function gagner() {
     setTimeout(function () {
         clearInterval(err);
         restart();
-    }, 5000);
+    }, 4000);
 }
-
-/*
-    PROBLEME AVEC RESTART
-*/
 
 function perdu() {
     if (strict) {
