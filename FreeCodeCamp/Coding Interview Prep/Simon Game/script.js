@@ -181,6 +181,8 @@ function perdu() {
     if (strict) {
         ordre = [];
         click = [];
+        fail = false;
+        score = 0;
         showError();
         play();
     } else {
