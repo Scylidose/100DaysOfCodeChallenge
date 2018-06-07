@@ -1,6 +1,6 @@
 # 100 Days of Code Challenge
 
-## Day 39: 06 June 2018
+## Day 40: 07 June 2018
 
 - Finally got my Front-End certification o.o 
 
