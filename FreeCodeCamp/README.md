@@ -65,3 +65,13 @@ My solutions to the projects offered by [freeCodeCamp](https://www.freecodecamp.
 *[Build a Tic Tac Toe Game](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Tic%20Tac%20Toe%20Game)
 
 ![Tic Tac Toe Game](../Calendar/img/tictactoe3.gif)
+
+*[Build a Simon Game](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/FreeCodeCamp/Coding%20Interview%20Prep/Simon%20Game)
+
+![Simon Game](../Calendar/img/simon4.gif)
+
+# Certificates
+
+## Front End Development Projects
+
+![FrontEndCertificate](../Calendar/img/certificate1.png)
