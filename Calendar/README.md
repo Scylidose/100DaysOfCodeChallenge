@@ -2,6 +2,18 @@
 
 ## Day 39: 06 June 2018
 
+- Finally got my Front-End certification o.o 
+
+![Certificate1](img/certificate1.png)
+
+- Finished the Simon Game (*freeCodeCamp*). Corrected some remaining bugs.
+
+![Simon4](img/simon4.gif)
+
+**Aprox Time:** ***1 hour***
+
+## Day 39: 06 June 2018
+
 - Continued the Simon Game (*freeCodeCamp*). Added delay between generated colors, added win and error announcer, added score count and style.
 
 ![Simon3](img/simon3.gif)
