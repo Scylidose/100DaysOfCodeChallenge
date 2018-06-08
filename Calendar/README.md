@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 41: 08 June 2018
+
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Backend Basics.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 40: 07 June 2018
 
 - Finally got my Front-End certification o.o 
