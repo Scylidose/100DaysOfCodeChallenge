@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 42: 09 June 2018
+
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done The Command Line.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 41: 08 June 2018
 
 - Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Backend Basics.
