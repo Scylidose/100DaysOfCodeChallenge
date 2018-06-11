@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 44: 11 June 2018
+
+- Read documentation about NodeJS.
+
+- Compared some backend language and decided to learn VueJS, AngularJS, Ruby, React and Redux for the next weeks.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 43: 10 June 2018
 
 - Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done Node JS.
