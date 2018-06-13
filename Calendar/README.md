@@ -1,6 +1,6 @@
 # 100 Days of Code Challenge
 
-## Day 45: 12 June 2018
+## Day 46: 13 June 2018
 
 - Read documentation about Express JS.
 
