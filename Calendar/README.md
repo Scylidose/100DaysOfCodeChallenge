@@ -1,5 +1,25 @@
 # 100 Days of Code Challenge
 
+## Day 47: 14 June 2018
+
+- Started [my GitHub.io page](https://scylidose.github.io/).
+
+![GitHubIo1](img/githubio1.png)
+
+- Decided to rewrite an old Flask/Jinja2/SQLite project to an node.JS/ExpressJS/MongoDB application.
+
+Home Page now : 
+
+![PetShopNode1](img/petshop-node1.png)
+
+How It'll look like : 
+
+![PetShopFlask1](img/petshop-flask1.png)
+
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done Server Side Frameworks.
+
+**Aprox Time:** ***4 hours***
+
 ## Day 46: 13 June 2018
 
 - Read documentation about Express JS.
