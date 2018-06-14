@@ -16,7 +16,7 @@ How It'll look like :
 
 ![PetShopFlask1](img/petshop-flask1.png)
 
-- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done Server Side Frameworks.
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Intermediate Express section.
 
 **Aprox Time:** ***4 hours***
 
