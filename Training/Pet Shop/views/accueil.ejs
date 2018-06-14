@@ -1,0 +1,36 @@
+<% include layout.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <% if(utilisateur == "None"){ %>
+                <table>
+                    <form action="/login" method="POST">
+                        <tr>
+                            <td>
+                                <label>Courriel </label>
+                            </td>
+                            <td>
+                                <input type="text" name="courriel">
+                            </td>
+
+                            <td>
+                                <label>Mot de passe </label>
+                            </td>
+                            <td>
+                                <input type="password" name="password">
+                            </td>
+
+                            <td></td>
+                            <td>
+                                <input type="submit" name="valider" value="Se connecter">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            <% } %>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+<hr>
