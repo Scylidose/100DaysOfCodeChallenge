@@ -1,0 +1,114 @@
+<% include layout.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <table>
+                <form action="" onsubmit="return valider()" method="POST">
+                    <tr>
+                        <td>
+                            <label>Nom</label>
+                        </td>
+                        <td>
+                            <input type="text" id="nom" name="nom">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Prénom</label>
+                        </td>
+                        <td>
+                            <input type="text" id="prenom" name="prenom">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Nom d'utilisateur</label>
+                        </td>
+                        <td>
+                            <input type="text" id="utilisateur" name="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Numéro de téléphone</label>
+                        </td>
+                        <td>
+                            <input type="text" id="telephone" name="telephone" maxlength="22">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Adresse</label>
+                        </td>
+                        <td>
+                            <input type="text" id="adresse" name="adresse">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Courriel</label>
+                        </td>
+                        <td>
+                            <input type="text" id="courriel" name="courriel" maxlength="254">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Confirmer le courriel</label>
+                        </td>
+                        <td>
+                            <input type="text" id="courriel2" name="courriel2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Mot de passe</label>
+                        </td>
+                        <td>
+                            <input type="password" id="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="submit" value="S'enregistrer">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            <h3 class='erreur' id="courriel_diff">Erreur: Les courriels sont différents</h3>
+            <h3 class='erreur' id="champs_vides">Erreur: Certains champs sont vides</h3>
+            <h3 class='erreur' id="courriel_inval">Erreur: Le champ du courriel est invalide</h3>
+            <h3 class='erreur' id="telephone_inval">Erreur: Le champ du téléphone est invalide</h3>
+            <h3 class='erreur' id="champs_long">Erreur: Les champs de courriel et/ou téléphone sont trop longs</h3>
+
+            <% if(error == "Erreur: Nom d'utilisateur déjà pris"){ %>
+            <h3 class='erreur2'>Erreur: Nom d'utilisateur déjà pris</h3>
+
+            <% } else if(error == "Erreur: Adresse courriel déjà prise"){ %>
+            <h3 class='erreur2'>Erreur: Adresse courriel déjà prise</h3>
+
+            <% } else if(error == "Erreur: Mot de passe invalide"){ %>
+            <h3 class='erreur2'>Erreur: Mot de passe invalide</h3>
+
+            <% } else if(error == "Erreur: Les courriels sont différents"){ %>
+            <h3 class='erreur2'>Erreur: Les courriels sont différents</h3>
+
+            <% } else if(error == "Erreur: Le champ du téléphone invalide"){ %>
+            <h3 class='erreur2'>Erreur: Le champ du téléphone est invalide</h3>
+
+            <% } else if(error == "Erreur: Le champ du courriel invalide"){ %>
+            <h3 class='erreur2'>Erreur: Le champ du courriel est invalide</h3>
+
+            <% } else if(error == "Erreur: Certains champs sont vides"){ %>
+            <h3 class='erreur2'>Erreur: Certains champs sont vides</h3>
+
+            <% } else if(error == "Erreur: Champs trop longs"){ %>
+            <h3 class='erreur2'>Erreur: Les champs de courriel et/ou téléphone sont trop longs</h3>
+            <% } %>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
