@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 48: 15 June 2018
+
+- Continued the Pet Shop project. Added post route and get posted arguments.
+
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Databases (MongoDB, Mongoose) section.
+
+**Aprox Time:** ***2 hours***
+
 ## Day 47: 14 June 2018
 
 - Started [my GitHub.io page](https://scylidose.github.io/).
