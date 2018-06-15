@@ -1,8 +1,10 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
 const port = process.env.PORT || 5000;
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
 // Home Page
@@ -19,6 +21,23 @@ app.get("/login", function(req, res){
 
 app.get("/enregistrer", function(req, res){
     res.render("templates/enregistrer.ejs", {error:""});
+});
+
+app.post("/register", function(req, res){
+    var destination = req.body.courriel;
+    var courriel2 = req.body.courriel2;
+    var utilisateur = req.body.username;
+
+    var password = req.body.password;
+
+    utilisateur = req.body.username;
+    destination = req.body.courriel;
+    var nom = req.body.nom;
+    var prenom = req.body.prenom;
+    var telephone = req.body.telephone;
+    var adresse = req.body.adresse;
+
+    res.redirect("/confirmer");
 });
 
 // Animals Page 
