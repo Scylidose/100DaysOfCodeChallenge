@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 49: 16 June 2018
+
+- Started **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Done the Introduction and Basic Express Setup sections.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 48: 15 June 2018
 
 - Continued the Pet Shop project. Added post route and get posted arguments.
