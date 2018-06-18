@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 51: 18 June 2018
+
+- Started **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Done the Post API Routes section.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 50: 17 June 2018
 
 - Continued the Pet Shop project. Added new verification for the posted arguments, corrected some bugs, added new links, added new routes and can now ask to create an account.
