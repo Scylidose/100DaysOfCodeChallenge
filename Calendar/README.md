@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 52: 19 June 2018
+
+- Started **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Started the Profile API Routes section.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 51: 18 June 2018
 
 - Started **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Done the Post API Routes section.
