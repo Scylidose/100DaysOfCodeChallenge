@@ -1,14 +1,29 @@
 # 100 Days of Code Challenge
 
+## Day 53: 20 June 2018
+
+Finally decided to make an entirely new Pet Shop site (FullStack) and let the rewrite code for later.
+
+- Continued **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Done the Profile API Routes section, the User API Routes & JWT Authentication.
+
+- Started a fresh new Pet Shop site. Added dependencies and done basics routes.
+
+- Continued [my GitHub.io page](https://scylidose.github.io/). Added animated anchors and div, added navbar, sections, text and arrow-links.
+
+![GitHubIo2](img/githubio2.gif)
+
+**Aprox Time:** ***3 hours***
+
+
 ## Day 52: 19 June 2018
 
-- Started **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Started the Profile API Routes section.
+- Continued **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Started the Profile API Routes section.
 
 **Aprox Time:** ***1 hour***
 
 ## Day 51: 18 June 2018
 
-- Started **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Done the Post API Routes section.
+- Continued **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY). Done the Post API Routes section.
 
 **Aprox Time:** ***1 hour***
 
