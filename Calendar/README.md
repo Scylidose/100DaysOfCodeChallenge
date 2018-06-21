@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 54: 21 June 2018
+
+- Rewatched some sections of the **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY) Udemy course. 
+
+- Continued my Pet Shop site. Added validators, new routes, login and register and authentification tokens.
+
+**Aprox Time:** ***3 hours***
+
 ## Day 53: 20 June 2018
 
 Finally decided to make an entirely new Pet Shop site (FullStack) and let the rewrite code for later.
@@ -13,7 +21,6 @@ Finally decided to make an entirely new Pet Shop site (FullStack) and let the re
 ![GitHubIo2](img/githubio2.gif)
 
 **Aprox Time:** ***3 hours***
-
 
 ## Day 52: 19 June 2018
 
