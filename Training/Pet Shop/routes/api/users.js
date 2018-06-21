@@ -9,6 +9,10 @@ const router = express.Router();
 // Load User model
 const User = require("../../models/User");
 
+// Load Input Validation
+const validateRegisterInput = require("../../validation/register")
+const validateLoginInput = require("../../validation/login")
+
 /*
     @route    GET api/users/test
     @desc     Test users route
@@ -24,13 +28,22 @@ router.get("/test", (req, res) => res.json({
     @access   Public
 */
 router.post("/register", (req, res) => {
+
+    const {
+        errors,
+        isValid
+    } = validateRegisterInput(req.body);
+
+    if (!isValid)  {
+        return res.status(400).json(errors);
+    }
+
     User.findOne({
         email: req.body.email
     }).then(user => {
         if (user) {
-            return res.status(400).json({
-                email: "Email already exists"
-            });
+            errors.Email = "Email alreay exists";
+            return res.status(400).json(errors);
         } else {
             const newUser = new User({
                 FirstName: req.body.firstname,
@@ -61,21 +74,29 @@ router.post("/login", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
+    const {
+        errors,
+        isValid
+    } = validateLOGINInput(req.body);
+
+    if (!isValid)  {
+        return res.status(400).json(errors);
+    }
+
     // Find user by email
     User.findOne({
-        Email:email
+        Email: email
     }).then(user =>  {
-        if (!user){
-            return res.status(404).json({
-                email: "User not found"
-            })
+        if (!user) {
+            errors.email = "User not found";
+            return res.status(404).json(errors);
         }
         // Check Password
         bcrypt.compare(password, user.Password).then(isMatch =>  {
             if (isMatch) {
                 // User Matched
-                const payload = { 
-                    id: user.id, 
+                const payload = {
+                    id: user.id,
                     email: user.Email
                 };
 
@@ -90,9 +111,8 @@ router.post("/login", (req, res) => {
                 });
 
             } else {
-                return res.status(400).json({
-                    password: "Incorrect Password"
-                })
+                errors.password = "Password incorrect";
+                return res.status(400).json(errors);
             }
         });
     });
@@ -103,7 +123,9 @@ router.post("/login", (req, res) => {
     @desc     Return the current user
     @access   Private
 */
-router.get("/current", passport.authenticate("jwt", {session: false}), (req, res) => {
+router.get("/current", passport.authenticate("jwt", {
+    session: false
+}), (req, res) => {
     res.json({
         id: req.user.id,
         email: req.user.Email
