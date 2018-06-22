@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 55: 22 June 2018
+
+- Read documentation on arrow functions, difference between let, var and const declarations and read passport documentation.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 54: 21 June 2018
 
 - Rewatched some sections of the **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY) Udemy course. 
