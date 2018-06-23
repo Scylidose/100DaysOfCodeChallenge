@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 56: 23 June 2018
+
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Git and GitHub section.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 55: 22 June 2018
 
 - Read documentation on arrow functions, difference between let, var and const declarations and read passport documentation.
