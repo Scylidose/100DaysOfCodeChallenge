@@ -1,5 +1,17 @@
 # 100 Days of Code Challenge
 
+## Day 58: 25 June 2018
+
+- Looked some website design to get inspired with my GitHub.io  page and done some schemes.
+
+**Aprox Time:** ***1 hour***
+
+## Day 57: 24 June 2018
+
+- Read some Node.JS and ExpressJS documentation.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 56: 23 June 2018
 
 - Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Git and GitHub section.
