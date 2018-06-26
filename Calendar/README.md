@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 59: 26 June 2018
+
+- Continued my Pet Shop site. Added Post route for posted form, added text validation and post model for mongoDB.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 58: 25 June 2018
 
 - Looked some website design to get inspired with my GitHub.io  page and done some schemes.
