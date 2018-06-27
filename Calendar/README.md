@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 60: 27 June 2018
+
+- Continued my Pet Shop site. Added Profile model, profile routes (get, delete, post,...). Added Post get and delete routes.
+
+**Aprox Time:** ***2 hours***
+
 ## Day 59: 26 June 2018
 
 - Continued my Pet Shop site. Added Post route for posted form, added text validation and post model for mongoDB.
