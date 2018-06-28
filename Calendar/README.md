@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 61: 28 June 2018
+
+Decided to transform my Pet Shop project to Pokemon Pet Shop, we can trade one or many pokemon to someone else the purpose will be to collect all the pokemon (1rst generation).
+
+- Continued my Pet Shop site. Added Pokemon and collection models and collection route.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 60: 27 June 2018
 
 - Continued my Pet Shop site. Added Profile model, profile routes (get, delete, post,...). Added Post get and delete routes.
