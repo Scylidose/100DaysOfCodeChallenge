@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 62: 29 June 2018
+
+- Looked some of the best WebSite Design.
+
+- Create a schema for my Pokemon Pet Shop site.
+
+- Done the specifications for the P.P.S. project.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 61: 28 June 2018
 
 Decided to transform my Pet Shop project to Pokemon Pet Shop, we can trade one or many pokemon to someone else the purpose will be to collect all the pokemon (1rst generation).
