@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 63: 30 June 2018
+
+- Continued my Pet Shop site. Started a bit of the Front-End, added 2 new layouts and added basic structure for the home page.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 62: 29 June 2018
 
 - Looked some of the best WebSite Design.
