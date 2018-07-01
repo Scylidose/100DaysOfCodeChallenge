@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 64: 01 July 2018
+
+- Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Authentication section.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 63: 30 June 2018
 
 - Continued my Pet Shop site. Started a bit of the Front-End, added 2 new layouts and added basic structure for the home page.
