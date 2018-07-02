@@ -3,9 +3,6 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-// Load Validation
-const validateProfileInput = require('../../validation/profile');
-
 // Load Profile Model
 const Profile = require('../../models/Profile');
 // Load User Model
@@ -93,10 +90,6 @@ router.post(
         session: false
     }),
     (req, res) => {
-        const {
-            errors,
-            isValid
-        } = validateProfileInput(req.body);
 
         // Check Validation
         if (!isValid) {
