@@ -1,0 +1,17 @@
+<% include layouts/top.ejs %>
+    <div class="searchBar">
+        <img src="/images/pokeball-background.jpg" class="img-fluid">
+        <form style="margin-top:5px; margin-left:10px" class="form-inline searchForm" action="" method="POST">
+            <input class="form-control mr-sm-2" name="chercher" placeholder="Chercher un Pokemon/Auteur/Grade" aria-label="Chercher un Pokemon/Auteur/Grade"
+                size="40">
+            <input class="btn rechercher" type="submit" name="submit" value="Chercher">
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+            </div>
+        </div>
+    </div>
+    <% include layouts/bottom.ejs %>
