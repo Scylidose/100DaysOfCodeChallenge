@@ -1,0 +1,19 @@
+.rechercher {
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.searchBar {
+    position: relative;
+}
+
+.searchForm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 33%;
+    margin: auto;
+}
