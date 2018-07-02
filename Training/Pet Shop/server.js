@@ -24,6 +24,8 @@ mongoose
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
+app.use(express.static("views/public"));
+
 // Passport middleware
 app.use(passport.initialize());
 
@@ -31,6 +33,10 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 // Use Routes
+app.use("/", (req, res) => {
+    res.render("home.ejs");
+});
+
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
