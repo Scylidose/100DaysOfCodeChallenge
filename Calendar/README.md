@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 65: 02 July 2018
+
+- Continued my Pet Shop site. Added new background image, added home page route, added searchbar and style.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 64: 01 July 2018
 
 - Continued **The Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done the Authentication section.
