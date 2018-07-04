@@ -17,3 +17,22 @@
     left: 33%;
     margin: auto;
 }
+
+.right-line {
+    border-right: 2px black solid;
+}
+
+hr {
+    margin: 0 0;
+    border-top: 0px;
+    border-bottom: 3px black solid;
+}
+
+.about, .collection{
+    margin-bottom: 20px;
+}
+
+.poke-background {
+        -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(40%);
+}
