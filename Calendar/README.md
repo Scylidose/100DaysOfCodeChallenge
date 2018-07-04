@@ -1,5 +1,15 @@
 # 100 Days of Code Challenge
 
+## Day 66: 04 July 2018
+
+- Continued my Pet Shop site. Added a sidebar menu with animated scroll, text and gif, web page tab icon, and style.
+
+![PokemonPetShop1](img/pokemonpetshop1.gif)
+
+**Aprox Time:** ***2 hours***
+
+## MISSED 03 July 2018
+
 ## Day 65: 02 July 2018
 
 - Continued my Pet Shop site. Added new background image, added home page route, added searchbar and style.
