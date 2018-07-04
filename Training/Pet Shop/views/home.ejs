@@ -1,5 +1,11 @@
 <% include layouts/top.ejs %>
-    <div class="searchBar">
+    <div class="sidenav">
+        <a class="dot" href="#searchBar"></a>
+        <a class="dot" href="#about"></a>
+        <a class="dot" href="#collection"></a>
+        <a class="dot" href="#random"></a>
+    </div>
+    <div class="searchBar" id="searchBar">
         <img src="/images/pokeball-background.jpg" class="img-fluid poke-background">
         <form style="margin-top:5px; margin-left:10px" class="form-inline searchForm" action="" method="POST">
             <input class="form-control mr-sm-2" name="chercher" placeholder="Chercher un Pokemon/Auteur/Grade" aria-label="Chercher un Pokemon/Auteur/Grade"
@@ -9,7 +15,7 @@
     </div>
     <hr>
     <h2 class="text-center" style="margin: 20px 0">What's About</h2>
-    <div class="container about">
+    <div class="container about" id="about">
         <div class="row">
             <div class="col-md-4 right-line">
                 <h3 class="text-center">Titre1</h3>
@@ -31,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="container collection">
+    <div class="container collection" id="collection">
         <div class="row">
             <div class="col-md-6 right-line">
                 <h3 class="text-center">Pokemon</h3>
@@ -43,5 +49,13 @@
         </div>
     </div>
     <hr>
-
+    <div class="container" id="random">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="/images/pokeball-gif.gif" width="50" height="65">
+                <img src="/images/pokeball-gif.gif" width="50" height="65">
+                <img src="/images/pokeball-gif.gif" width="50" height="65">
+            </div>
+        </div>
+    </div>
     <% include layouts/bottom.ejs %>
