@@ -22,6 +22,12 @@
     border-right: 2px black solid;
 }
 
+@media screen and (max-width: 767px) {
+    .right-line {
+        border: 0;
+    }
+}
+
 hr {
     margin: 0 0;
     border-top: 0px;
@@ -36,7 +42,6 @@ hr {
         -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
         filter: grayscale(40%);
 }
-
 
 .sidenav {
     height: 100%;
