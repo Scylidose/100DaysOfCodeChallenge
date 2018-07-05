@@ -1,5 +1,17 @@
 # 100 Days of Code Challenge
 
+## Day 67: 05 July 2018
+
+- Continued my Pet Shop site. Added text, link, max-width media query to remove an element when user use a phone and added sample image.
+
+![PokemonPetShop2](img/pokemonpetshop2.png)
+
+The phone version :    
+
+![PokemonPetShop3](img/pokemonpetshop3.png)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 66: 04 July 2018
 
 - Continued my Pet Shop site. Added a sidebar menu with animated scroll, text and gif, web page tab icon, and style.
