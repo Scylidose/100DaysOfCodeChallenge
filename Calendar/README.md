@@ -1,5 +1,12 @@
 # 100 Days of Code Challenge
 
+## Day 68: 06 July 2018
+
+- Continued my Pet Shop site. Added new route to create an account and added template containing the form to sign in.
+And desperately searched information about linking an url from anchor to nodeJS route.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 67: 05 July 2018
 
 - Continued my Pet Shop site. Added text, link, max-width media query to remove an element when user use a phone and added sample image.
