@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 69: 07 July 2018
+
+- Read some NodeJS and ExpressJS documentation
+
+- Searched solution to link node routes with anchor links (html)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 68: 06 July 2018
 
 - Continued my Pet Shop site. Added new route to create an account and added template containing the form to sign in.
