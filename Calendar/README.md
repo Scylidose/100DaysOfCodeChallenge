@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 70: 08 July 2018
+
+- Continued my Pet Shop site. Added new route to modify user information and added form to modify them.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 69: 07 July 2018
 
 - Read some NodeJS and ExpressJS documentation
