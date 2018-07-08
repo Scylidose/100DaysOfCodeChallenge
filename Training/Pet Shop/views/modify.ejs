@@ -1,0 +1,53 @@
+<% include layouts/top.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <table>
+                <form onsubmit="return valider()" action="" method="POST">
+                    <tr>
+                        <td>
+                            <label>Last Name </label>
+                        </td>
+                        <td>
+                            <input type="text" name="lastname" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>First Name </label>
+                        </td>
+                        <td>
+                            <input type="text" name="firstname" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Username </label>
+                        </td>
+                        <td>
+                            <input type="text" name="username" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email </label>
+                        </td>
+                        <td>
+                            <input type="text" name="email" value="" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="submit" value="Modify user informations">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<% include layouts/bottom.ejs %>
