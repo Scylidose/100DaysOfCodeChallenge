@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 71: 09 July 2018
+
+- Continued my GitHub.io page. Added form to contact me, media logo, profile pic, centered and align elements, added style and smooth scroll animation when clicking the sidenav menu.
+
+![GitHubIo3](img/githubio3.gif)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 70: 08 July 2018
 
 - Continued my Pet Shop site. Added new route to modify user information and added form to modify them.
