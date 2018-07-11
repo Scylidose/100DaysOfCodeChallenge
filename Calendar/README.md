@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 72 & 73: 10 & 11 July 2018
+
+- Continued my GitHub.io page. Added new background and color, added text, logo, table, animated transition color on hover and removed animated arrow.
+
+![GitHubIo4](img/githubio4.gif)
+
+**Aprox Time:** ***2.5 hours***
+
 ## Day 71: 09 July 2018
 
 - Continued my GitHub.io page. Added form to contact me, media logo, profile pic, centered and align elements, added style and smooth scroll animation when clicking the sidenav menu.
