@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 74: 12 July 2018
+
+- Continued my GitHub.io page. Added functions to fade differents page section, added new logo, skills page section, completed portfolio section and added style.
+
+![GitHubIo5](img/githubio5.gif)
+
+**Aprox Time:** ***3 hours***
+
 ## Day 72 & 73: 10 & 11 July 2018
 
 - Continued my GitHub.io page. Added new background and color, added text, logo, table, animated transition color on hover and removed animated arrow.
