@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 75: 13 July 2018
+
+- Continued my GitHub.io page. Added tab logo and title page, started the challenge page (sidenav menu, day section), added new logo and style.
+
+![GitHubIo6](img/githubio6.gif)
+
+**Aprox Time:** ***3 hours***
+
 ## Day 74: 12 July 2018
 
 - Continued my GitHub.io page. Added functions to fade differents page section, added new logo, skills page section, completed portfolio section and added style.
