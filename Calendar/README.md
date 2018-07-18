@@ -1,5 +1,21 @@
 # 100 Days of Code Challenge
 
+## Day 80: 18 July 2018
+
+- Continued **The Advanced Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done Introduction To React and JSX.
+
+**Aprox Time:** ***1 hour***
+
+## Day 76 to 79: 14 July to 17 July 2018
+
+- Read NodeJS, ExpressJS and MongoDB documentation.
+
+- Started to learn React language.
+
+- Read HTTP and TCP documentation.
+
+**Aprox Time:** ***5 hours***
+
 ## Day 75: 13 July 2018
 
 - Continued my GitHub.io page. Added tab logo and title page, started the challenge page (sidenav menu, day section), added new logo and style.
