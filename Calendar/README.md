@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 81: 19 July 2018
+
+- Done new specification notes and started to think how to do the Pet Shop project.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 80: 18 July 2018
 
 - Continued **The Advanced Web Developer Bootcamp** (COLT STEELE) Udemy courses. Done Introduction To React and JSX.
