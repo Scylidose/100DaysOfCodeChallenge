@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 82 & 83: 20 & 21 July 2018
+
+- Added new folders, started exercise about nodeJS/ExpressJS framework (npm, route and layout)  started to rewatch some section of the **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY).
+
+![Exercise1](img/exercise1.gif)
+
+**Aprox Time:** ***2.5 hours***
+
 ## Day 81: 19 July 2018
 
 - Done new specification notes and started to think how to do the Pet Shop project.
