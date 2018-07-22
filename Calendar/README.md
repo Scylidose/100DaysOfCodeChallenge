@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 84: 22 July 2018
+
+- Started to do Login exercise, added User model, basic route, all dependencies, connected with mongoDB and configured passport and mongoDB key.
+
+**Aprox Time:** ***2 hours***
+
 ## Day 82 & 83: 20 & 21 July 2018
 
 - Added new folders, started exercise about nodeJS/ExpressJS framework (npm, route and layout)  started to rewatch some section of the **MERN Stack Front To Back: Full Stak React, Redux & Node.js** (BRAD TRAVERSY).
