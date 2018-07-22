@@ -11,6 +11,9 @@ const port = process.env.port || 5000;
 
 const db = require('./config/keys').mongoURI;
 
+// Load User model
+const User = require('../../models/User');
+
 // Passport middleware
 app.use(passport.initialize());
 
