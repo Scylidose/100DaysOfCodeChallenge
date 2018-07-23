@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 85: 23 July 2018
+
+- Continued to do Login exercise, Added user route, and succeed to debug the app.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 84: 22 July 2018
 
 - Started to do Login exercise, added User model, basic route, all dependencies, connected with mongoDB and configured passport and mongoDB key.
