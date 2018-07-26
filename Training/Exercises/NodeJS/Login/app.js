@@ -33,6 +33,10 @@ app.get("/", function (req, res) {
     res.render('index.ejs');
 });
 
+app.post("/", function (req, res) {
+    alert("Test");
+});
+
 app.use('/account/users', users);
 
 // Connect to MongoDB
