@@ -34,7 +34,13 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-    alert("Test");
+    const newUser = new User({
+        name: req.body.name,
+        password: req.body.name
+    });
+
+    newUser.save();
+    res.render('user.ejs');
 });
 
 app.use('/account/users', users);
