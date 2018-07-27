@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
-const users = require('./account/user');
 
 const app = express();
 
@@ -40,10 +39,29 @@ app.post("/", function (req, res) {
     });
 
     newUser.save();
-    res.render('user.ejs');
+    res.redirect("/user/" + newUser.name);
 });
 
-app.use('/account/users', users);
+app.get("/login", function (req, res) {
+    res.render("login.ejs");
+});
+
+app.post("/login", function (req, res) {
+    User.findOne({
+        name: req.body.name,
+        password: req.body.name
+    }).then(
+        user => {
+            res.redirect("/user/" + user.name)
+        }
+    );
+});
+
+app.get("/user/:id", function (req, res) {
+    res.render("user.ejs", {
+        id: req.params.id,
+    });
+})
 
 // Connect to MongoDB
 mongoose
