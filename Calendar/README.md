@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 86 to 89: 24 to 27 July 2018
+
+- Finished Login Exercise. Added login and register form, log off link, title, can add and fetch a user, unique url for each user.
+
+- Read ExpressJS and EJS documentations
+
+**Aprox Time:** ***4 hours***
+
 ## Day 85: 23 July 2018
 
 - Continued to do Login exercise, Added user route, and succeed to debug the app.
