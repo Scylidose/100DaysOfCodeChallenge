@@ -55,14 +55,11 @@ app.post("/", function (req, res) {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
             newUser.password = hash;
-            newUser
-                .save()
-                .then(user => res.json(user))
-                .catch(err => console.log(err));
+            newUser.save()
         });
     });
 
-    res.redirect("/user/" + newUser.name);
+    res.redirect("/login");
 });
 
 app.get("/login", function (req, res) {
@@ -81,20 +78,52 @@ app.post("/login", function (req, res) {
     }
 
     User.findOne({
-        name: req.body.name,
-        password: req.body.name
-    }).then(
-        user => {
-            res.redirect("/user/" + user.name)
+        name: req.body.name
+    }).then(user => {
+        // Check for user
+        if (!user) {
+            errors.name = 'User not found';
+            return res.status(404).json(errors);
         }
-    );
+
+        // Check Password
+        bcrypt.compare(req.body.password, user.password).then(isMatch => {
+            if (isMatch) {
+                // User Matched
+                const payload = {
+                    name: user.name,
+                }; // Create JWT Payload
+
+                // Sign Token
+                jwt.sign(
+                    payload,
+                    keys.secretOrKey, {
+                        expiresIn: 3600
+                    },
+                    (err, token) => {
+                        res.json({
+                            success: true,
+                            token: 'Bearer ' + token
+                        });
+                    }
+                );
+            } else {
+                errors.password = 'Password incorrect';
+                return res.status(400).json(errors);
+            }
+        });
+    });
 });
 
-app.get("/user/:id", function (req, res) {
-    res.render("user.ejs", {
-        id: req.params.id,
-    });
-})
+app.get("/user/:id",
+    passport.authenticate('jwt', {
+        session: false
+    }),
+    function (req, res) {
+        res.render("user.ejs", {
+            id: req.params.id,
+        });
+    })
 
 // Connect to MongoDB
 mongoose
