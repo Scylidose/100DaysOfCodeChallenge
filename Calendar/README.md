@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 90: 28 July 2018
+
+- Finished Validation Exercise. Added webtoken, input validation, check session, crypt password with Salt-Hash technique.
+
+**Aprox Time:** ***2 hours***
+
 ## Day 86 to 89: 24 to 27 July 2018
 
 - Finished Login Exercise. Added login and register form, log off link, title, can add and fetch a user, unique url for each user.
