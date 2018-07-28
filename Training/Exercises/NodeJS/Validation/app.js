@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 
@@ -50,7 +51,17 @@ app.post("/", function (req, res) {
         password: req.body.name
     });
 
-    //newUser.save();
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+            newUser
+                .save()
+                .then(user => res.json(user))
+                .catch(err => console.log(err));
+        });
+    });
+
     res.redirect("/user/" + newUser.name);
 });
 
