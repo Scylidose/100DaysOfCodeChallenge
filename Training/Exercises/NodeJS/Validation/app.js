@@ -13,6 +13,8 @@ const db = require('./config/keys').mongoURI;
 // Load User model
 const User = require('./models/User.js');
 
+const validateUser = require('./validation/user');
+
 // Passport middleware
 app.use(passport.initialize());
 
@@ -33,12 +35,22 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
+
+    const {
+        errors,
+        isValid
+    } = validateUser(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
     const newUser = new User({
         name: req.body.name,
         password: req.body.name
     });
 
-    newUser.save();
+    //newUser.save();
     res.redirect("/user/" + newUser.name);
 });
 
@@ -47,6 +59,16 @@ app.get("/login", function (req, res) {
 });
 
 app.post("/login", function (req, res) {
+
+    const {
+        errors,
+        isValid
+    } = validateUser(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
     User.findOne({
         name: req.body.name,
         password: req.body.name
