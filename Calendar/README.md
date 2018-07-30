@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 92: 30 July 2018
+
+- Continued Pet Shop project. Added dependencies, added bootstrap and jquery library, added pug pages, home route, added type in Collection model.
+
+- Read Pug documentation.
+
+**Aprox Time:** ***1.5 hour***
+
 ## Day 91: 29 July 2018
 
 - Started Pet Shop project. Added dependencies, models, validation input and basic route.
