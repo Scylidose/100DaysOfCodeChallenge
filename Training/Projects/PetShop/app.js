@@ -3,8 +3,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const path = require('path');
+const pokemonGif = require('pokemon-gif');
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'pug');
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({
@@ -26,6 +30,10 @@ app.use(passport.initialize());
 
 // Passport Config
 require('./config/passport')(passport);
+
+app.get("/", function(req, res){
+    res.render('accueil', { title: 'PokemonPetShop | Home' });
+});
 
 const port = process.env.PORT || 5000;
 
