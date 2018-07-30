@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const Pokemon = require('./Pokemon');
+
 // Create Schema
 const CollectionSchema = new Schema({
     username: {
@@ -13,7 +15,7 @@ const CollectionSchema = new Schema({
     },
     Pokemons: [{
         Pokemon: {
-            type: String,
+            type: Pokemon.type,
             required: true
         }
     }],

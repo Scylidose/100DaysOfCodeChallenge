@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // Create Schema
 const PokemonSchema = new Schema({
 
-    Pokemon: {
+    id: {
         type: String,
         required: true
     },
