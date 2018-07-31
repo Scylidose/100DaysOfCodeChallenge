@@ -32,7 +32,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.get("/", function(req, res){
-    res.render('accueil', { title: 'PokemonPetShop | Home' });
+    res.render('accueil', { utilisateur: false });
 });
 
 const port = process.env.PORT || 5000;
