@@ -53,17 +53,26 @@ block content
                 p(class="text-center") Get 3 random pokemon when you create an account !
                 
                 if !utilisateur
-                    table
-                        form(action="/login" method="POST")
-                            tr
-                                td
-                                    label Courriel
-                                td
-                                    input(type="text" name="courriel")
-                                td
-                                    label Mot de passe 
-                                td
-                                    input(type="password" name="password")
-                                td
-                                td
-                                    input(type="submit" name="valider" value="Se connecter")
+                    hr
+                    .container#register
+                        .row
+                            .col-md-3
+                            .col-md-6(class="text-center")
+                                h4 Register now !
+                                table(style="margin: 20px 20%")
+                                    form(action="/register" method="POST")
+                                        tr
+                                            td
+                                                label Courriel
+                                            td
+                                                input(type="text" name="courriel")
+                                        tr
+                                            td
+                                                label Password
+                                            td
+                                                input(type="password" name="password")
+                                        tr
+                                            td
+                                            td
+                                                input(type="submit" name="valider" value="Register")
+                            .col-md-3
