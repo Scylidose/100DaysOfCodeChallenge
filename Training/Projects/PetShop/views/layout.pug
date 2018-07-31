@@ -1,9 +1,25 @@
 doctype html
 html
   head
-    title= title
+    title PokemonPetShop | Home
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/js/script.js')
+
   body
+    ul(class="nav nav-tabs navbar" style="background-color: #333333;")
+      li.nav-item
+        a(class="nav-link active" href="/") Accueil
+      li.nav-item
+        a(class="nav-link" href="/animaux") Animaux
+
+      li(class="nav-item" style="float:right; margin-right: 15px;")
+        form(style="margin-top:5px; margin-left:10px" class="form-inline" action="" method="POST")
+          input(class="form-control mr-sm-2" name="chercher" placeholder="Chercher un animal" aria-label="Chercher un animal")
+          input(class="btn btn-success" type="submit" name="submit" value="Chercher un animal")
     block content
