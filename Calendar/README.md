@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 93: 31 July 2018
+
+- Continued Pet Shop project. Added user route and page, completed layout and index page, added register form and post route, added bootstrap, jquery, personnal script, style and images.
+
+- Read Pug documentation.
+
+**Aprox Time:** ***2.5 hours***
+
 ## Day 92: 30 July 2018
 
 - Continued Pet Shop project. Added dependencies, added bootstrap and jquery library, added pug pages, home route, added type in Collection model.
