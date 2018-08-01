@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 94: 01 August 2018
+
+- Continued Pet Shop project. Added generator of random animal and added personnal collection when creating an account, and attempted to make passport jwt work.
+
+- Read passport-jwt authentification documentation
+
+**Aprox Time:** ***2 hours***
+
 ## Day 93: 31 July 2018
 
 - Continued Pet Shop project. Added user route and page, completed layout and index page, added register form and post route, added bootstrap, jquery, personnal script, style and images.
