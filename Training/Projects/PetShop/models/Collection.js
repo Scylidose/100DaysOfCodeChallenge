@@ -9,13 +9,10 @@ const CollectionSchema = new Schema({
         type: String,
         required: true
     },
-    lemgth: {
-        type: Number,
-        required: true
-    },
     Pokemons: [{
         Pokemon: {
-            type: Pokemon.type,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'pokemons',
             required: true
         }
     }],

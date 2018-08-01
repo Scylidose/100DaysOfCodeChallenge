@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const pokeCollection = require('./Collection');
+
 // Create Schema
 const UserSchema = new Schema({
     username: {
@@ -13,6 +15,11 @@ const UserSchema = new Schema({
     },
     password: {
         type: String,
+        required: true
+    },
+    pokeCollection: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "collections",
         required: true
     },
     date: {

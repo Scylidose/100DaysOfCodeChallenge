@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const PokemonSchema = new Schema({
 
     id: {
-        type: String,
+        type: Number,
         required: true
     },
     date: {
