@@ -38,10 +38,10 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.get("/", function (req, res) {
-        res.render('accueil', {
-            utilisateur: false
-        });
+    res.render('accueil', {
+        utilisateur: false
     });
+});
 
 app.post("/register", function (req, res) {
     var username = req.body.username;
@@ -58,12 +58,11 @@ app.post("/register", function (req, res) {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
             newUser.password = hash;
-            //newUser.save()
         });
     });
 
     const payload = {
-        username: username,
+        id: username
     }; // Create JWT Payload
 
     // Sign Token
@@ -75,34 +74,38 @@ app.post("/register", function (req, res) {
         (err, token) => {
             res.json({
                 success: true,
-                token: 'Bearer ' + token
+                token: `Bearer ${token}`
             });
         }
     );
 
     const pokeCollection = new Collection({
         username: username,
-        length: 0
     })
 
-    for(var i = 0; i<2; i++){
+    for (var i = 0; i < 2; i++) {
         var id = genPokemon();
         const newPokemon = new Pokemon({
             id: id
         });
-        pokeCollection.Pokemons.push(newPokemon);
+        //pokeCollection.Pokemons.push(newPokemon);
     }
+    newUser.pokeCollection = pokeCollection;
 
     pokeCollection.save();
-    
-    res.redirect('/user/'+username);
+    newUser.save()
+
+    res.redirect('/user/' + username);
 });
 
-app.get("/user/:username", passport.authenticate('jwt', { session: false }), function(req, res){
+app.get("/user/:username", passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
 
+    res.render("user");
 });
 
-function genPokemon(){
+function genPokemon() {
     return Math.floor(Math.random() * (151 - 1 + 1)) + 1;
 }
 
