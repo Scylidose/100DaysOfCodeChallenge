@@ -2,9 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const bcrypt = require('bcryptjs');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const pokemonGif = require('pokemon-gif');
+
+const keys = require('./config/keys');
 
 const app = express();
 
@@ -26,7 +29,7 @@ mongoose
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-const User = require('./models/User.js');
+const User = require('./models/User');
 
 // Passport middleware
 app.use(passport.initialize());
@@ -55,7 +58,7 @@ app.post("/register", function (req, res) {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
             newUser.password = hash;
-            newUser.save()
+            //newUser.save()
         });
     });
 
@@ -77,12 +80,31 @@ app.post("/register", function (req, res) {
         }
     );
 
+    const pokeCollection = new Collection({
+        username: username,
+        length: 0
+    })
+
+    for(var i = 0; i<2; i++){
+        var id = genPokemon();
+        const newPokemon = new Pokemon({
+            id: id
+        });
+        pokeCollection.Pokemons.push(newPokemon);
+    }
+
+    pokeCollection.save();
+    
     res.redirect('/user/'+username);
 });
 
 app.get("/user/:username", passport.authenticate('jwt', { session: false }), function(req, res){
 
 });
+
+function genPokemon(){
+    return Math.floor(Math.random() * (151 - 1 + 1)) + 1;
+}
 
 const port = process.env.PORT || 5000;
 
