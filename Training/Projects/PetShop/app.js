@@ -30,6 +30,7 @@ mongoose
     .catch(err => console.log(err));
 
 const User = require('./models/User');
+const pokeCollection = require('./models/Collection');
 
 // Passport middleware
 app.use(passport.initialize());
@@ -60,49 +61,59 @@ app.post("/register", function (req, res) {
             newUser.password = hash;
         });
     });
+    /*
+        const payload = {
+            id: username
+        }; // Create JWT Payload
 
-    const payload = {
-        id: username
-    }; // Create JWT Payload
+        // Sign Token
+        jwt.sign(
+            payload,
+            keys.secretOrKey, {
+                expiresIn: 3600
+            },
+            (err, token) => {
+                res.json({
+                    success: true,
+                    token: `Bearer ${token}`
+                });
+            }
+        );*/
 
-    // Sign Token
-    jwt.sign(
-        payload,
-        keys.secretOrKey, {
-            expiresIn: 3600
-        },
-        (err, token) => {
-            res.json({
-                success: true,
-                token: `Bearer ${token}`
-            });
-        }
-    );
-
-    const pokeCollection = new Collection({
+    const newPokeCollection = new pokeCollection({
         username: username,
-    })
+        Pokemon: ['']
+    });
 
     for (var i = 0; i < 2; i++) {
         var id = genPokemon();
-        const newPokemon = new Pokemon({
+        var newPoke = {
             id: id
-        });
-        //pokeCollection.Pokemons.push(newPokemon);
+        }
+        newPokeCollection.Pokemons.unshift(newPoke);
     }
-    newUser.pokeCollection = pokeCollection;
 
-    pokeCollection.save();
+    newPokeCollection.save();
     newUser.save()
 
     res.redirect('/user/' + username);
 });
 
-app.get("/user/:username", passport.authenticate('jwt', {
-    session: false
-}), function (req, res) {
+app.get("/user/:username", function (req, res) {
+    var pokeColl = [];
 
-    res.render("user");
+    pokeCollection.findOne({
+        username: req.params.username
+    }).then(coll => {
+        for(var i =0; i < coll.Pokemons.length; i++){
+            pokeColl.unshift(coll.Pokemons[i].id);
+        }
+        res.json({
+            pokeColl
+        })
+    })
+
+    //res.render("user", { username: req.params.username});
 });
 
 function genPokemon() {
