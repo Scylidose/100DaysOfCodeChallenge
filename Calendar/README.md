@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 95: 02 August 2018
+
+- Continued Pet Shop project. Tried to make passport-jwt work, changed models (removed a model and changed attribute type), now add animal to collection and can fetch collection from an username.
+
+- Read Mongoose documentation.
+
+**Aprox Time:** ***2 hours***
+
 ## Day 94: 01 August 2018
 
 - Continued Pet Shop project. Added generator of random animal and added personnal collection when creating an account, and attempted to make passport jwt work.
