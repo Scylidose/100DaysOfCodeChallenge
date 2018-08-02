@@ -15,6 +15,7 @@ module.exports = passport => {
         username: jwt_payload._doc._id
       })
         .then(user => {
+          return res.json(jwt_payload._doc._id);
           if (user) {
             return done(null, user);
           }
