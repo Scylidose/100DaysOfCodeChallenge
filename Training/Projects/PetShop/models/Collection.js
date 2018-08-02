@@ -1,19 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Pokemon = require('./Pokemon');
-
 // Create Schema
-const CollectionSchema = new Schema({
+const pokeCollectionSchema = new Schema({
     username: {
         type: String,
         required: true
     },
     Pokemons: [{
         Pokemon: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'pokemons',
-            required: true
+            type: Number
         }
     }],
     date: {
@@ -22,4 +18,4 @@ const CollectionSchema = new Schema({
     }
 });
 
-module.exports = Collection = mongoose.model('collections', CollectionSchema);
+module.exports = pokeCollection = mongoose.model('pokeCollections', pokeCollectionSchema);

@@ -17,11 +17,6 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    pokeCollection: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "collections",
-        required: true
-    },
     date: {
         type: Date,
         default: Date.now
