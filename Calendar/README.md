@@ -2,7 +2,7 @@
 
 ## Day 95: 02 August 2018
 
-- Continued Pet Shop project. Tried to make passport-jwt work, changed models (removed a model and changed attribute type), now add animal to collection and can fetch collection from an username.
+- Continued Pet Shop project. Tried to make passport-jwt work, changed models (removed a model and changed attribute type), now add animal to collection, can fetch collection from an username and added personnal user page.
 
 - Read Mongoose documentation.
 
