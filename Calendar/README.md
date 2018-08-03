@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 96: 03 August 2018
+
+- Continued Pet Shop project. Now fetch gif of the animal and add it in a list, can now render list item in pug and added style.
+
+**Aprox Time:** ***1 hour***
+
 ## Day 95: 02 August 2018
 
 - Continued Pet Shop project. Tried to make passport-jwt work, changed models (removed a model and changed attribute type), now add animal to collection, can fetch collection from an username and added personnal user page.
