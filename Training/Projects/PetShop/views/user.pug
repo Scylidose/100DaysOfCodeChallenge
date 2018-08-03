@@ -14,5 +14,8 @@ block content
             .col-md-6.text-center
                 h3 My Collection
                 hr
-                
+                ul.collection
+                each pokemon in pokemons
+                    li
+                        img.pokemon(src= pokemon)
             .col-md-3
