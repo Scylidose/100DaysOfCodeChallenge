@@ -88,7 +88,7 @@ app.post("/register", function (req, res) {
     for (var i = 0; i < 2; i++) {
         var id = genPokemon();
         var newPoke = {
-            id: id
+            Pokemon: id
         }
         newPokeCollection.Pokemons.unshift(newPoke);
     }
@@ -106,14 +106,11 @@ app.get("/user/:username", function (req, res) {
         username: req.params.username
     }).then(coll => {
         for(var i =0; i < coll.Pokemons.length; i++){
-            pokeColl.unshift(coll.Pokemons[i].id);
+            pokeColl.unshift(pokemonGif(coll.Pokemons[i].Pokemon));
         }
-        res.json({
-            pokeColl
-        })
-    })
 
-    //res.render("user", { username: req.params.username});
+        res.render("user", { username: req.params.username, pokemons: pokeColl});
+    })
 });
 
 function genPokemon() {
