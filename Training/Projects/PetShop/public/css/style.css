@@ -34,13 +34,14 @@ hr {
     border-bottom: 3px black solid;
 }
 
-.about, .collection{
+.about, .collection {
     margin-bottom: 20px;
 }
 
 .poke-background {
-        -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(40%);
+    -webkit-filter: grayscale(40%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(40%);
 }
 
 .sidenav {
@@ -77,11 +78,16 @@ hr {
     width: 100%;
 }
 
-.footer{
+.footer {
     background-color: #333333;
     overflow: hidden;
     position: relative;
     top: 0;
     width: 100%;
     margin-top: 30px;
+}
+
+ul.collection {
+    border: 1px solid black;
+    list-style:none;
 }
