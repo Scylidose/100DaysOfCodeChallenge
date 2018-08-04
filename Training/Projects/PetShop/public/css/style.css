@@ -87,7 +87,13 @@ hr {
     margin-top: 30px;
 }
 
-ul.collection {
-    border: 1px solid black;
-    list-style:none;
+.collection {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.pokemon {
+    display: inline-block;
+    width: 50%;
 }
