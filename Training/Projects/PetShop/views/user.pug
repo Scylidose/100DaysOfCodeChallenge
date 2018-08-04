@@ -14,8 +14,14 @@ block content
             .col-md-6.text-center
                 h3 My Collection
                 hr
-                ul.collection
-                each pokemon in pokemons
-                    li
-                        img.pokemon(src= pokemon)
+                .collection
+                    - var i = 0
+                    while pokemons.length > i
+                        if i == 1
+                            br
+                        .pokemon
+                            img(src= pokemonsGif[i])
+                            h3= pokemons[i]
+                        - i++
+                            
             .col-md-3
