@@ -1,5 +1,13 @@
 # 100 Days of Code Challenge
 
+## Day 97: 04 August 2018
+
+- Continued Pet Shop project. Now fetch the name of the animal and add it in a list, added new module, added nav-item in upper menu.
+
+![PokemonPetShop](img/petshop-node3.gif)
+
+**Aprox Time:** ***1 hour***
+
 ## Day 96: 03 August 2018
 
 - Continued Pet Shop project. Now fetch gif of the animal and add it in a list, can now render list item in pug and added style.
