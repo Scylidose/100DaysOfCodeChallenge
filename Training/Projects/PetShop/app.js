@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const pokemonGif = require('pokemon-gif');
+const pokemon = require('pokemon');
 
 const keys = require('./config/keys');
 
@@ -101,15 +102,16 @@ app.post("/register", function (req, res) {
 
 app.get("/user/:username", function (req, res) {
     var pokeColl = [];
+    var pokeCollGif = [];
 
     pokeCollection.findOne({
         username: req.params.username
     }).then(coll => {
         for(var i =0; i < coll.Pokemons.length; i++){
-            pokeColl.unshift(pokemonGif(coll.Pokemons[i].Pokemon));
+            pokeColl.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
+            pokeCollGif.unshift(pokemonGif(coll.Pokemons[i].Pokemon));
         }
-
-        res.render("user", { username: req.params.username, pokemons: pokeColl});
+        res.render("user", { username: req.params.username, pokemonsGif: pokeCollGif, pokemons: pokeColl});
     })
 });
 
