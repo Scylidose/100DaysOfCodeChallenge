@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 98: 05 August 2018
+
+- Continued Pet Shop project. Added new model, add new animal in database when registering. Added search and login route, user can find an animal, put passport-jwt and bcrypt script in login and register route. Corrected some text.
+
+**Aprox Time:** ***2 hours***
+
 ## Day 97: 04 August 2018
 
 - Continued Pet Shop project. Now fetch the name of the animal and add it in a list, added new module, added nav-item in upper menu.
