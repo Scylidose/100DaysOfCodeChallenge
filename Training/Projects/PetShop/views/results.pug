@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-3
+            .col-md-6.text-center
+                - var i = 0
+                    while resultList.length > i
+                        .pokemon
+                            img(src="http://www.pokestadium.com/sprites/xy/" + resultList[i] + ".gif")
+                            h5= resultList[i]
+                        - i++
+            .col-md-3
