@@ -9,9 +9,9 @@ block content
     .searchBar#searchBar
         img(src="/images/pokeball-background.jpg" class="img-fluid poke-background")
         form(style="margin-top:5px; margin-left:10px" class="form-inline searchForm" action="" method="POST")
-            input(class="form-control mr-sm-2" name="chercher" placeholder="Chercher un Pokemon/Auteur/Grade" aria-label="Chercher un Pokemon/Auteur/Grade"
+            input(class="form-control mr-sm-2" name="search" placeholder="Search a pokemon or account" aria-label="Search a pokemon or account"
                 size="40")
-            input(class="btn rechercher" type="submit" name="submit" value="Chercher")
+            input(class="btn rechercher" type="submit" name="submit" value="Search")
     hr
     h2(class="text-center" style="margin: 20px 0") What's About
     .container.about#about
@@ -79,5 +79,23 @@ block content
                                         tr
                                             td
                                             td
-                                                input(type="submit" name="valider" value="Register")
+                                                input(type="submit" name="register" value="Register")
+                                    
+                                h4 Login
+                                table(style="margin: 20px 20%")
+                                    form(action="/login" method="POST")
+                                        tr
+                                            td
+                                                label Username
+                                            td
+                                                input(type="text" name="username")
+                                        tr
+                                            td
+                                                label Password
+                                            td
+                                                input(type="password" name="password")
+                                        tr
+                                            td
+                                            td
+                                                input(type="submit" name="login" value="Login")
                             .col-md-3
