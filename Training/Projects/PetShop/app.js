@@ -32,6 +32,7 @@ mongoose
 
 const User = require('./models/User');
 const pokeCollection = require('./models/Collection');
+const PokemonDB = require('./models/Pokemon');
 
 // Passport middleware
 app.use(passport.initialize());
@@ -62,24 +63,24 @@ app.post("/register", function (req, res) {
             newUser.password = hash;
         });
     });
-    
-        const payload = {
-            id: username
-        }; // Create JWT Payload
 
-        // Sign Token
-        jwt.sign(
-            payload,
-            keys.secretOrKey, {
-                expiresIn: 3600
-            },
-            (err, token) => {
-                res.json({
-                    success: true,
-                    token: 'Bearer ' + token
-                });
-            }
-        );
+    const payload = {
+        id: username
+    }; // Create JWT Payload
+
+    // Sign Token
+    jwt.sign(
+        payload,
+        keys.secretOrKey, {
+            expiresIn: 3600
+        },
+        (err, token) => {
+            res.json({
+                success: true,
+                token: 'Bearer ' + token
+            });
+        }
+    );
 
     const newPokeCollection = new pokeCollection({
         username: username,
@@ -91,6 +92,25 @@ app.post("/register", function (req, res) {
         var newPoke = {
             Pokemon: id
         }
+        PokemonDB.findOne({
+            name: pokemon.getName(id)
+        }).then(pokemons => {
+            if (!pokemons)  {
+                var newPokemon = new Pokemon({
+                    usernames: [''],
+                    name: ''
+                });
+
+                newPokemon.usernames.unshift(username);
+                newPokemon.name = pokemon.getName(id);
+                newPokemon.save();
+            } else {
+                pokemons.usernames.unshift(username);
+                pokemons.name = pokemon.getName(id);
+                pokemons.save();
+            }
+        })
+
         newPokeCollection.Pokemons.unshift(newPoke);
     }
 
@@ -135,6 +155,24 @@ app.post("/login", function (req, res) {
             } else {
                 return res.status(400).json('Password incorrect');
             }
+        });
+    })
+});
+
+app.post("/search", function (req, res) {
+    var results = [];
+
+    var search = req.body.search;
+
+    PokemonDB.find({
+        name: search
+    }).then(pokemons => {
+        if (!pokemons) {
+            return res.status(400).json("Pokemon not found.");
+        }
+
+        res.render("results", {
+            resultList: pokemons
         });
     })
 });
