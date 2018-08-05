@@ -62,7 +62,7 @@ app.post("/register", function (req, res) {
             newUser.password = hash;
         });
     });
-    /*
+    
         const payload = {
             id: username
         }; // Create JWT Payload
@@ -76,10 +76,10 @@ app.post("/register", function (req, res) {
             (err, token) => {
                 res.json({
                     success: true,
-                    token: `Bearer ${token}`
+                    token: 'Bearer ' + token
                 });
             }
-        );*/
+        );
 
     const newPokeCollection = new pokeCollection({
         username: username,
@@ -100,6 +100,45 @@ app.post("/register", function (req, res) {
     res.redirect('/user/' + username);
 });
 
+app.post("/login", function (req, res) {
+    var username = req.body.username;
+    var password = req.body.password;
+
+    User.findOne({
+        username: username
+    }).then(user =>  {
+        if (!user) {
+            return res.status(404).json('User not found');
+        }
+
+        bcrypt.compare(password, user.password).then(isMatch => {
+            if (isMatch) {
+                // User Matched
+                const payload = {
+                    id: username
+                }; // Create JWT Payload
+
+                // Sign Token
+                jwt.sign(
+                    payload,
+                    keys.secretOrKey, {
+                        expiresIn: 3600
+                    },
+                    (err, token) => {
+                        res.json({
+                            success: true,
+                            token: 'Bearer ' + token
+                        });
+                    }
+                );
+                res.redirect('/user/' + username);
+            } else {
+                return res.status(400).json('Password incorrect');
+            }
+        });
+    })
+});
+
 app.get("/user/:username", function (req, res) {
     var pokeColl = [];
     var pokeCollGif = [];
@@ -107,11 +146,15 @@ app.get("/user/:username", function (req, res) {
     pokeCollection.findOne({
         username: req.params.username
     }).then(coll => {
-        for(var i =0; i < coll.Pokemons.length; i++){
+        for (var i = 0; i < coll.Pokemons.length; i++) {
             pokeColl.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
             pokeCollGif.unshift(pokemonGif(coll.Pokemons[i].Pokemon));
         }
-        res.render("user", { username: req.params.username, pokemonsGif: pokeCollGif, pokemons: pokeColl});
+        res.render("user", {
+            username: req.params.username,
+            pokemonsGif: pokeCollGif,
+            pokemons: pokeColl
+        });
     })
 });
 
