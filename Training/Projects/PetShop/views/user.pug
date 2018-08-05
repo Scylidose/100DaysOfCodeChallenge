@@ -17,11 +17,9 @@ block content
                 .collection
                     - var i = 0
                     while pokemons.length > i
-                        if i == 1
-                            br
                         .pokemon
                             img(src= pokemonsGif[i])
-                            h3= pokemons[i]
+                            h5= pokemons[i]
                         - i++
                             
             .col-md-3
