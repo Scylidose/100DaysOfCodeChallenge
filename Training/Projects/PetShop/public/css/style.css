@@ -90,10 +90,11 @@ hr {
 .collection {
     width: 100%;
     height: auto;
-    display: flex;
+    display: inline-block;
+    zoom: 1; 
 }
 
 .pokemon {
     display: inline-block;
-    width: 50%;
+    width: 30%;
 }
