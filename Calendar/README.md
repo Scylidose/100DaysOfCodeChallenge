@@ -1,5 +1,11 @@
 # 100 Days of Code Challenge
 
+## Day 99: 06 August 2018
+
+- Continued Pet Shop project. Added user collection route, user can see the collection of other when searching one specific animal and corrected few bugs.
+
+**Aprox Time:** ***1.5 hour***
+
 ## Day 98: 05 August 2018
 
 - Continued Pet Shop project. Added new model, add new animal in database when registering. Added search and login route, user can find an animal, put passport-jwt and bcrypt script in login and register route. Corrected some text.
