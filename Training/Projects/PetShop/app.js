@@ -95,17 +95,21 @@ app.post("/register", function (req, res) {
         PokemonDB.findOne({
             name: pokemon.getName(id)
         }).then(pokemons => {
-            if (!pokemons)  {
-                var newPokemon = new Pokemon({
-                    usernames: [''],
-                    name: ''
-                });
 
-                newPokemon.usernames.unshift(username);
-                newPokemon.name = pokemon.getName(id);
+            var newUsername = {
+                user: username
+            }
+
+            if (!pokemons)  {
+
+                var newPokemon = new PokemonDB({
+                    user: [''],
+                    name: pokemon.getName(id)
+                });
+                newPokemon.usernames.unshift(newUsername);
                 newPokemon.save();
             } else {
-                pokemons.usernames.unshift(username);
+                pokemons.usernames.unshift(newUsername);
                 pokemons.name = pokemon.getName(id);
                 pokemons.save();
             }
