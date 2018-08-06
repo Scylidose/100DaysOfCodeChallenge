@@ -144,7 +144,6 @@ app.post("/login", function (req, res) {
 });
 
 app.post("/search", function (req, res) {
-    var results = [];
 
     var search = req.body.search;
 
@@ -180,11 +179,34 @@ app.get("/user/:username", function (req, res) {
     })
 });
 
+app.get("/collection/:username", function (req, res) {
+
+    var user = req.params.username;
+    var pokeName = [];
+
+    pokeCollection.findOne({
+        username: user
+    }).then(coll => {
+        if (!coll) {
+            return res.status(400).json("User not found.");
+        }
+
+        for(var i = 0; i < coll.Pokemons.length; i++){
+            pokeName.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
+        }
+
+        res.render("collection", {
+            username: user,
+            resultList: pokeName
+        })
+    });
+});
+
 function genPokemon() {
     return Math.floor(Math.random() * (151 - 1 + 1)) + 1;
 }
 
-function createPokemon(username, id){
+function createPokemon(username, id) {
     PokemonDB.findOne({
         name: pokemon.getName(id)
     }).then(pokemons => {
