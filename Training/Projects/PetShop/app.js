@@ -92,28 +92,8 @@ app.post("/register", function (req, res) {
         var newPoke = {
             Pokemon: id
         }
-        PokemonDB.findOne({
-            name: pokemon.getName(id)
-        }).then(pokemons => {
 
-            var newUsername = {
-                user: username
-            }
-
-            if (!pokemons)  {
-
-                var newPokemon = new PokemonDB({
-                    user: [''],
-                    name: pokemon.getName(id)
-                });
-                newPokemon.usernames.unshift(newUsername);
-                newPokemon.save();
-            } else {
-                pokemons.usernames.unshift(newUsername);
-                pokemons.name = pokemon.getName(id);
-                pokemons.save();
-            }
-        })
+        createPokemon(username, id);
 
         newPokeCollection.Pokemons.unshift(newPoke);
     }
@@ -202,6 +182,30 @@ app.get("/user/:username", function (req, res) {
 
 function genPokemon() {
     return Math.floor(Math.random() * (151 - 1 + 1)) + 1;
+}
+
+function createPokemon(username, id){
+    PokemonDB.findOne({
+        name: pokemon.getName(id)
+    }).then(pokemons => {
+
+        var newUsername = {
+            user: username
+        }
+
+        if (!pokemons)  {
+
+            var newPokemon = new PokemonDB({
+                user: [''],
+                name: pokemon.getName(id)
+            });
+            newPokemon.usernames.unshift(newUsername);
+            newPokemon.save();
+        } else {
+            pokemons.usernames.unshift(newUsername);
+            pokemons.save();
+        }
+    })
 }
 
 const port = process.env.PORT || 5000;
