@@ -4,11 +4,16 @@ block content
     .container
         .row
             .col-md-3
-            .col-md-6.text-center
+            .col-md-6.text-center(style="margin-top:100px")
                 - var i = 0
-                    while resultList.length > i
+                    while resultList[0].usernames.length > i
                         .pokemon
-                            img(src="http://www.pokestadium.com/sprites/xy/" + resultList[i] + ".gif")
-                            h5= resultList[i]
+                            img(src="http://www.pokestadium.com/sprites/xy/" + resultList[0].name.toLowerCase() + ".gif")
+                            h3= resultList[0].name
+                            hr
+                            h5 Possessed by :
+                            
+                            a(href="/user/"+resultList[0].usernames[i].user)
+                                h6= resultList[0].usernames[i].user
                         - i++
             .col-md-3
