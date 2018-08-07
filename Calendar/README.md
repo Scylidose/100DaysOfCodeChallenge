@@ -1,5 +1,7 @@
 # 100 Days of Code Challenge
 
+## MISSED 07 August 2018
+
 ## Day 99: 06 August 2018
 
 - Continued Pet Shop project. Added user collection route, user can see the collection of other when searching one specific animal and corrected few bugs.
