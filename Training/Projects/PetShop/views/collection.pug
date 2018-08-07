@@ -11,6 +11,15 @@ block content
                         .pokemon
                             img(src= "http://www.pokestadium.com/sprites/xy/" + resultList[i].toLowerCase() + ".gif")
                             h5= resultList[i]
-                            button Trade
+                            button.choose(onclick="changeColor(this)") Trade
                         - i++
+
+                h2 Which Pokemon do you want to trade ?
+                    - var j = 0
+                    while myCollection.length > j
+                        .pokemon
+                            img(src= "http://www.pokestadium.com/sprites/xy/" + myCollection[j].toLowerCase() + ".gif")
+                            h5= myCollection[j]
+                            button.choose(onclick="changeColor(this)") Choose
+                        - j++
             .col-md-3
