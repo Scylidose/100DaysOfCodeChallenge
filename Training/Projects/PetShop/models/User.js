@@ -17,6 +17,17 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    trade: [{
+        ask: [{
+            type: String
+        }],
+        want: [{
+            type: String
+        }],
+        from: {
+            type: String
+        }
+    }],
     date: {
         type: Date,
         default: Date.now
