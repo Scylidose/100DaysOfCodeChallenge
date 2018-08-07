@@ -183,6 +183,7 @@ app.get("/collection/:username", function (req, res) {
 
     var user = req.params.username;
     var pokeName = [];
+    var myColl = [];
 
     pokeCollection.findOne({
         username: user
@@ -197,7 +198,8 @@ app.get("/collection/:username", function (req, res) {
 
         res.render("collection", {
             username: user,
-            resultList: pokeName
+            resultList: pokeName,
+            myCollection: myColl
         })
     });
 });
