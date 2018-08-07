@@ -15,3 +15,11 @@ $(document).ready(function () {
         $('.nav-item a').toggleClass("bounce");
     }, 5000);
 });
+
+function changeColor(element){
+    if($(element).css("background-color") == "red"){
+        $(element).css("background-color", "blue");
+    } else {
+        $(element).css("background-color", "red");
+    }
+}
