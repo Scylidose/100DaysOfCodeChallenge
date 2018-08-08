@@ -17,9 +17,5 @@ $(document).ready(function () {
 });
 
 function changeColor(element){
-    if($(element).css("background-color") == "red"){
-        $(element).css("background-color", "blue");
-    } else {
-        $(element).css("background-color", "red");
-    }
+    $(element).toggleClass("clicked");
 }
