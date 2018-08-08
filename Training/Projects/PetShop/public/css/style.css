@@ -98,3 +98,7 @@ hr {
     display: inline-block;
     width: 30%;
 }
+
+.clicked {
+    background-color: red;
+}
