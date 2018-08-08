@@ -57,7 +57,7 @@ app.post("/register", function (req, res) {
         if (user) {
             return res.status(400).json('User already exist');
         }
-    })
+    });
 
     User.findOne({
         courriel: courriel
@@ -65,7 +65,7 @@ app.post("/register", function (req, res) {
         if (user) {
             return res.status(400).json('Courriel already exist');
         }
-    })
+    });
 
     User.find({}, function (err, users) {
         users.forEach(function (user) {
@@ -88,7 +88,7 @@ app.post("/register", function (req, res) {
         Pokemon: ['']
     });
 
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 3; i++) {
         var id = genPokemon();
         var newPoke = {
             Pokemon: id
@@ -109,6 +109,26 @@ app.post("/register", function (req, res) {
         });
     });
 
+    const payload = {
+        id: newUser.id,
+        username: username
+    }; // Create JWT Payload
+
+    // Sign Token
+    jwt.sign(
+        payload,
+        keys.secretOrKey, {
+            expiresIn: 3600
+        },
+        (err, token) => {
+            res.json({
+                success: true,
+                token: 'Bearer ' + token
+            });
+            res.setHeader('Authorization', token);
+        }
+    );
+
     res.redirect('/user/' + username);
 });
 
@@ -126,7 +146,7 @@ app.post("/login", function (req, res) {
         bcrypt.compare(password, user.password).then(isMatch => {
             if (isMatch) {
                 const payload = {
-                    id: user.id
+                    username: username
                 }; // Create JWT Payload
 
                 // Sign Token
@@ -138,7 +158,7 @@ app.post("/login", function (req, res) {
                     (err, token) => {
                         res.json({
                             success: true,
-                            token: 'Bearer ' + token
+                            token: `Bearer ${token}`
                         });
                     }
                 );
@@ -167,7 +187,7 @@ app.post("/search", function (req, res) {
     })
 });
 
-app.get("/user/:username", function (req, res) {
+app.get("/user/:username", passport.authenticate('jwt', { session: false }), function (req, res) {
     var pokeColl = [];
     var pokeCollGif = [];
 
@@ -186,7 +206,9 @@ app.get("/user/:username", function (req, res) {
     })
 });
 
-app.get("/collection/:username", function (req, res) {
+app.get("/collection/:username", passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
 
     var user = req.params.username;
     var pokeName = [];
@@ -203,11 +225,19 @@ app.get("/collection/:username", function (req, res) {
             pokeName.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
         }
 
-        res.render("collection", {
-            username: user,
-            resultList: pokeName,
-            myCollection: myColl
-        })
+        pokeCollection.findOne({
+            username: req.user.username
+        }).then(coll => {
+            for (var i = 0; i <  coll.Pokemons.length; i++) {
+                myColl.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
+            }
+
+            res.render("collection", {
+                username: user,
+                resultList: pokeName,
+                myCollection: myColl
+            })
+        });
     });
 });
 
