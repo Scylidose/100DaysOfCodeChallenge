@@ -1,5 +1,9 @@
 # 100 Days of Code Challenge
 
+----------------------------------------------
+        100 Days of Code Challenge | ROUND 1        
+----------------------------------------------
+
 ## Day 100: 08 August 2018
 
 - Continued Pet Shop project. Corrected bcryptjs bug, added script to toggle class when clicking button, new loop to show our animal in collection route, added passport authenticate route, removed EJS package, changed some blocks, added style and new text.
