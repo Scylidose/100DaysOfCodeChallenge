@@ -51,36 +51,37 @@ app.post("/register", function (req, res) {
     var courriel = req.body.courriel;
     var password = req.body.password;
 
+    User.findOne({
+        username: username
+    }).then(user =>  {
+        if (user) {
+            return res.status(400).json('User already exist');
+        }
+    })
+
+    User.findOne({
+        courriel: courriel
+    }).then(user =>  {
+        if (user) {
+            return res.status(400).json('Courriel already exist');
+        }
+    })
+
+    User.find({}, function (err, users) {
+        users.forEach(function (user) {
+            bcrypt.compare(password, user.password).then(isMatch => {
+                if (isMatch) {
+                    return res.status(400).json('Password already exist');
+                }
+            });
+        });
+    })
+
     const newUser = new User({
         username: username,
         courriel: courriel,
         password: password
     });
-
-    bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newUser.password, salt, (err, hash) => {
-            if (err) throw err;
-            newUser.password = hash;
-        });
-    });
-
-    const payload = {
-        id: username
-    }; // Create JWT Payload
-
-    // Sign Token
-    jwt.sign(
-        payload,
-        keys.secretOrKey, {
-            expiresIn: 3600
-        },
-        (err, token) => {
-            res.json({
-                success: true,
-                token: 'Bearer ' + token
-            });
-        }
-    );
 
     const newPokeCollection = new pokeCollection({
         username: username,
@@ -99,7 +100,14 @@ app.post("/register", function (req, res) {
     }
 
     newPokeCollection.save();
-    newUser.save()
+
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+            newUser.save();
+        });
+    });
 
     res.redirect('/user/' + username);
 });
@@ -117,9 +125,8 @@ app.post("/login", function (req, res) {
 
         bcrypt.compare(password, user.password).then(isMatch => {
             if (isMatch) {
-                // User Matched
                 const payload = {
-                    id: username
+                    id: user.id
                 }; // Create JWT Payload
 
                 // Sign Token
@@ -192,7 +199,7 @@ app.get("/collection/:username", function (req, res) {
             return res.status(400).json("User not found.");
         }
 
-        for(var i = 0; i < coll.Pokemons.length; i++){
+        for (var i = 0; i <  coll.Pokemons.length; i++) {
             pokeName.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
         }
 
@@ -205,7 +212,13 @@ app.get("/collection/:username", function (req, res) {
 });
 
 function genPokemon() {
-    return Math.floor(Math.random() * (151 - 1 + 1)) + 1;
+    var id = Math.floor(Math.random() * (151 - 1 + 1)) + 1;
+
+    if (id >= 144 && id <= 151) {
+        id = Math.floor(Math.random() * (151 - 1 + 1)) + 1;
+    }
+
+    return id;
 }
 
 function createPokemon(username, id) {
