@@ -7,6 +7,7 @@ const path = require('path');
 const jwt = require('jsonwebtoken');
 const pokemonGif = require('pokemon-gif');
 const pokemon = require('pokemon');
+var cookieParser = require('cookie-parser');
 
 const keys = require('./config/keys');
 
@@ -14,6 +15,8 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'pug');
+
+app.use(cookieParser());
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({
@@ -111,23 +114,16 @@ app.post("/register", function (req, res) {
 
     const payload = {
         id: newUser.id,
-        username: username
     }; // Create JWT Payload
 
     // Sign Token
-    jwt.sign(
+    var token = jwt.sign(
         payload,
         keys.secretOrKey, {
             expiresIn: 3600
-        },
-        (err, token) => {
-            res.cookie('jwt',token);
-            res.json({
-                success: true,
-                token: 'Bearer ' + token
-            });
-        }
-    );
+        });
+
+    res.cookie('jwt', token, {encode: String});
 
     res.redirect('/user/' + username);
 });
