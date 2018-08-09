@@ -8,6 +8,12 @@ const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;
 
+var cookieExtractor = function(req) {
+  var token = null;
+  if (req && req.cookies) token = req.cookies['jwt'];
+  return token;
+};
+
 module.exports = passport => {
   passport.use(
     new JwtStrategy(opts, (jwt_payload, done) => {
