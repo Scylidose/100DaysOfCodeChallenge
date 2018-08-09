@@ -4,27 +4,25 @@ const mongoose = require('mongoose');
 const User = mongoose.model('users');
 const keys = require('../config/keys');
 
-const opts = {};
-opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-opts.secretOrKey = keys.secretOrKey;
-
 var cookieExtractor = function(req) {
   var token = null;
   if (req && req.cookies) token = req.cookies['jwt'];
   return token;
 };
-
-module.exports = passport => {
-  passport.use(
-    new JwtStrategy(opts, (jwt_payload, done) => {
-      User.findById(jwt_payload.id)
-        .then(user => {
-          if (user) {
-            return done(null, user);
-          }
-          return done(null, false);
-        })
-        .catch(err => console.log(err));
-    })
-  );
+module.exports = function(passport) {  
+  var opts = {};
+  opts.jwtFromRequest = cookieExtractor; // check token in cookie
+  opts.secretOrKey = keys.secretOrKey;
+  passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
+    User.findById(jwt_payload.id, function(err, user) {
+      if (err) {
+        return done(err, false);
+      }
+      if (user) {
+        done(null, user);
+      } else {
+        done(null, false);
+      }
+    });
+  }));
 };
