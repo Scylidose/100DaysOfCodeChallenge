@@ -121,11 +121,11 @@ app.post("/register", function (req, res) {
             expiresIn: 3600
         },
         (err, token) => {
+            res.cookie('jwt',token);
             res.json({
                 success: true,
                 token: 'Bearer ' + token
             });
-            res.setHeader('Authorization', token);
         }
     );
 
@@ -187,7 +187,9 @@ app.post("/search", function (req, res) {
     })
 });
 
-app.get("/user/:username", passport.authenticate('jwt', { session: false }), function (req, res) {
+app.get("/user/:username", passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
     var pokeColl = [];
     var pokeCollGif = [];
 
