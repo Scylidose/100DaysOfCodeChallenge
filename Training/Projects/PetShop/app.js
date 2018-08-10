@@ -9,6 +9,8 @@ const pokemonGif = require('pokemon-gif');
 const pokemon = require('pokemon');
 var cookieParser = require('cookie-parser');
 
+var ObjectId = require('mongodb').ObjectID;
+
 const keys = require('./config/keys');
 
 const app = express();
@@ -113,7 +115,7 @@ app.post("/register", function (req, res) {
     });
 
     const payload = {
-        id: newUser.id,
+        id: username,
     }; // Create JWT Payload
 
     // Sign Token
@@ -123,9 +125,11 @@ app.post("/register", function (req, res) {
             expiresIn: 3600
         });
 
-    res.cookie('jwt', token, {encode: String});
+    res.cookie('jwt', token, {
+        encode: String
+    });
 
-    res.redirect('/user/' + username);
+    res.redirect('/');
 });
 
 app.post("/login", function (req, res) {
@@ -142,28 +146,30 @@ app.post("/login", function (req, res) {
         bcrypt.compare(password, user.password).then(isMatch => {
             if (isMatch) {
                 const payload = {
-                    username: username
+                    id: username,
                 }; // Create JWT Payload
-
+            
                 // Sign Token
-                jwt.sign(
+                var token = jwt.sign(
                     payload,
                     keys.secretOrKey, {
                         expiresIn: 3600
-                    },
-                    (err, token) => {
-                        res.json({
-                            success: true,
-                            token: `Bearer ${token}`
-                        });
-                    }
-                );
-                res.redirect('/user/' + username);
+                    });
+            
+                res.cookie('jwt', token, {
+                    encode: String
+                });
+
+                res.redirect('/redirection', username);
             } else {
                 return res.status(400).json('Password incorrect');
             }
         });
     })
+});
+
+app.get("/redirection", username, function(req, res){
+    res.redirect('/user/' + username);
 });
 
 app.post("/search", function (req, res) {
