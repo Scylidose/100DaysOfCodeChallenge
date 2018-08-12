@@ -19,16 +19,3 @@ $(document).ready(function () {
 function changeColor(element){
     $(element).toggleClass("clicked");
 }
-
-function tradePkm() {
-    var tradeList = [];
-    var chooseList = [];
-
-    $('.trade.clicked').each(function() {
-        tradeList.push($(this).attr("id"));
-    });
-
-    $('.choose.clicked').each(function() {
-        chooseList.push($(this).attr("id"));
-    });
-}
