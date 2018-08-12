@@ -104,6 +104,17 @@
     - [ ] **You don't know JS** ***- Up & Going***  
     KYLE SIMPSON
 
+    - [ ] **Don't Make Me Think** ***, Revisited, 3rd Edition***  
+    STEVE KRUG
+
+    - [ ] **Implementing Responsive Design- Building Sites for an Anywhere, Everywhere Web**  
+    TIM KADLEC
+
+    - [ ] **Responsive Web Design**  
+    ETHAN MARCOTTE
+
+    - [ ] **Responsive Web Design with Adobe Photoshop**  
+    DAN ROSE
 
 # Rules
 
@@ -118,7 +129,8 @@
 
 # Calendar
 
-### Started Sunday 29 April 2018  
-### Should end Tuesday 07 August 2018  
+## Round 1 - Ended 8th August 2018
+
+## Round 2 - Coming Soon...
 
 Click [there](https://github.com/Scylidose/100DaysOfCodeChallenge/tree/master/Calendar) and see my daily logs ! :v:
