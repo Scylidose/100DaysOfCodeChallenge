@@ -11,7 +11,7 @@ block content
                         .pokemon
                             img(src= "http://www.pokestadium.com/sprites/xy/" + resultList[i].toLowerCase() + ".gif")
                             h5= resultList[i]
-                            button.choose(onclick="changeColor(this)") Choose
+                            button.choose(onclick="changeColor(this)" id=resultList[i].toLowerCase()) Choose
                         - i++
 
                 h2 Which Pokemon do you want to trade ?
@@ -20,7 +20,7 @@ block content
                         .pokemon
                             img(src= "http://www.pokestadium.com/sprites/xy/" + myCollection[j].toLowerCase() + ".gif")
                             h5= myCollection[j]
-                            button.choose(onclick="changeColor(this)") Choose
+                            button.trade(onclick="changeColor(this)" id=myCollection[j].toLowerCase()) Choose
                         - j++
-                button Trade
+                button(onclick="tradePkm()") Trade
             .col-md-3
