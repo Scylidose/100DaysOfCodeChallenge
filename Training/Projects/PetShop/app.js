@@ -46,9 +46,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.get("/", function (req, res) {
-    res.render('accueil', {
-        utilisateur: false
-    });
+    res.render('accueil');
 });
 
 app.post("/register", function (req, res) {
@@ -160,7 +158,7 @@ app.post("/login", function (req, res) {
                     encode: String
                 });
 
-                res.redirect('/redirection', username);
+                res.redirect('/');
             } else {
                 return res.status(400).json('Password incorrect');
             }
@@ -168,8 +166,8 @@ app.post("/login", function (req, res) {
     })
 });
 
-app.get("/redirection", username, function(req, res){
-    res.redirect('/user/' + username);
+app.get('/trade', function (req, res) {
+    
 });
 
 app.post("/search", function (req, res) {
