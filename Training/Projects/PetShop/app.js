@@ -9,8 +9,6 @@ const pokemonGif = require('pokemon-gif');
 const pokemon = require('pokemon');
 var cookieParser = require('cookie-parser');
 
-var ObjectId = require('mongodb').ObjectID;
-
 const keys = require('./config/keys');
 
 const app = express();
@@ -146,14 +144,14 @@ app.post("/login", function (req, res) {
                 const payload = {
                     id: username,
                 }; // Create JWT Payload
-            
+
                 // Sign Token
                 var token = jwt.sign(
                     payload,
                     keys.secretOrKey, {
                         expiresIn: 3600
                     });
-            
+
                 res.cookie('jwt', token, {
                     encode: String
                 });
@@ -166,7 +164,7 @@ app.post("/login", function (req, res) {
     })
 });
 
-app.get('/trade', function (req, res) {
+app.get('/trade/:trade/:choose', function (req, res) {
     
 });
 
@@ -249,7 +247,6 @@ function genPokemon() {
     if (id >= 144 && id <= 151) {
         id = Math.floor(Math.random() * (151 - 1 + 1)) + 1;
     }
-
     return id;
 }
 
