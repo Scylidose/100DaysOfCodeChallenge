@@ -16,6 +16,21 @@ $(document).ready(function () {
     }, 5000);
 });
 
-function changeColor(element){
+function changeColor(element) {
     $(element).toggleClass("clicked");
+}
+
+function getTrade() {
+    var tradeList = [];
+    var chooseList = [];
+
+    $('.trade.clicked').each(function () {
+        tradeList.push($(this).attr("id"));
+    });
+
+    $('.choose.clicked').each(function () {
+        chooseList.push($(this).attr("id"));
+    });
+
+    document.location.href="/trade/"+tradeList+"/"+chooseList;
 }
