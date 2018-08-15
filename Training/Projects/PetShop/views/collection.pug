@@ -5,7 +5,7 @@ block content
         .row
             .col-md-3
             .col-md-6.text-center(style="margin-top:100px")
-                h2 Collection of #{username}
+                h2(class="userTitle" id=username) Collection of #{username}
                 - var i = 0
                     while resultList.length > i
                         .pokemon
