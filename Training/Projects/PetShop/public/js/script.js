@@ -23,6 +23,7 @@ function changeColor(element) {
 function getTrade() {
     var tradeList = [];
     var chooseList = [];
+    var user = $(".userTitle").attr('id');
 
     $('.trade.clicked').each(function () {
         tradeList.push($(this).attr("id"));
@@ -32,5 +33,5 @@ function getTrade() {
         chooseList.push($(this).attr("id"));
     });
 
-    document.location.href="/trade/"+tradeList+"/"+chooseList;
+    document.location.href="/trade/"+user+"/"+tradeList+"/"+chooseList;
 }
