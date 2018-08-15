@@ -164,7 +164,19 @@ app.post("/login", function (req, res) {
     })
 });
 
-app.get('/trade/:trade/:choose', function (req, res) {
+app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
+
+    var username = req.params.username;
+    var from = req.params.from;
+
+    var tradeList = req.params.trade;
+    var chooseList = req.params.choose;
+
+    tradeList = tradeList.split(",");
+    chooseList = chooseList.split(",");
+
     
 });
 
