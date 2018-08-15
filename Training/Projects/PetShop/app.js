@@ -36,6 +36,7 @@ mongoose
 const User = require('./models/User');
 const pokeCollection = require('./models/Collection');
 const PokemonDB = require('./models/Pokemon');
+const tradePokemon = require('./models/Trade');
 
 // Passport middleware
 app.use(passport.initialize());
@@ -81,7 +82,7 @@ app.post("/register", function (req, res) {
     const newUser = new User({
         username: username,
         courriel: courriel,
-        password: password
+        password: password,
     });
 
     const newPokeCollection = new pokeCollection({
@@ -168,8 +169,8 @@ app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
 
-    var username = req.params.username;
-    var from = req.params.from;
+    var username = req.user.username;
+    var fromUser = req.params.from;
 
     var tradeList = req.params.trade;
     var chooseList = req.params.choose;
@@ -177,7 +178,16 @@ app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
     tradeList = tradeList.split(",");
     chooseList = chooseList.split(",");
 
-    
+    const newTrade = new tradePokemon({
+        username: username,
+        ask: tradeList,
+        choose: chooseList,
+        from: fromUser
+    });
+
+    newTrade.save();
+
+    return res.redirect("/user/" + username);
 });
 
 app.post("/search", function (req, res) {
@@ -203,6 +213,8 @@ app.get("/user/:username", passport.authenticate('jwt', {
     var pokeColl = [];
     var pokeCollGif = [];
 
+    var tradeList = [];
+
     pokeCollection.findOne({
         username: req.params.username
     }).then(coll => {
@@ -210,10 +222,20 @@ app.get("/user/:username", passport.authenticate('jwt', {
             pokeColl.unshift(pokemon.getName(coll.Pokemons[i].Pokemon));
             pokeCollGif.unshift(pokemonGif(coll.Pokemons[i].Pokemon));
         }
+
+        tradePokemon.find({
+            username: req.params.username
+        }).then(trades => {
+            trades.forEach(function (trades) {
+
+            });
+        })
+
         res.render("user", {
             username: req.params.username,
             pokemonsGif: pokeCollGif,
-            pokemons: pokeColl
+            pokemons: pokeColl,
+            trades: tradeList
         });
     })
 });
