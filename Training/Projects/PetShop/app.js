@@ -214,6 +214,10 @@ app.get("/user/:username", passport.authenticate('jwt', {
     var pokeCollGif = [];
 
     var tradeList = [];
+    var tradeCollection = [];
+
+    var ask = [];
+    var choose = [];
 
     pokeCollection.findOne({
         username: req.params.username
@@ -226,18 +230,28 @@ app.get("/user/:username", passport.authenticate('jwt', {
         tradePokemon.find({
             username: req.params.username
         }).then(trades => {
-            trades.forEach(function (trades) {
+            for (var i = 0; i <  trades.length; i++) {
+                for (var j = 0; j <  trades[i].ask.length; j++) {
+                    ask.unshift(trades[i].ask[j]);
+                }
+                for (var j = 0; j <  trades[i].choose.length; j++) {
+                    choose.unshift(trades[i].choose[j]);
+                }
+                tradeList.unshift(ask);
+                tradeList.unshift(choose);
+                tradeList.unshift(trades[i].from);
 
+                tradeCollection.unshift(tradeList);
+            }
+            return res.json(tradeCollection[1]);
+            res.render("user", {
+                username: req.params.username,
+                pokemonsGif: pokeCollGif,
+                pokemons: pokeColl,
+                trades: tradeCollection
             });
-        })
-
-        res.render("user", {
-            username: req.params.username,
-            pokemonsGif: pokeCollGif,
-            pokemons: pokeColl,
-            trades: tradeList
         });
-    })
+    });
 });
 
 app.get("/collection/:username", passport.authenticate('jwt', {
