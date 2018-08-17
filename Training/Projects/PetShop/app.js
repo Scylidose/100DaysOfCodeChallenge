@@ -207,6 +207,14 @@ app.post("/search", function (req, res) {
     })
 });
 
+app.get('/accept/:from/:trade/:choose', passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
+    var username = req.user.username;
+    // Script to remove trade proposal + add/remove pokemon in collection
+    return res.redirect("/user/" + username);
+});
+
 app.get("/user/:username", passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
