@@ -33,6 +33,8 @@ mongoose
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
+var ObjectId = require('mongoose').Schema.ObjectId;
+
 const User = require('./models/User');
 const pokeCollection = require('./models/Collection');
 const PokemonDB = require('./models/Pokemon');
@@ -169,8 +171,8 @@ app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
 
-    var username = req.user.username;
-    var fromUser = req.params.from;
+    var username = req.params.from;
+    var fromUser = req.user.username;
 
     var tradeList = req.params.trade;
     var chooseList = req.params.choose;
@@ -187,7 +189,7 @@ app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
 
     newTrade.save();
 
-    return res.redirect("/user/" + username);
+    return res.redirect("/user/" + fromUser);
 });
 
 app.post("/search", function (req, res) {
@@ -207,12 +209,74 @@ app.post("/search", function (req, res) {
     })
 });
 
-app.get('/accept/:from/:trade/:choose', passport.authenticate('jwt', {
+app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
     var username = req.user.username;
-    // Script to remove trade proposal + add/remove pokemon in collection
-    return res.redirect("/user/" + username);
+    var fromUser = req.params.from;
+    var tradeList = [];
+    var chooseList = [];
+
+    tradeList.push(req.params.trade);
+    chooseList.push(req.params.choose);
+
+    tradePokemon.find({
+        ask: tradeList,
+        choose: chooseList,
+        username: username,
+        from: fromUser
+    }).then(trades => {
+        for (var i = 0; i < tradeList.length; i++) {
+            var trading = pokemon.getId(tradeList[i].charAt(0).toUpperCase() + tradeList[i].slice(1));
+            pokeCollection.update({
+                username: username
+            }, {
+                $pull: {
+                    Pokemons: {
+                        "Pokemon": trading
+                    }
+                }
+            }).exec();
+
+            pokeCollection.update({
+                username: fromUser
+            }, {
+                $push: {
+                    Pokemons: {
+                        "Pokemon": trading
+                    }
+                }
+            }).exec();
+        }
+
+        for (var i = 0; i < chooseList.length; i++) {
+            var choosing = pokemon.getId(chooseList[i].charAt(0).toUpperCase() + chooseList[i].slice(1));
+            pokeCollection.update({
+                username: fromUser
+            }, {
+                $pull: {
+                    Pokemons: {
+                        "Pokemon": choosing
+                    }
+                }
+            }).exec();
+
+            pokeCollection.update({
+                username: username
+            }, {
+                $push: {
+                    Pokemons: {
+                        "Pokemon": choosing
+                    }
+                }
+            }).exec();
+        }
+        //return res.json(trades[0]._id);
+        tradePokemon.findByIdAndRemove(trades[0]._id, function (err) {
+            if (err) throw err;
+        });
+        return res.redirect("/user/" + username);
+    })
 });
 
 app.get("/user/:username", passport.authenticate('jwt', {
@@ -224,7 +288,7 @@ app.get("/user/:username", passport.authenticate('jwt', {
     var tradeList = [];
     var tradeCollection = [];
 
-    var ask = [];
+    var ask =   [];
     var choose = [];
 
     pokeCollection.findOne({
@@ -258,6 +322,7 @@ app.get("/user/:username", passport.authenticate('jwt', {
 
             res.render("user", {
                 username: req.params.username,
+                cookieUser: req.user.username,
                 pokemonsGif: pokeCollGif,
                 pokemons: pokeColl,
                 trades: JSON.stringify(tradeCollection)
