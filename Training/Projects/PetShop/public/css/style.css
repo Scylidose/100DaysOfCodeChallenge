@@ -102,3 +102,12 @@ hr {
 .clicked {
     background-color: red;
 }
+
+.tradeColl {
+    text-align: center;
+}
+
+.trades {
+    display: inline-block;
+    font-size: medium;
+}
