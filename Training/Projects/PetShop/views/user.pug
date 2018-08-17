@@ -32,31 +32,32 @@ block content
                         - i++
             .col-md-3
     hr
-    .container
-        .row
-            .col-md-3
-            .col-md-6.text-center
-                h2 Trade
-                hr
-                .tradeColl
-                    -var trade = JSON.parse(trades)
-                    - var i =0
-                    each value, index in trade
-                        .trades
-                            each val, ind in value
-                                if ind == 1
-                                    each ask in value[ind]
-                                        .ask
-                                            img(src= "http://www.pokestadium.com/sprites/xy/" + ask + ".gif")
+    if cookieUser == username
+        .container
+            .row
+                .col-md-3
+                .col-md-6.text-center
+                    h2 Trade
+                    hr
+                    .tradeColl
+                        -var trade = JSON.parse(trades)
+                        - var i =0
+                        each value, index in trade
+                            .trades
+                                each val, ind in value
+                                    if ind == 1
+                                        each ask in value[ind]
+                                            .ask
+                                                img(src= "http://www.pokestadium.com/sprites/xy/" + ask + ".gif")
 
-                            img(src= "/images/trade-logo.png" style="display: inline-block;")
-                            each val, ind in value
-                                if ind == 2
-                                    each choose in value[ind]
-                                        .choose
-                                            img(src= "http://www.pokestadium.com/sprites/xy/" + choose + ".gif")
-                        .accept
-                            h6= "From " + value[0]
-                            button(onclick="acceptTrade(this.id)" id=i) Accept
-                            - i++
-            .col-md-3
+                                img(src= "/images/trade-logo.png" style="display: inline-block;")
+                                each val, ind in value
+                                    if ind == 2
+                                        each choose in value[ind]
+                                            .choose
+                                                img(src= "http://www.pokestadium.com/sprites/xy/" + choose + ".gif")
+                            .accept
+                                h6= "From " + value[0]
+                                button(onclick="acceptTrade(this.id)" id=i) Accept
+                                - i++
+                .col-md-3
