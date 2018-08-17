@@ -29,18 +29,22 @@ block content
             .col-md-6.text-center
                 h2 Trade
                 hr
-                .collection
+                .tradeColl
                     -var trade = JSON.parse(trades)
-                    -var i = 0
-                    while trade.length >= i
-                        -var j =0
-                        while trade[i][1].length >= j
-                            img(src= "http://www.pokestadium.com/sprites/xy/" + trade[i][1][j] + ".gif")
-                            - j++
-                        img(src= "/images/trade-logo.png")
-                        -var h =0
-                        while trade[i][2].length >= h
-                            img(src= "http://www.pokestadium.com/sprites/xy/" + trade[i][2][h] + ".gif")
-                            - h++
-                        - i++
+                    each value, index in trade
+                        .trades
+                            each val, ind in value
+                                .ask
+                                if ind == 1
+                                    each ask in value[ind]
+                                        img(src= "http://www.pokestadium.com/sprites/xy/" + ask + ".gif")
+                            p= "From " + value[0]
+                            img(src= "/images/trade-logo.png")
+                            each val, ind in value
+                                .choose
+                                if ind == 2
+                                    each choose in value[ind]
+                                        img(src= "http://www.pokestadium.com/sprites/xy/" + choose + ".gif")
+                            br
+                            a(href="/") Accept
             .col-md-3
