@@ -17,8 +17,12 @@ html
       li.nav-item
         a.nav-link(href="/") Home
 
-      li.nav-item
-        a.nav-link(href="/") My Account
+      if username != ""
+        li.nav-item
+          a.nav-link(href="/user/"+username) My Account
+
+        li.nav-item
+          a.nav-link(href="/disconnect") Disconnect
 
       li(class="nav-item" style="float:right; margin-right: 15px;")
         form(style="margin-top:5px; margin-left:10px" class="form-inline" action="/search" method="POST")
