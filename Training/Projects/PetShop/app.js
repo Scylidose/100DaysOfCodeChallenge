@@ -242,13 +242,17 @@ app.get("/user/:username", passport.authenticate('jwt', {
                 tradeList.unshift(trades[i].from);
 
                 tradeCollection.unshift(tradeList);
+
+                ask = [];
+                choose = [];
+                tradeList = [];
             }
-            return res.json(tradeCollection[1]);
+
             res.render("user", {
                 username: req.params.username,
                 pokemonsGif: pokeCollGif,
                 pokemons: pokeColl,
-                trades: tradeCollection
+                trades: JSON.stringify(tradeCollection)
             });
         });
     });
