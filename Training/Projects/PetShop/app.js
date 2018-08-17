@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 const pokemonGif = require('pokemon-gif');
 const pokemon = require('pokemon');
 var cookieParser = require('cookie-parser');
+var jwtDecode = require('jwt-decode');
 
 const keys = require('./config/keys');
 
@@ -33,8 +34,6 @@ mongoose
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-var ObjectId = require('mongoose').Schema.ObjectId;
-
 const User = require('./models/User');
 const pokeCollection = require('./models/Collection');
 const PokemonDB = require('./models/Pokemon');
@@ -47,7 +46,22 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.get("/", function (req, res) {
-    res.render('accueil');
+    var username = "";
+    var token = req.cookies.jwt
+    if (token) {
+        username = jwtDecode(token).id
+    }
+    User.findOne({
+        username: username
+    }).then(users => {
+        var user = "";
+        if(users){
+            user = users.username;
+        }
+        res.render("accueil", {
+            username: user
+        })
+    })
 });
 
 app.post("/register", function (req, res) {
@@ -209,6 +223,11 @@ app.post("/search", function (req, res) {
     })
 });
 
+app.get("/disconnect", function(req, res){
+    res.clearCookie("jwt");
+    res.redirect("/");
+});
+
 app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
@@ -217,15 +236,32 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
     var tradeList = [];
     var chooseList = [];
 
-    tradeList.push(req.params.trade);
-    chooseList.push(req.params.choose);
+    for (var i = 0; i  < req.params.trade.split(",").length; i++) {
+        tradeList.push(req.params.trade.split(",")[i]);
+    }
+
+    for (var i = 0; i  < req.params.choose.split(",").length; i++) {
+        chooseList.push(req.params.choose.split(",")[i]);
+    }
 
     tradePokemon.find({
-        ask: tradeList,
-        choose: chooseList,
+        ask: {
+            $all: tradeList
+        },
+        choose: {
+            $all: chooseList
+        },
         username: username,
         from: fromUser
     }).then(trades => {
+        /*
+            Bug pokemon ajout
+        */
+
+        if (!trades) {
+            res.json("An error occured.");
+        }
+
         for (var i = 0; i < tradeList.length; i++) {
             var trading = pokemon.getId(tradeList[i].charAt(0).toUpperCase() + tradeList[i].slice(1));
             pokeCollection.update({
@@ -236,17 +272,21 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
                         "Pokemon": trading
                     }
                 }
-            }).exec();
+            }, function (err) {
+                if (err) return handleError(err)
+            });
 
             pokeCollection.update({
                 username: fromUser
             }, {
                 $push: {
                     Pokemons: {
-                        "Pokemon": trading
+                        Pokemon: trading
                     }
                 }
-            }).exec();
+            }, function (err) {
+                if (err) return handleError(err)
+            });
         }
 
         for (var i = 0; i < chooseList.length; i++) {
@@ -259,19 +299,23 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
                         "Pokemon": choosing
                     }
                 }
-            }).exec();
+            }, function (err) {
+                if (err) return handleError(err)
+            });
 
             pokeCollection.update({
                 username: username
             }, {
                 $push: {
                     Pokemons: {
-                        "Pokemon": choosing
+                        Pokemon: choosing
                     }
                 }
-            }).exec();
+            }, function (err) {
+                if (err) return handleError(err)
+            });
         }
-        //return res.json(trades[0]._id);
+
         tradePokemon.findByIdAndRemove(trades[0]._id, function (err) {
             if (err) throw err;
         });
