@@ -5,15 +5,18 @@ block content
         .row
             .col-md-3
             .col-md-6.text-center(style="margin-top:100px")
-                - var i = 0
-                    while resultList[0].usernames.length > i
-                        .pokemon
-                            img(src="http://www.pokestadium.com/sprites/xy/" + resultList[0].name.toLowerCase() + ".gif")
-                            h3= resultList[0].name
-                            hr
-                            h5 Possessed by :
+                if resultList.length == 0
+                    h5 No result found
+                else
+                    - var i = 0
+                        while resultList[0].usernames.length > i
+                            .pokemon
+                                img(src="http://www.pokestadium.com/sprites/xy/" + resultList[0].name.toLowerCase() + ".gif")
+                                h3= resultList[0].name
+                                hr
+                                h5 Possessed by :
                             
-                            a(href="/collection/"+resultList[0].usernames[i].user)
-                                h6= resultList[0].usernames[i].user
-                        - i++
+                                a(href="/collection/"+resultList[0].usernames[i].user)
+                                    h6= resultList[0].usernames[i].user
+                            - i++
             .col-md-3
