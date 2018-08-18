@@ -25,11 +25,11 @@ function getTrade() {
     var chooseList = [];
     var user = $(".userTitle").attr('id');
 
-    $('.trade.clicked').each(function () {
+    $('.tradePkm.clicked').each(function () {
         tradeList.push($(this).attr("id"));
     });
 
-    $('.choose.clicked').each(function () {
+    $('.choosePkm.clicked').each(function () {
         chooseList.push($(this).attr("id"));
     });
 
