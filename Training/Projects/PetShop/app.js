@@ -291,9 +291,6 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
         username: username,
         from: fromUser
     }).then(trades => {
-        /*
-            Bug pokemon ajout
-        */
 
         if (!trades) {
             res.json("An error occured.");
@@ -301,55 +298,54 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
 
         for (var i = 0; i < tradeList.length; i++) {
             var trading = pokemon.getId(tradeList[i].charAt(0).toUpperCase() + tradeList[i].slice(1));
-            pokeCollection.update({
+            console.log(trading);
+
+            pokeCollection.findOne({
                 username: username
-            }, {
-                $pull: {
-                    Pokemons: {
-                        "Pokemon": trading
+            }).then(coll => {
+                for (var i = 0; i <  coll.Pokemons.length; i++) {
+                    if (coll.Pokemons[i].Pokemon == trading) {
+                        coll.Pokemons.splice(i, 1);
                     }
                 }
-            }, function (err) {
-                if (err) return handleError(err)
+                coll.save();
             });
 
-            pokeCollection.update({
+            pokeCollection.findOne({
                 username: fromUser
-            }, {
-                $push: {
-                    Pokemons: {
-                        Pokemon: trading
-                    }
+            }).then(coll => {
+                var newPoke = {
+                    Pokemon: trading
                 }
-            }, function (err) {
-                if (err) return handleError(err)
+                
+                coll.Pokemons.unshift(newPoke);
+                coll.save();
             });
         }
 
         for (var i = 0; i < chooseList.length; i++) {
             var choosing = pokemon.getId(chooseList[i].charAt(0).toUpperCase() + chooseList[i].slice(1));
-            pokeCollection.update({
+
+            pokeCollection.findOne({
                 username: fromUser
-            }, {
-                $pull: {
-                    Pokemons: {
-                        "Pokemon": choosing
+            }).then(coll => {
+                for (var i = 0; i <  coll.Pokemons.length; i++) {
+                    if (coll.Pokemons[i].Pokemon == choosing) {
+                        coll.Pokemons.splice(i, 1);
                     }
                 }
-            }, function (err) {
-                if (err) return handleError(err)
+                coll.save();
             });
 
-            pokeCollection.update({
+            pokeCollection.findOne({
                 username: username
-            }, {
-                $push: {
-                    Pokemons: {
-                        Pokemon: choosing
-                    }
+            }).then(coll => {
+                var newPoke = {
+                    Pokemon: choosing
                 }
-            }, function (err) {
-                if (err) return handleError(err)
+                
+                coll.Pokemons.unshift(newPoke);
+                coll.save();
             });
         }
 
