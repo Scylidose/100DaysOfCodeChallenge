@@ -45,6 +45,10 @@ app.use(passport.initialize());
 // Passport Config
 require('./config/passport')(passport);
 
+// Validation 
+const validateRegisterInput = require('./validation/register');
+const validateLoginInput = require('./validation/login');
+
 app.get("/", function (req, res) {
     var username = "";
     var token = req.cookies.jwt
@@ -55,7 +59,7 @@ app.get("/", function (req, res) {
         username: username
     }).then(users => {
         var user = "";
-        if(users){
+        if (users) {
             user = users.username;
         }
         res.render("accueil", {
@@ -69,6 +73,15 @@ app.post("/register", function (req, res) {
     var courriel = req.body.courriel;
     var password = req.body.password;
 
+    const {
+        errors,
+        isValid
+    } = validateRegisterInput(req.body);
+
+    // Check Validation
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
     User.findOne({
         username: username
     }).then(user =>  {
@@ -149,6 +162,16 @@ app.post("/login", function (req, res) {
     var username = req.body.username;
     var password = req.body.password;
 
+    const {
+        errors,
+        isValid
+    } = validateLoginInput(req.body);
+
+    // Check Validation
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
     User.findOne({
         username: username
     }).then(user =>  {
@@ -223,7 +246,7 @@ app.post("/search", function (req, res) {
     })
 });
 
-app.get("/disconnect", function(req, res){
+app.get("/disconnect", function (req, res) {
     res.clearCookie("jwt");
     res.redirect("/");
 });
