@@ -240,9 +240,23 @@ app.post("/search", function (req, res) {
             return res.status(400).json("Pokemon not found.");
         }
 
-        res.render("results", {
-            resultList: pokemons
-        });
+        var username = "";
+        var token = req.cookies.jwt
+        if (token) {
+            username = jwtDecode(token).id
+        }
+        User.findOne({
+            username: username
+        }).then(users => {
+            var user = "";
+            if (users) {
+                user = users.username;
+            }
+            res.render("results", {
+                resultList: pokemons,
+                username: user
+            });
+        })
     })
 });
 
