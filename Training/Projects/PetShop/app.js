@@ -204,31 +204,6 @@ app.post("/login", function (req, res) {
     })
 });
 
-app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
-    session: false
-}), function (req, res) {
-
-    var username = req.params.from;
-    var fromUser = req.user.username;
-
-    var tradeList = req.params.trade;
-    var chooseList = req.params.choose;
-
-    tradeList = tradeList.split(",");
-    chooseList = chooseList.split(",");
-
-    const newTrade = new tradePokemon({
-        username: username,
-        ask: tradeList,
-        choose: chooseList,
-        from: fromUser
-    });
-
-    newTrade.save();
-
-    return res.redirect("/user/" + fromUser);
-});
-
 app.post("/search", function (req, res) {
 
     var search = req.body.search;
@@ -265,6 +240,31 @@ app.get("/disconnect", function (req, res) {
     res.redirect("/");
 });
 
+app.get('/trade/:from/:trade/:choose', passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
+
+    var username = req.params.from;
+    var fromUser = req.user.username;
+
+    var tradeList = req.params.trade;
+    var chooseList = req.params.choose;
+
+    tradeList = tradeList.split(",");
+    chooseList = chooseList.split(",");
+
+    const newTrade = new tradePokemon({
+        username: username,
+        ask: tradeList,
+        choose: chooseList,
+        from: fromUser
+    });
+
+    newTrade.save();
+
+    return res.redirect("/user/" + fromUser);
+});
+
 app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
@@ -296,56 +296,47 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
             res.json("An error occured.");
         }
 
-        for (var i = 0; i < tradeList.length; i++) {
+        for (var i = 0; i < tradeList.length ||  i < chooseList.length; i++) {
+
             var trading = pokemon.getId(tradeList[i].charAt(0).toUpperCase() + tradeList[i].slice(1));
-            console.log(trading);
-
-            pokeCollection.findOne({
-                username: username
-            }).then(coll => {
-                for (var i = 0; i <  coll.Pokemons.length; i++) {
-                    if (coll.Pokemons[i].Pokemon == trading) {
-                        coll.Pokemons.splice(i, 1);
-                    }
-                }
-                coll.save();
-            });
-
-            pokeCollection.findOne({
-                username: fromUser
-            }).then(coll => {
-                var newPoke = {
-                    Pokemon: trading
-                }
-                
-                coll.Pokemons.unshift(newPoke);
-                coll.save();
-            });
-        }
-
-        for (var i = 0; i < chooseList.length; i++) {
             var choosing = pokemon.getId(chooseList[i].charAt(0).toUpperCase() + chooseList[i].slice(1));
 
             pokeCollection.findOne({
                 username: fromUser
             }).then(coll => {
-                for (var i = 0; i <  coll.Pokemons.length; i++) {
-                    if (coll.Pokemons[i].Pokemon == choosing) {
-                        coll.Pokemons.splice(i, 1);
+                for (var j = 0; j <  coll.Pokemons.length; j++) {
+                    if (coll.Pokemons[j].Pokemon == trading) {
+                        coll.Pokemons.splice(j, 1);
+                        break;
                     }
                 }
-                coll.save();
+
+                var newPokeCh = {
+                    Pokemon: choosing
+                }
+
+                coll.Pokemons.unshift(newPokeCh);
+                coll.save().catch(err => console.log(err));;
             });
 
             pokeCollection.findOne({
                 username: username
             }).then(coll => {
-                var newPoke = {
-                    Pokemon: choosing
+
+                for (var j = 0; j <  coll.Pokemons.length; j++) {
+                    if (coll.Pokemons[j].Pokemon == choosing) {
+                        coll.Pokemons.splice(j, 1);
+                        break;
+                    }
                 }
-                
-                coll.Pokemons.unshift(newPoke);
-                coll.save();
+
+                var newPokeTra = {
+                    Pokemon: trading
+                }
+
+                coll.Pokemons.unshift(newPokeTra);
+
+                coll.save().catch(err => console.log(err));;
             });
         }
 
