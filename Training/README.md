@@ -6,7 +6,7 @@ Repository where I'll post all of non-related online courses projects.
 
 ## Projects
 
-### Pokemon Pet Shop  
+### Pokemon Pet Shop (Full Stack)  
 
 Become a Pokemon Trainer, receive your 3 first Pokemons and try to collect them'all by trading differents Pokemon with other Trainer.
 
