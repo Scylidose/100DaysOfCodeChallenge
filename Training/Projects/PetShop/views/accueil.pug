@@ -66,7 +66,7 @@ block content
                             .col-md-3
                             .col-md-6(class="text-center")
                                 h4 Register now !
-                                form(action="/register" method="POST")
+                                form(action="/register" method="POST" autocomplete="off")
                                     table(style="margin: 20px 20%")
                                         tr
                                             td
@@ -89,7 +89,7 @@ block content
                                                 input(type="submit" name="register" value="Register")
                                     
                                 h4 Login
-                                form(action="/login" method="POST")
+                                form(action="/login" method="POST" autocomplete="off")
                                     table(style="margin: 20px 20%")
                                         tr
                                             td
