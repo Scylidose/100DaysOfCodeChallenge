@@ -36,8 +36,3 @@ Get the best **Collection**
     - Add style to form and buttons
     - Get coins for every trade
     - Can get a random Pokemon with the earned coins
-
-
-### Build a Pet Shop App (FullStack)
-
-
