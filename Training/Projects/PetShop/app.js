@@ -316,7 +316,25 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
                 }
 
                 coll.Pokemons.unshift(newPokeCh);
-                coll.save().catch(err => console.log(err));;
+
+                PokemonDB.findOne({
+                    name: trading
+                }).then(poke => {
+                    var newOwner = {
+                        user: username
+                    }
+                    for (var j = 0; j <  poke.usernames.length; j++) {
+                        if (poke.usernames[j].user == fromUser) {
+                            poke.usernames.splice(j, 1);
+                            break;
+                        }
+                    }
+                    poke.usernames.unshift(newOwner);
+
+                    poke.save().catch(err => console.log(err));
+                });
+
+                coll.save().catch(err => console.log(err));
             });
 
             pokeCollection.findOne({
@@ -335,6 +353,23 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
                 }
 
                 coll.Pokemons.unshift(newPokeTra);
+
+                PokemonDB.findOne({
+                    name: choosing
+                }).then(poke => {
+                    var newOwner = {
+                        user: fromUser
+                    }
+                    for (var j = 0; j <  poke.usernames.length; j++) {
+                        if (poke.usernames[j].user == username) {
+                            poke.usernames.splice(j, 1);
+                            break;
+                        }
+                    }
+                    poke.usernames.unshift(newOwner);
+
+                    poke.save().catch(err => console.log(err));
+                });
 
                 coll.save().catch(err => console.log(err));;
             });
