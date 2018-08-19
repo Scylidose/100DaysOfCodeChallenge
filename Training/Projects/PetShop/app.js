@@ -347,6 +347,45 @@ app.get('/accept/:from/:choose/:trade', passport.authenticate('jwt', {
     })
 });
 
+
+app.get('/cancel/:from/:choose/:trade', passport.authenticate('jwt', {
+    session: false
+}), function (req, res) {
+    var username = req.user.username;
+    var fromUser = req.params.from;
+    var tradeList = [];
+    var chooseList = [];
+
+    for (var i = 0; i  < req.params.trade.split(",").length; i++) {
+        tradeList.push(req.params.trade.split(",")[i]);
+    }
+
+    for (var i = 0; i  < req.params.choose.split(",").length; i++) {
+        chooseList.push(req.params.choose.split(",")[i]);
+    }
+
+    tradePokemon.find({
+        ask: {
+            $all: tradeList
+        },
+        choose: {
+            $all: chooseList
+        },
+        username: username,
+        from: fromUser
+    }).then(trades => {
+
+        if (!trades) {
+            res.json("An error occured.");
+        }
+
+        tradePokemon.findByIdAndRemove(trades[0]._id, function (err) {
+            if (err) throw err;
+        });
+        return res.redirect("/user/" + username);
+    })
+});
+
 app.get("/user/:username", passport.authenticate('jwt', {
     session: false
 }), function (req, res) {
